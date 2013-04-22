@@ -1,0 +1,1566 @@
+--------------------------------------------------------------------------------
+Release 14.1 Trace  (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.1/ISE_DS/ISE/bin/lin64/unwrapped/trce -v 3 -s 1 -n 10 -fastpaths
+-xml ml505top.twx ml505top.ncd -o ml505top.twr ml505top.pcf
+
+Design file:              ml505top.ncd
+Physical constraint file: ml505top.pcf
+Device,package,speed:     xc5vlx110t,ff1136,-1 (PRODUCTION 1.73 2012-04-23, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_USER_CLK = PERIOD TIMEGRP "USER_CLK" 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_USER_CLK = PERIOD TIMEGRP "USER_CLK" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 2.000ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: user_clk_pll/CLKIN1
+  Logical resource: user_clk_pll/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN1
+  Clock network: user_clk_g
+--------------------------------------------------------------------------------
+Slack: 6.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 2.000ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: user_clk_pll/CLKIN1
+  Logical resource: user_clk_pll/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN1
+  Clock network: user_clk_g
+--------------------------------------------------------------------------------
+Slack: 8.451ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.549ns (645.578MHz) (Tpllper_CLKIN)
+  Physical resource: user_clk_pll/CLKIN1
+  Logical resource: user_clk_pll/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN1
+  Clock network: user_clk_g
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_cpu_clk = PERIOD TIMEGRP "cpu_clk" TS_USER_CLK / 0.5 HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 6894 paths analyzed, 690 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.184ns.
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_1 (SLICE_X68Y45.SR), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.816ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_18 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.036ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.011ns (0.470 - 0.481)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_18 to dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y55.CQ      Tcko                  0.471   count_r<19>
+                                                       count_r_18
+    SLICE_X57Y56.D1      net (fanout=2)        0.858   count_r<18>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X68Y45.SR      net (fanout=10)       2.234   rst2
+    SLICE_X68Y45.CLK     Tsrck                 0.547   dvi/DVIData/PixCnt/RgnVS/FSM.State/Out<1>
+                                                       dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_1
+    -------------------------------------------------  ---------------------------
+    Total                                      6.036ns (1.206ns logic, 4.830ns route)
+                                                       (20.0% logic, 80.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.974ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_6 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.891ns (Levels of Logic = 2)
+  Clock Path Skew:      0.002ns (0.470 - 0.468)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_6 to dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y52.CQ      Tcko                  0.471   count_r<7>
+                                                       count_r_6
+    SLICE_X57Y53.C1      net (fanout=2)        0.855   count_r<6>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X46Y63.A3      net (fanout=5)        1.596   rst1184
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X68Y45.SR      net (fanout=10)       2.234   rst2
+    SLICE_X68Y45.CLK     Tsrck                 0.547   dvi/DVIData/PixCnt/RgnVS/FSM.State/Out<1>
+                                                       dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.891ns (1.206ns logic, 4.685ns route)
+                                                       (20.5% logic, 79.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.058ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_20 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.792ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.013ns (0.470 - 0.483)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_20 to dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y56.AQ      Tcko                  0.471   count_r<23>
+                                                       count_r_20
+    SLICE_X57Y56.D2      net (fanout=2)        0.614   count_r<20>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X68Y45.SR      net (fanout=10)       2.234   rst2
+    SLICE_X68Y45.CLK     Tsrck                 0.547   dvi/DVIData/PixCnt/RgnVS/FSM.State/Out<1>
+                                                       dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.792ns (1.206ns logic, 4.586ns route)
+                                                       (20.8% logic, 79.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_2 (SLICE_X68Y45.SR), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.822ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_18 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.030ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.011ns (0.470 - 0.481)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_18 to dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y55.CQ      Tcko                  0.471   count_r<19>
+                                                       count_r_18
+    SLICE_X57Y56.D1      net (fanout=2)        0.858   count_r<18>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X68Y45.SR      net (fanout=10)       2.234   rst2
+    SLICE_X68Y45.CLK     Tsrck                 0.541   dvi/DVIData/PixCnt/RgnVS/FSM.State/Out<1>
+                                                       dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_2
+    -------------------------------------------------  ---------------------------
+    Total                                      6.030ns (1.200ns logic, 4.830ns route)
+                                                       (19.9% logic, 80.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.980ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_6 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.885ns (Levels of Logic = 2)
+  Clock Path Skew:      0.002ns (0.470 - 0.468)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_6 to dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y52.CQ      Tcko                  0.471   count_r<7>
+                                                       count_r_6
+    SLICE_X57Y53.C1      net (fanout=2)        0.855   count_r<6>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X46Y63.A3      net (fanout=5)        1.596   rst1184
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X68Y45.SR      net (fanout=10)       2.234   rst2
+    SLICE_X68Y45.CLK     Tsrck                 0.541   dvi/DVIData/PixCnt/RgnVS/FSM.State/Out<1>
+                                                       dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.885ns (1.200ns logic, 4.685ns route)
+                                                       (20.4% logic, 79.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.064ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_20 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.786ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.013ns (0.470 - 0.483)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_20 to dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y56.AQ      Tcko                  0.471   count_r<23>
+                                                       count_r_20
+    SLICE_X57Y56.D2      net (fanout=2)        0.614   count_r<20>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X68Y45.SR      net (fanout=10)       2.234   rst2
+    SLICE_X68Y45.CLK     Tsrck                 0.541   dvi/DVIData/PixCnt/RgnVS/FSM.State/Out<1>
+                                                       dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.786ns (1.200ns logic, 4.586ns route)
+                                                       (20.7% logic, 79.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11 (SLICE_X42Y80.A1), 41 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.981ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_18 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.779ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.103ns (1.215 - 1.318)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_18 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y55.CQ      Tcko                  0.471   count_r<19>
+                                                       count_r_18
+    SLICE_X57Y56.D1      net (fanout=2)        0.858   count_r<18>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X42Y80.A1      net (fanout=40)       1.550   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X42Y80.CLK     Tas                   0.026   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<14>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11
+    -------------------------------------------------  ---------------------------
+    Total                                      5.779ns (0.779ns logic, 5.000ns route)
+                                                       (13.5% logic, 86.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.139ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_6 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.634ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.090ns (1.215 - 1.305)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_6 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y52.CQ      Tcko                  0.471   count_r<7>
+                                                       count_r_6
+    SLICE_X57Y53.C1      net (fanout=2)        0.855   count_r<6>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X46Y63.A3      net (fanout=5)        1.596   rst1184
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X42Y80.A1      net (fanout=40)       1.550   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X42Y80.CLK     Tas                   0.026   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<14>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11
+    -------------------------------------------------  ---------------------------
+    Total                                      5.634ns (0.779ns logic, 4.855ns route)
+                                                       (13.8% logic, 86.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.223ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_20 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.535ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.105ns (1.215 - 1.320)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_20 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y56.AQ      Tcko                  0.471   count_r<23>
+                                                       count_r_20
+    SLICE_X57Y56.D2      net (fanout=2)        0.614   count_r<20>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X42Y80.A1      net (fanout=40)       1.550   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X42Y80.CLK     Tas                   0.026   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<14>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_11
+    -------------------------------------------------  ---------------------------
+    Total                                      5.535ns (0.779ns logic, 4.756ns route)
+                                                       (14.1% logic, 85.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12 (SLICE_X42Y80.B1), 41 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.986ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_18 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.774ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.103ns (1.215 - 1.318)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_18 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y55.CQ      Tcko                  0.471   count_r<19>
+                                                       count_r_18
+    SLICE_X57Y56.D1      net (fanout=2)        0.858   count_r<18>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X42Y80.B1      net (fanout=40)       1.544   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X42Y80.CLK     Tas                   0.027   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<14>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12
+    -------------------------------------------------  ---------------------------
+    Total                                      5.774ns (0.780ns logic, 4.994ns route)
+                                                       (13.5% logic, 86.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.144ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_6 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.629ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.090ns (1.215 - 1.305)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_6 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y52.CQ      Tcko                  0.471   count_r<7>
+                                                       count_r_6
+    SLICE_X57Y53.C1      net (fanout=2)        0.855   count_r<6>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X46Y63.A3      net (fanout=5)        1.596   rst1184
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X42Y80.B1      net (fanout=40)       1.544   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X42Y80.CLK     Tas                   0.027   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<14>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12
+    -------------------------------------------------  ---------------------------
+    Total                                      5.629ns (0.780ns logic, 4.849ns route)
+                                                       (13.9% logic, 86.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.228ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_20 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.530ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.105ns (1.215 - 1.320)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_20 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y56.AQ      Tcko                  0.471   count_r<23>
+                                                       count_r_20
+    SLICE_X57Y56.D2      net (fanout=2)        0.614   count_r<20>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X42Y80.B1      net (fanout=40)       1.544   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X42Y80.CLK     Tas                   0.027   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<14>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_12
+    -------------------------------------------------  ---------------------------
+    Total                                      5.530ns (0.780ns logic, 4.750ns route)
+                                                       (14.1% logic, 85.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_0 (SLICE_X67Y45.SR), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.991ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_18 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.857ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.015ns (0.466 - 0.481)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_18 to dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y55.CQ      Tcko                  0.471   count_r<19>
+                                                       count_r_18
+    SLICE_X57Y56.D1      net (fanout=2)        0.858   count_r<18>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X47Y63.A1      net (fanout=5)        1.701   rst1128
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X67Y45.SR      net (fanout=18)       2.092   rst
+    SLICE_X67Y45.CLK     Tsrck                 0.547   dvi/DVIData/PixCnt/RgnVS/FSM.State/Out<0>
+                                                       dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.857ns (1.206ns logic, 4.651ns route)
+                                                       (20.6% logic, 79.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.132ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_6 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.729ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.002ns (0.466 - 0.468)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_6 to dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y52.CQ      Tcko                  0.471   count_r<7>
+                                                       count_r_6
+    SLICE_X57Y53.C1      net (fanout=2)        0.855   count_r<6>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X47Y63.A3      net (fanout=5)        1.576   rst1184
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X67Y45.SR      net (fanout=18)       2.092   rst
+    SLICE_X67Y45.CLK     Tsrck                 0.547   dvi/DVIData/PixCnt/RgnVS/FSM.State/Out<0>
+                                                       dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.729ns (1.206ns logic, 4.523ns route)
+                                                       (21.1% logic, 78.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.223ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_10 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.633ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.007ns (0.466 - 0.473)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_10 to dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y53.CQ      Tcko                  0.471   count_r<11>
+                                                       count_r_10
+    SLICE_X57Y53.C3      net (fanout=2)        0.759   count_r<10>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X47Y63.A3      net (fanout=5)        1.576   rst1184
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X67Y45.SR      net (fanout=18)       2.092   rst
+    SLICE_X67Y45.CLK     Tsrck                 0.547   dvi/DVIData/PixCnt/RgnVS/FSM.State/Out<0>
+                                                       dvi/DVIData/PixCnt/RgnVS/FSM.State/Out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.633ns (1.206ns logic, 4.427ns route)
+                                                       (21.4% logic, 78.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19 (SLICE_X43Y80.A1), 41 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.993ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_18 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.742ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.128ns (1.190 - 1.318)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_18 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y55.CQ      Tcko                  0.471   count_r<19>
+                                                       count_r_18
+    SLICE_X57Y56.D1      net (fanout=2)        0.858   count_r<18>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X43Y80.A1      net (fanout=40)       1.513   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X43Y80.CLK     Tas                   0.026   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<22>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19
+    -------------------------------------------------  ---------------------------
+    Total                                      5.742ns (0.779ns logic, 4.963ns route)
+                                                       (13.6% logic, 86.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.151ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_6 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.597ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.115ns (1.190 - 1.305)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_6 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y52.CQ      Tcko                  0.471   count_r<7>
+                                                       count_r_6
+    SLICE_X57Y53.C1      net (fanout=2)        0.855   count_r<6>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X46Y63.A3      net (fanout=5)        1.596   rst1184
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X43Y80.A1      net (fanout=40)       1.513   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X43Y80.CLK     Tas                   0.026   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<22>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19
+    -------------------------------------------------  ---------------------------
+    Total                                      5.597ns (0.779ns logic, 4.818ns route)
+                                                       (13.9% logic, 86.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.235ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_20 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.498ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.130ns (1.190 - 1.320)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_20 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y56.AQ      Tcko                  0.471   count_r<23>
+                                                       count_r_20
+    SLICE_X57Y56.D2      net (fanout=2)        0.614   count_r<20>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X43Y80.A1      net (fanout=40)       1.513   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X43Y80.CLK     Tas                   0.026   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<22>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19
+    -------------------------------------------------  ---------------------------
+    Total                                      5.498ns (0.779ns logic, 4.719ns route)
+                                                       (14.2% logic, 85.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20 (SLICE_X43Y80.B1), 41 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.994ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_18 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.741ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.128ns (1.190 - 1.318)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_18 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y55.CQ      Tcko                  0.471   count_r<19>
+                                                       count_r_18
+    SLICE_X57Y56.D1      net (fanout=2)        0.858   count_r<18>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X43Y80.B1      net (fanout=40)       1.511   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X43Y80.CLK     Tas                   0.027   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<22>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20
+    -------------------------------------------------  ---------------------------
+    Total                                      5.741ns (0.780ns logic, 4.961ns route)
+                                                       (13.6% logic, 86.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.152ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_6 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.596ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.115ns (1.190 - 1.305)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_6 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y52.CQ      Tcko                  0.471   count_r<7>
+                                                       count_r_6
+    SLICE_X57Y53.C1      net (fanout=2)        0.855   count_r<6>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X46Y63.A3      net (fanout=5)        1.596   rst1184
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X43Y80.B1      net (fanout=40)       1.511   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X43Y80.CLK     Tas                   0.027   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<22>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20
+    -------------------------------------------------  ---------------------------
+    Total                                      5.596ns (0.780ns logic, 4.816ns route)
+                                                       (13.9% logic, 86.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.236ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_20 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.497ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.130ns (1.190 - 1.320)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_20 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y56.AQ      Tcko                  0.471   count_r<23>
+                                                       count_r_20
+    SLICE_X57Y56.D2      net (fanout=2)        0.614   count_r<20>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X46Y63.A1      net (fanout=5)        1.738   rst1128
+    SLICE_X46Y63.A       Tilo                  0.094   dvi/DVIInit/I2CCmdInit/_or0000
+                                                       rst2_1
+    SLICE_X39Y73.A6      net (fanout=10)       0.854   rst2
+    SLICE_X39Y73.A       Tilo                  0.094   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/_or00001
+    SLICE_X43Y80.B1      net (fanout=40)       1.511   dvi/DVIInit/I2CDatInit/_or0000
+    SLICE_X43Y80.CLK     Tas                   0.027   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<22>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_20
+    -------------------------------------------------  ---------------------------
+    Total                                      5.497ns (0.780ns logic, 4.717ns route)
+                                                       (14.2% logic, 85.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_2 (SLICE_X71Y44.SR), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.039ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_18 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.819ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.005ns (0.476 - 0.481)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_18 to dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y55.CQ      Tcko                  0.471   count_r<19>
+                                                       count_r_18
+    SLICE_X57Y56.D1      net (fanout=2)        0.858   count_r<18>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X47Y63.A1      net (fanout=5)        1.701   rst1128
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X71Y44.SR      net (fanout=18)       2.054   rst
+    SLICE_X71Y44.CLK     Tsrck                 0.547   dvi/DVIData/PixCnt/RgnAY/FSM.State/Out<2>
+                                                       dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.819ns (1.206ns logic, 4.613ns route)
+                                                       (20.7% logic, 79.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.180ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_6 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.691ns (Levels of Logic = 2)
+  Clock Path Skew:      0.008ns (0.476 - 0.468)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_6 to dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y52.CQ      Tcko                  0.471   count_r<7>
+                                                       count_r_6
+    SLICE_X57Y53.C1      net (fanout=2)        0.855   count_r<6>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X47Y63.A3      net (fanout=5)        1.576   rst1184
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X71Y44.SR      net (fanout=18)       2.054   rst
+    SLICE_X71Y44.CLK     Tsrck                 0.547   dvi/DVIData/PixCnt/RgnAY/FSM.State/Out<2>
+                                                       dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.691ns (1.206ns logic, 4.485ns route)
+                                                       (21.2% logic, 78.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.271ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_10 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.595ns (Levels of Logic = 2)
+  Clock Path Skew:      0.003ns (0.476 - 0.473)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_10 to dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y53.CQ      Tcko                  0.471   count_r<11>
+                                                       count_r_10
+    SLICE_X57Y53.C3      net (fanout=2)        0.759   count_r<10>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X47Y63.A3      net (fanout=5)        1.576   rst1184
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X71Y44.SR      net (fanout=18)       2.054   rst
+    SLICE_X71Y44.CLK     Tsrck                 0.547   dvi/DVIData/PixCnt/RgnAY/FSM.State/Out<2>
+                                                       dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.595ns (1.206ns logic, 4.389ns route)
+                                                       (21.6% logic, 78.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_1 (SLICE_X71Y44.SR), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.041ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_18 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.817ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.005ns (0.476 - 0.481)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_18 to dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y55.CQ      Tcko                  0.471   count_r<19>
+                                                       count_r_18
+    SLICE_X57Y56.D1      net (fanout=2)        0.858   count_r<18>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X47Y63.A1      net (fanout=5)        1.701   rst1128
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X71Y44.SR      net (fanout=18)       2.054   rst
+    SLICE_X71Y44.CLK     Tsrck                 0.545   dvi/DVIData/PixCnt/RgnAY/FSM.State/Out<2>
+                                                       dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.817ns (1.204ns logic, 4.613ns route)
+                                                       (20.7% logic, 79.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.182ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_6 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.689ns (Levels of Logic = 2)
+  Clock Path Skew:      0.008ns (0.476 - 0.468)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_6 to dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y52.CQ      Tcko                  0.471   count_r<7>
+                                                       count_r_6
+    SLICE_X57Y53.C1      net (fanout=2)        0.855   count_r<6>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X47Y63.A3      net (fanout=5)        1.576   rst1184
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X71Y44.SR      net (fanout=18)       2.054   rst
+    SLICE_X71Y44.CLK     Tsrck                 0.545   dvi/DVIData/PixCnt/RgnAY/FSM.State/Out<2>
+                                                       dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.689ns (1.204ns logic, 4.485ns route)
+                                                       (21.2% logic, 78.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.273ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_10 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.593ns (Levels of Logic = 2)
+  Clock Path Skew:      0.003ns (0.476 - 0.473)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_10 to dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y53.CQ      Tcko                  0.471   count_r<11>
+                                                       count_r_10
+    SLICE_X57Y53.C3      net (fanout=2)        0.759   count_r<10>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X47Y63.A3      net (fanout=5)        1.576   rst1184
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X71Y44.SR      net (fanout=18)       2.054   rst
+    SLICE_X71Y44.CLK     Tsrck                 0.545   dvi/DVIData/PixCnt/RgnAY/FSM.State/Out<2>
+                                                       dvi/DVIData/PixCnt/RgnAY/FSM.State/Out_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.593ns (1.204ns logic, 4.389ns route)
+                                                       (21.5% logic, 78.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIData/PixCnt/RgnHS/FSM.State/Out_0 (SLICE_X63Y43.SR), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.180ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_18 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnHS/FSM.State/Out_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.663ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.020ns (0.461 - 0.481)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_18 to dvi/DVIData/PixCnt/RgnHS/FSM.State/Out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y55.CQ      Tcko                  0.471   count_r<19>
+                                                       count_r_18
+    SLICE_X57Y56.D1      net (fanout=2)        0.858   count_r<18>
+    SLICE_X57Y56.D       Tilo                  0.094   rst1128
+                                                       rst1128
+    SLICE_X47Y63.A1      net (fanout=5)        1.701   rst1128
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X63Y43.SR      net (fanout=18)       1.900   rst
+    SLICE_X63Y43.CLK     Tsrck                 0.545   dvi/DVIData/PixCnt/RgnHS/FSM.State/Out<0>
+                                                       dvi/DVIData/PixCnt/RgnHS/FSM.State/Out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.663ns (1.204ns logic, 4.459ns route)
+                                                       (21.3% logic, 78.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.321ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_6 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnHS/FSM.State/Out_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.535ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.007ns (0.461 - 0.468)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_6 to dvi/DVIData/PixCnt/RgnHS/FSM.State/Out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y52.CQ      Tcko                  0.471   count_r<7>
+                                                       count_r_6
+    SLICE_X57Y53.C1      net (fanout=2)        0.855   count_r<6>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X47Y63.A3      net (fanout=5)        1.576   rst1184
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X63Y43.SR      net (fanout=18)       1.900   rst
+    SLICE_X63Y43.CLK     Tsrck                 0.545   dvi/DVIData/PixCnt/RgnHS/FSM.State/Out<0>
+                                                       dvi/DVIData/PixCnt/RgnHS/FSM.State/Out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.535ns (1.204ns logic, 4.331ns route)
+                                                       (21.8% logic, 78.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.412ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               count_r_10 (FF)
+  Destination:          dvi/DVIData/PixCnt/RgnHS/FSM.State/Out_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.439ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.012ns (0.461 - 0.473)
+  Source Clock:         cpu_clk_g rising at 0.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.137ns
+
+  Clock Uncertainty:          0.137ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.264ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: count_r_10 to dvi/DVIData/PixCnt/RgnHS/FSM.State/Out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y53.CQ      Tcko                  0.471   count_r<11>
+                                                       count_r_10
+    SLICE_X57Y53.C3      net (fanout=2)        0.759   count_r<10>
+    SLICE_X57Y53.C       Tilo                  0.094   rst1184
+                                                       rst1184
+    SLICE_X47Y63.A3      net (fanout=5)        1.576   rst1184
+    SLICE_X47Y63.A       Tilo                  0.094   dvi/DVIInit/I2CControl/Master/SCLShft/SHIFT.Register/Out<1>
+                                                       rst2
+    SLICE_X63Y43.SR      net (fanout=18)       1.900   rst
+    SLICE_X63Y43.CLK     Tsrck                 0.545   dvi/DVIData/PixCnt/RgnHS/FSM.State/Out<0>
+                                                       dvi/DVIData/PixCnt/RgnHS/FSM.State/Out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.439ns (1.204ns logic, 4.235ns route)
+                                                       (22.1% logic, 77.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_cpu_clk = PERIOD TIMEGRP "cpu_clk" TS_USER_CLK / 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_30 (SLICE_X43Y79.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.375ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_22 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_30 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.471ns (Levels of Logic = 1)
+  Clock Path Skew:      0.096ns (1.286 - 1.190)
+  Source Clock:         cpu_clk_g rising at 20.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_22 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y80.DQ      Tcko                  0.414   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<22>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_22
+    SLICE_X43Y79.D6      net (fanout=2)        0.252   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<22>
+    SLICE_X43Y79.CLK     Tah         (-Th)     0.195   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<30>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_30_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_30
+    -------------------------------------------------  ---------------------------
+    Total                                      0.471ns (0.219ns logic, 0.252ns route)
+                                                       (46.5% logic, 53.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_27 (SLICE_X43Y79.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.387ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_27 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.483ns (Levels of Logic = 1)
+  Clock Path Skew:      0.096ns (1.286 - 1.190)
+  Source Clock:         cpu_clk_g rising at 20.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y80.AQ      Tcko                  0.414   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<22>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_19
+    SLICE_X43Y79.A6      net (fanout=2)        0.266   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<19>
+    SLICE_X43Y79.CLK     Tah         (-Th)     0.197   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<30>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_27_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_27
+    -------------------------------------------------  ---------------------------
+    Total                                      0.483ns (0.217ns logic, 0.266ns route)
+                                                       (44.9% logic, 55.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_35 (SLICE_X40Y79.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.429ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_27 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_35 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.468ns (Levels of Logic = 1)
+  Clock Path Skew:      0.039ns (0.546 - 0.507)
+  Source Clock:         cpu_clk_g rising at 20.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_27 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_35
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y79.AQ      Tcko                  0.414   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<30>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_27
+    SLICE_X40Y79.A6      net (fanout=2)        0.273   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<27>
+    SLICE_X40Y79.CLK     Tah         (-Th)     0.219   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<38>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_35_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_35
+    -------------------------------------------------  ---------------------------
+    Total                                      0.468ns (0.195ns logic, 0.273ns route)
+                                                       (41.7% logic, 58.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.VldShft/SHIFT.Register/Out_5 (SLICE_X42Y65.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.436ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dvi/DVIInit/I2CDatInit/SHIFT.SprReg/Out_0 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.VldShft/SHIFT.Register/Out_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.504ns (Levels of Logic = 1)
+  Clock Path Skew:      0.068ns (0.559 - 0.491)
+  Source Clock:         cpu_clk_g rising at 20.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: dvi/DVIInit/I2CDatInit/SHIFT.SprReg/Out_0 to dvi/DVIInit/I2CDatInit/SHIFT.VldShft/SHIFT.Register/Out_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X45Y65.AQ      Tcko                  0.414   dvi/DVIInit/I2CDatInit/SHIFT.SprReg/Out<0>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.SprReg/Out_0
+    SLICE_X42Y65.A6      net (fanout=9)        0.287   dvi/DVIInit/I2CDatInit/SHIFT.SprReg/Out<0>
+    SLICE_X42Y65.CLK     Tah         (-Th)     0.197   dvi/DVIInit/I2CDatInit/SHIFT.VldShft/SHIFT.Register/Out<5>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.VldShft/SHIFT.Register/Out_5_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.VldShft/SHIFT.Register/Out_5
+    -------------------------------------------------  ---------------------------
+    Total                                      0.504ns (0.217ns logic, 0.287ns route)
+                                                       (43.1% logic, 56.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_7 (SLICE_X42Y73.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.449ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_39 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.507ns (Levels of Logic = 1)
+  Clock Path Skew:      0.058ns (0.556 - 0.498)
+  Source Clock:         cpu_clk_g rising at 20.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_39 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X41Y74.AQ      Tcko                  0.414   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<39>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_39
+    SLICE_X42Y73.A6      net (fanout=3)        0.290   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<39>
+    SLICE_X42Y73.CLK     Tah         (-Th)     0.197   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<10>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_7_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.507ns (0.217ns logic, 0.290ns route)
+                                                       (42.8% logic, 57.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CControl/InLatch/Value/Out_13 (SLICE_X35Y72.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.452ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out_37 (FF)
+  Destination:          dvi/DVIInit/I2CControl/InLatch/Value/Out_13 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.495ns (Levels of Logic = 0)
+  Clock Path Skew:      0.043ns (0.551 - 0.508)
+  Source Clock:         cpu_clk_g rising at 20.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out_37 to dvi/DVIInit/I2CControl/InLatch/Value/Out_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y72.AQ      Tcko                  0.433   dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out<39>
+                                                       dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out_37
+    SLICE_X35Y72.BX      net (fanout=2)        0.293   dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out<37>
+    SLICE_X35Y72.CLK     Tckdi       (-Th)     0.231   dvi/DVIInit/I2CControl/InLatch/Value/Out<15>
+                                                       dvi/DVIInit/I2CControl/InLatch/Value/Out_13
+    -------------------------------------------------  ---------------------------
+    Total                                      0.495ns (0.202ns logic, 0.293ns route)
+                                                       (40.8% logic, 59.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CControl/InLatch/Value/Out_8 (SLICE_X35Y74.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.455ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out_32 (FF)
+  Destination:          dvi/DVIInit/I2CControl/InLatch/Value/Out_8 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.502ns (Levels of Logic = 0)
+  Clock Path Skew:      0.047ns (0.559 - 0.512)
+  Source Clock:         cpu_clk_g rising at 20.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out_32 to dvi/DVIInit/I2CControl/InLatch/Value/Out_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y73.AQ      Tcko                  0.433   dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out<34>
+                                                       dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out_32
+    SLICE_X35Y74.AX      net (fanout=2)        0.298   dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out<32>
+    SLICE_X35Y74.CLK     Tckdi       (-Th)     0.229   dvi/DVIInit/I2CControl/InLatch/Value/Out<11>
+                                                       dvi/DVIInit/I2CControl/InLatch/Value/Out_8
+    -------------------------------------------------  ---------------------------
+    Total                                      0.502ns (0.204ns logic, 0.298ns route)
+                                                       (40.6% logic, 59.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_9 (SLICE_X42Y73.C6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.455ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_1 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_9 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.510ns (Levels of Logic = 1)
+  Clock Path Skew:      0.055ns (0.556 - 0.501)
+  Source Clock:         cpu_clk_g rising at 20.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_1 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y73.CQ      Tcko                  0.414   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_1
+    SLICE_X42Y73.C6      net (fanout=2)        0.291   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<1>
+    SLICE_X42Y73.CLK     Tah         (-Th)     0.195   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<10>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_9_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_9
+    -------------------------------------------------  ---------------------------
+    Total                                      0.510ns (0.219ns logic, 0.291ns route)
+                                                       (42.9% logic, 57.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_10 (SLICE_X42Y73.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.455ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_2 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_10 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.510ns (Levels of Logic = 1)
+  Clock Path Skew:      0.055ns (0.556 - 0.501)
+  Source Clock:         cpu_clk_g rising at 20.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_2 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y73.DQ      Tcko                  0.414   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_2
+    SLICE_X42Y73.D6      net (fanout=2)        0.291   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<2>
+    SLICE_X42Y73.CLK     Tah         (-Th)     0.195   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<10>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_10_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_10
+    -------------------------------------------------  ---------------------------
+    Total                                      0.510ns (0.219ns logic, 0.291ns route)
+                                                       (42.9% logic, 57.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_3 (SLICE_X42Y79.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.458ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_35 (FF)
+  Destination:          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.522ns (Levels of Logic = 1)
+  Clock Path Skew:      0.064ns (0.572 - 0.508)
+  Source Clock:         cpu_clk_g rising at 20.000ns
+  Destination Clock:    cpu_clk_g rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_35 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X40Y79.AQ      Tcko                  0.433   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<38>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_35
+    SLICE_X42Y79.A6      net (fanout=3)        0.286   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<35>
+    SLICE_X42Y79.CLK     Tah         (-Th)     0.197   dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out<6>
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_3_rstpot
+                                                       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.522ns (0.236ns logic, 0.286ns route)
+                                                       (45.2% logic, 54.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_cpu_clk = PERIOD TIMEGRP "cpu_clk" TS_USER_CLK / 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 17.600ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_2_OBUF/SR
+  Logical resource: dvi/DVIData/VideoBuf/bit[2].ODDR/SR
+  Location pin: OLOGIC_X2Y70.SR
+  Clock network: dvi/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+Slack: 17.600ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_3_OBUF/SR
+  Logical resource: dvi/DVIData/VideoBuf/bit[3].ODDR/SR
+  Location pin: OLOGIC_X2Y71.SR
+  Clock network: dvi/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+Slack: 17.600ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_4_OBUF/SR
+  Logical resource: dvi/DVIData/VideoBuf/bit[4].ODDR/SR
+  Location pin: OLOGIC_X2Y72.SR
+  Clock network: dvi/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_USER_CLK
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_USER_CLK                    |     10.000ns|      4.000ns|      3.092ns|            0|            0|            0|         6894|
+| TS_cpu_clk                    |     20.000ns|      6.184ns|          N/A|            0|            0|         6894|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock USER_CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+USER_CLK       |    6.184|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 6894 paths, 0 nets, and 968 connections
+
+Design statistics:
+   Minimum period:   6.184ns{1}   (Maximum frequency: 161.708MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Apr 21 20:25:58 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 610 MB
+
+
+

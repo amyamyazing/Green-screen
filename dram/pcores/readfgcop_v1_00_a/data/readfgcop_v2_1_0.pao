@@ -1,0 +1,7 @@
+##############################################################################
+## Filename:          /home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readfgcop_v1_00_a/data/readfgcop_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Wed Mar 13 13:11:25 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib readfgcop_v1_00_a readfgcop verilog

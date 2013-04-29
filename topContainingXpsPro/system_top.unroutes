@@ -1,0 +1,26 @@
+Release 14.1 - par P.15xf (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Sun Apr 28 14:19:37 2013
+
+All signals are completely routed.
+
+WARNING:ParHelpers:362 - There are 8 sourceless signals in this design. This design will not pass the DRC check run by
+   Bitgen.
+
+   GPIO_LED<0>_OBUF
+   GPIO_LED<1>_OBUF
+   GPIO_LED<2>_OBUF
+   GPIO_LED<3>_OBUF
+   GPIO_LED<4>_OBUF
+   GPIO_LED<5>_OBUF
+   GPIO_LED<6>_OBUF
+   GPIO_LED<7>_OBUF
+WARNING:ParHelpers:361 - There are 3 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   GPIO_SW_C_IBUF
+   system_i/dlmb_LMB_ABus<30>
+   system_i/dlmb_LMB_ABus<31>
+
+

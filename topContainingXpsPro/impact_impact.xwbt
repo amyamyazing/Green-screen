@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/impact.xsl
+OUTFILE=/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro
+LICENSE=iMPACT
+USER_INFO=iMPACT

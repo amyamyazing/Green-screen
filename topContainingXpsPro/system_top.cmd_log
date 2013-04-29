@@ -1,0 +1,115 @@
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/DVIcrap/hardware/src/ml505top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../DVIcrap/hardware/src/pixel_fifo -sd chipscope -nt timestamp -uc system_top.ucf -uc chipscope/chipscope_icon.ucf -uc chipscope/chipscope_ila.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../DVIcrap/hardware/src/pixel_fifo -sd chipscope -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 
+xst -intstyle ise -ifn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.xst" -ofn "/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd chipscope -sd ../../DVIcrap/hardware/src/pixel_fifo -nt timestamp -uc system_top.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 system_top.ngc system_top.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_top_map.ncd system_top.ngd system_top.pcf 
+par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd system_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system_top.twx system_top.ncd -o system_top.twr system_top.pcf -ucf system_top.ucf 
+bitgen -intstyle ise -f system_top.ut system_top.ncd 

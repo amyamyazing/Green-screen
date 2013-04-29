@@ -1,0 +1,2 @@
+verilog writecopimage_v1_00_a /home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/writecopimage_v1_00_a/hdl/verilog/writecopimage.v
+verilog work ../hdl/system_writecopimage_0_wrapper.v

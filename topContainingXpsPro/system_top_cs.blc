@@ -1,0 +1,138 @@
+Release 14.1 ngcbuild P.15xf (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.1/ISE_DS/ISE/bin/lin64/unwrapped/ngcbuild -dd
+/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/_n
+go -sd ../../DVIcrap/hardware/src/pixel_fifo -sd chipscope -p
+xc5vlx110t-ff1136-1 -i
+/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/sy
+stem_top.ngc
+/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/sy
+stem_top_cs.ngc
+
+Prepending components to an absolute path is invalid.
+Reading NGO file
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_top.ngc" ...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_microblaze_0_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_mb_plb_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_ilmb_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_dlmb_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_dlmb_cntlr_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_ilmb_cntlr_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_lmb_bram_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_rs232_uart_1_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_ddr2_sdram_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_clock_generator_0_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_mdm_0_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_proc_sys_reset_0_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_readbgcop_0_to_microblaze_0_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_readbgcop_0_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_microblaze_0_to_readbgcop_0_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_readfgcop_0_to_microblaze_0_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_readfgcop_0_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_microblaze_0_to_readfgcop_0_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_microblaze_0_to_writecopimage_0_wrapper.ngc"...
+Loading design module
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_writecopimage_0_wrapper.ngc"...
+Loading design module "chipscope/chipscope_ila.ngc"...
+Loading design module "chipscope/chipscope_icon.ngc"...
+Loading design module "../../DVIcrap/hardware/src/pixel_fifo/pixel_fifo.ngc"...
+Applying constraints in
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_ddr2_sdram_wrapper.ncf" to module "system_i/DDR2_SDRAM"...
+Checking Constraint Associations...
+Applying constraints in
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_readbgcop_0_to_microblaze_0_wrapper.ncf" to module
+"system_i/readbgcop_0_to_microblaze_0"...
+Checking Constraint Associations...
+Applying constraints in
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_microblaze_0_to_readbgcop_0_wrapper.ncf" to module
+"system_i/microblaze_0_to_readbgcop_0"...
+Checking Constraint Associations...
+Applying constraints in
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_readfgcop_0_to_microblaze_0_wrapper.ncf" to module
+"system_i/readfgcop_0_to_microblaze_0"...
+Checking Constraint Associations...
+Applying constraints in
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_microblaze_0_to_readfgcop_0_wrapper.ncf" to module
+"system_i/microblaze_0_to_readfgcop_0"...
+Checking Constraint Associations...
+Applying constraints in
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_microblaze_0_to_writecopimage_0_wrapper.ncf" to module
+"system_i/microblaze_0_to_writecopimage_0"...
+Checking Constraint Associations...
+Applying constraints in
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem.ncf" to module "system_i"...
+Checking Constraint Associations...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 620244 kilobytes
+
+Writing NGC file
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_top_cs.ngc" ...
+Total REAL time to NGCBUILD completion: 1 min  47 sec
+Total CPU time to NGCBUILD completion:  1 min  41 sec
+
+Writing NGCBUILD log file
+"/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/s
+ystem_top_cs.blc"...

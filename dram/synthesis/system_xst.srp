@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/synthe
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> 
 
@@ -257,25 +257,25 @@ Design Statistics
 # IOs                              : 128
 
 Cell Usage :
-# BELS                             : 6097
+# BELS                             : 6356
 #      BUF                         : 11
 #      GND                         : 22
-#      INV                         : 167
-#      LUT1                        : 111
-#      LUT2                        : 469
-#      LUT3                        : 1044
-#      LUT4                        : 777
-#      LUT5                        : 1070
-#      LUT6                        : 1486
+#      INV                         : 169
+#      LUT1                        : 167
+#      LUT2                        : 528
+#      LUT3                        : 1041
+#      LUT4                        : 783
+#      LUT5                        : 1077
+#      LUT6                        : 1488
 #      LUT6_2                      : 79
 #      MULT_AND                    : 2
-#      MUXCY                       : 208
+#      MUXCY                       : 276
 #      MUXCY_L                     : 166
-#      MUXF7                       : 203
+#      MUXF7                       : 205
 #      OR4                         : 2
-#      VCC                         : 15
-#      XORCY                       : 265
-# FlipFlops/Latches                : 7670
+#      VCC                         : 17
+#      XORCY                       : 323
+# FlipFlops/Latches                : 7664
 #      FD                          : 1586
 #      FD_1                        : 11
 #      FDC                         : 3
@@ -286,16 +286,16 @@ Cell Usage :
 #      FDE                         : 830
 #      FDE_1                       : 8
 #      FDP                         : 23
-#      FDR                         : 2284
+#      FDR                         : 2282
 #      FDR_1                       : 3
-#      FDRE                        : 1500
+#      FDRE                        : 1483
 #      FDRE_1                      : 1
 #      FDRS                        : 98
-#      FDRSE                       : 383
+#      FDRSE                       : 385
 #      FDRSE_1                     : 136
-#      FDS                         : 405
+#      FDS                         : 407
 #      FDS_1                       : 2
-#      FDSE                        : 74
+#      FDSE                        : 83
 #      IDDR_2CLK                   : 64
 #      ODDR                        : 146
 # RAMS                             : 105
@@ -332,18 +332,18 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            7670  out of  69120    11%  
- Number of Slice LUTs:                 5525  out of  69120     7%  
-    Number used as Logic:              5203  out of  69120     7%  
+ Number of Slice Registers:            7664  out of  69120    11%  
+ Number of Slice LUTs:                 5654  out of  69120     8%  
+    Number used as Logic:              5332  out of  69120     7%  
     Number used as Memory:              322  out of  17920     1%  
        Number used as RAM:              194
        Number used as SRL:              128
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  10377
-   Number with an unused Flip Flop:    2707  out of  10377    26%  
-   Number with an unused LUT:          4852  out of  10377    46%  
-   Number of fully used LUT-FF pairs:  2818  out of  10377    27%  
+ Number of LUT Flip Flop pairs used:  10456
+   Number with an unused Flip Flop:    2792  out of  10456    26%  
+   Number with an unused LUT:          4802  out of  10456    45%  
+   Number of fully used LUT-FF pairs:  2862  out of  10456    27%  
    Number of unique control sets:       767
 
 IO Utilization: 
@@ -378,10 +378,10 @@ Clock Information:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                                                                                                                                                                                                                            | Clock buffer(FF name)                                                                                                         | Load  |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-------+
-clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3                                                                                                                                                                                    | BUFG                                                                                                                          | 3614  |
+clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3                                                                                                                                                                                    | BUFG                                                                                                                          | 3752  |
 mdm_0/mdm_0/drck_i                                                                                                                                                                                                                      | BUFG                                                                                                                          | 209   |
 mdm_0/bscan_update1                                                                                                                                                                                                                     | BUFG                                                                                                                          | 42    |
-clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1                                                                                                                                                                                    | BUFG                                                                                                                          | 3653  |
+clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1                                                                                                                                                                                    | BUFG                                                                                                                          | 3509  |
 clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0                                                                                                                                                                                    | BUFG                                                                                                                          | 316   |
 DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/u_iddr_dq_ce)| 1     |
 DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/u_iddr_dq_ce)| 1     |
@@ -455,7 +455,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3'
   Clock period: 5.726ns (frequency: 174.642MHz)
-  Total number of paths / destination ports: 568093 / 9187
+  Total number of paths / destination ports: 572414 / 9385
 -------------------------------------------------------------------------
 Delay:               5.726ns (Levels of Logic = 38)
   Source:            microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_31 (FF)
@@ -566,10 +566,10 @@ Delay:               3.301ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1'
-  Clock period: 6.052ns (frequency: 165.223MHz)
-  Total number of paths / destination ports: 21561 / 6815
+  Clock period: 5.822ns (frequency: 171.756MHz)
+  Total number of paths / destination ports: 17677 / 6323
 -------------------------------------------------------------------------
-Delay:               6.052ns (Levels of Logic = 9)
+Delay:               5.822ns (Levels of Logic = 9)
   Source:            DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/pushaddr_r_10 (FF)
   Destination:       DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/num_xfers_in_fifo_4 (FF)
   Source Clock:      clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1 rising
@@ -582,10 +582,10 @@ Delay:               6.052ns (Levels of Logic = 9)
      FDR:C->Q              1   0.471   0.789  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/pushaddr_r_10 (DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/pushaddr_r<10>)
      LUT4:I0->O            1   0.094   0.480  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty94 (DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty94)
      LUT5:I4->O            1   0.094   0.576  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty118 (DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty118)
-     LUT3:I1->O            8   0.094   0.748  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty136 (PIM1_RdFIFO_Empty)
+     LUT3:I1->O            8   0.094   0.518  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Empty136 (PIM1_RdFIFO_Empty)
      end scope: 'DDR2_SDRAM'
      begin scope: 'readbgcop_0'
-     LUT3:I0->O           38   0.094   1.197  readbgcop_0/latency_counter_mux0000<0>111 (XIL_NPI_RdFIFO_Pop)
+     LUT3:I2->O           37   0.094   1.197  readbgcop_0/latency_counter_mux0000<0>111 (XIL_NPI_RdFIFO_Pop)
      end scope: 'readbgcop_0'
      begin scope: 'DDR2_SDRAM'
      LUT6:I0->O            1   0.094   0.973  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Result<4>2_SW1 (N715)
@@ -593,8 +593,8 @@ Delay:               6.052ns (Levels of Logic = 9)
      MUXF7:I1->O           1   0.254   0.000  DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Result<4> (DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/Result<4>)
      FDRE:D                   -0.018          DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/num_xfers_in_fifo_4
     ----------------------------------------
-    Total                      6.052ns (1.289ns logic, 4.763ns route)
-                                       (21.3% logic, 78.7% route)
+    Total                      5.822ns (1.289ns logic, 4.533ns route)
+                                       (22.1% logic, 77.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0'
@@ -644,46 +644,46 @@ Offset:              2.750ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3'
-  Total number of paths / destination ports: 3 / 3
+  Total number of paths / destination ports: 141 / 141
 -------------------------------------------------------------------------
-Offset:              0.899ns (Levels of Logic = 2)
+Offset:              1.729ns (Levels of Logic = 2)
   Source:            clock_generator_0/clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst:LOCKED (PAD)
-  Destination:       proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/lpf_int (FF)
+  Destination:       readbgcop_0/readbgcop_0/state_FSM_FFd6 (FF)
   Destination Clock: clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3 rising
 
-  Data Path: clock_generator_0/clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst:LOCKED to proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/lpf_int
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-    PLL_ADV:LOCKED         4   0.000   0.000  clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst (LOCKED)
-     end scope: 'clock_generator_0'
-     begin scope: 'proc_sys_reset_0'
-     LUT4:I0->O            1   0.094   0.000  proc_sys_reset_0/EXT_LPF/lpf_int_rstpot (proc_sys_reset_0/EXT_LPF/lpf_int_rstpot)
-     FD:D                     -0.018          proc_sys_reset_0/EXT_LPF/lpf_int
-    ----------------------------------------
-    Total                      0.899ns (0.899ns logic, 0.000ns route)
-                                       (100.0% logic, 0.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1'
-  Total number of paths / destination ports: 469 / 469
--------------------------------------------------------------------------
-Offset:              1.730ns (Levels of Logic = 2)
-  Source:            clock_generator_0/clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst:LOCKED (PAD)
-  Destination:       readbgcop_0/readbgcop_0/state_FSM_FFd5 (FF)
-  Destination Clock: clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1 rising
-
-  Data Path: clock_generator_0/clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst:LOCKED to readbgcop_0/readbgcop_0/state_FSM_FFd5
+  Data Path: clock_generator_0/clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst:LOCKED to readbgcop_0/readbgcop_0/state_FSM_FFd6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
     PLL_ADV:LOCKED         4   0.000   0.000  clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst (LOCKED)
      end scope: 'clock_generator_0'
      begin scope: 'readbgcop_0'
-     LUT2:I0->O           72   0.094   0.471  readbgcop_0/state_or00001 (readbgcop_0/state_or0000)
+     LUT2:I0->O           69   0.094   0.470  readbgcop_0/state_or00001 (readbgcop_0/state_or0000)
      FDR:R                     0.573          readbgcop_0/DATA_MB_0
     ----------------------------------------
-    Total                      1.730ns (1.259ns logic, 0.471ns route)
+    Total                      1.729ns (1.259ns logic, 0.470ns route)
+                                       (72.8% logic, 27.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1'
+  Total number of paths / destination ports: 325 / 325
+-------------------------------------------------------------------------
+Offset:              1.729ns (Levels of Logic = 2)
+  Source:            clock_generator_0/clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst:LOCKED (PAD)
+  Destination:       writecopimage_0/writecopimage_0/state_FSM_FFd2 (FF)
+  Destination Clock: clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1 rising
+
+  Data Path: clock_generator_0/clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst:LOCKED to writecopimage_0/writecopimage_0/state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    PLL_ADV:LOCKED         4   0.000   0.000  clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst (LOCKED)
+     end scope: 'clock_generator_0'
+     begin scope: 'writecopimage_0'
+     LUT2:I0->O           69   0.094   0.470  writecopimage_0/state_or00001 (writecopimage_0/state_or0000)
+     FDR:R                     0.573          writecopimage_0/state_FSM_FFd1
+    ----------------------------------------
+    Total                      1.729ns (1.259ns logic, 0.470ns route)
                                        (72.8% logic, 27.2% route)
 
 =========================================================================
@@ -860,8 +860,27 @@ Offset:              1.788ns (Levels of Logic = 2)
                                        (79.1% logic, 20.9% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3'
+  Total number of paths / destination ports: 244 / 244
+-------------------------------------------------------------------------
+Offset:              0.942ns (Levels of Logic = 0)
+  Source:            DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyrst_dq (FF)
+  Destination:       DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dq[0].u_iob_dq/u_idelay_dq:RST (PAD)
+  Source Clock:      clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3 rising
+
+  Data Path: DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyrst_dq to DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dq[0].u_iob_dq/u_idelay_dq:RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             72   0.471   0.471  DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyrst_dq (DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyrst_dq)
+    IODELAY:RST                0.000          DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/u_idelay_dqs
+    ----------------------------------------
+    Total                      0.942ns (0.471ns logic, 0.471ns route)
+                                       (50.0% logic, 50.0% route)
+
+=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1'
-  Total number of paths / destination ports: 86 / 62
+  Total number of paths / destination ports: 84 / 60
 -------------------------------------------------------------------------
 Offset:              3.395ns (Levels of Logic = 2)
   Source:            DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/u_oddr_dqs (FF)
@@ -878,25 +897,6 @@ Offset:              3.395ns (Levels of Logic = 2)
     ----------------------------------------
     Total                      3.395ns (3.059ns logic, 0.336ns route)
                                        (90.1% logic, 9.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3'
-  Total number of paths / destination ports: 242 / 242
--------------------------------------------------------------------------
-Offset:              0.942ns (Levels of Logic = 0)
-  Source:            DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyrst_dq (FF)
-  Destination:       DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dq[0].u_iob_dq/u_idelay_dq:RST (PAD)
-  Source Clock:      clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3 rising
-
-  Data Path: DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyrst_dq to DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dq[0].u_iob_dq/u_idelay_dq:RST
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q             72   0.471   0.471  DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyrst_dq (DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyrst_dq)
-    IODELAY:RST                0.000          DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/u_idelay_dqs
-    ----------------------------------------
-    Total                      0.942ns (0.471ns logic, 0.471ns route)
-                                       (50.0% logic, 50.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0'
@@ -1157,13 +1157,13 @@ Delay:               0.579ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 305.00 secs
-Total CPU time to Xst completion: 276.16 secs
+Total REAL time to Xst completion: 297.00 secs
+Total CPU time to Xst completion: 295.52 secs
  
 --> 
 
 
-Total memory usage is 784720 kilobytes
+Total memory usage is 785472 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    5 (   0 filtered)

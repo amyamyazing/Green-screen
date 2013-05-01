@@ -23,8 +23,13 @@ module system_stub
     fpga_0_clk_1_sys_clk_pin,
     fpga_0_rst_1_sys_rst_pin,
     readbgcop_0_OUTBG_Port_pin,
+    readfgcop_0_OUTFG_Port_pin,
+    readbgcop_0_DUMMY_Port_pin,
+    clock_generator_0_CLKOUT4_pin,
+    clock_generator_0_CLKOUT5_pin,
     clockgoing_pin,
-    readfgcop_0_OUTFG_Port_pin
+    proc_sys_reset_0_Interconnect_aresetn_pin,
+    proc_sys_reset_0_Ext_Reset_In_pin
   );
   input fpga_0_RS232_Uart_1_RX_pin;
   output fpga_0_RS232_Uart_1_TX_pin;
@@ -45,8 +50,13 @@ module system_stub
   input fpga_0_clk_1_sys_clk_pin;
   input fpga_0_rst_1_sys_rst_pin;
   output readbgcop_0_OUTBG_Port_pin;
-  output clockgoing_pin;
   output readfgcop_0_OUTFG_Port_pin;
+  output readbgcop_0_DUMMY_Port_pin;
+  output clock_generator_0_CLKOUT4_pin;
+  output clock_generator_0_CLKOUT5_pin;
+  output clockgoing_pin;
+  output proc_sys_reset_0_Interconnect_aresetn_pin;
+  input proc_sys_reset_0_Ext_Reset_In_pin;
 
   (* BOX_TYPE = "user_black_box" *)
   system
@@ -70,8 +80,13 @@ module system_stub
       .fpga_0_clk_1_sys_clk_pin ( fpga_0_clk_1_sys_clk_pin ),
       .fpga_0_rst_1_sys_rst_pin ( fpga_0_rst_1_sys_rst_pin ),
       .readbgcop_0_OUTBG_Port_pin ( readbgcop_0_OUTBG_Port_pin ),
+      .readfgcop_0_OUTFG_Port_pin ( readfgcop_0_OUTFG_Port_pin ),
+      .readbgcop_0_DUMMY_Port_pin ( readbgcop_0_DUMMY_Port_pin ),
+      .clock_generator_0_CLKOUT4_pin ( clock_generator_0_CLKOUT4_pin ),
+      .clock_generator_0_CLKOUT5_pin ( clock_generator_0_CLKOUT5_pin ),
       .clockgoing_pin ( clockgoing_pin ),
-      .readfgcop_0_OUTFG_Port_pin ( readfgcop_0_OUTFG_Port_pin )
+      .proc_sys_reset_0_Interconnect_aresetn_pin ( proc_sys_reset_0_Interconnect_aresetn_pin ),
+      .proc_sys_reset_0_Ext_Reset_In_pin ( proc_sys_reset_0_Ext_Reset_In_pin )
     );
 
 endmodule

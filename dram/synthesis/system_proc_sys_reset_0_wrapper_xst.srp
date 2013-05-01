@@ -4,8 +4,8 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/synthesis/xst_temp_dir/
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> 
 
@@ -489,8 +489,8 @@ Offset:              0.471ns (Levels of Logic = 0)
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 19.47 secs
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 20.06 secs
  
 --> 
 

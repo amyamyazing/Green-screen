@@ -25,5 +25,5 @@ UcfFile: data/system.ucf
 EnableParTimingError: 1
 ShowLicenseDialog: 1
 Processor: microblaze_0
-ElfImp: 
-ElfSim: 
+ElfImp: ../../workspace/read_write_DRAM/Debug/read_write_DRAM.elf
+ElfSim: ../../workspace/read_write_DRAM/Debug/read_write_DRAM.elf

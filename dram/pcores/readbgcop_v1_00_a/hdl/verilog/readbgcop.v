@@ -247,7 +247,7 @@ always @(posedge FSL_Clk)
       if (FSL_Rst | rst)              
         begin
 				state <= INIT;
-				ADDR_MB <= 0x903a9800;
+				ADDR_MB <= 32'h903a9800;
 				DATA_MB <= 0;
 				latency_counter <=0;
 				startlat <=0;
@@ -261,11 +261,11 @@ always @(posedge FSL_Clk)
 		//end
 	RDADDR: 
 		//if (FSL_S_Exists == 1) 
-		//begin
+		begin
 			latency_counter <= XIL_NPI_RdFIFO_Latency;
 			//ADDR_MB <= FSL_S_Data;
 			state <= FTDATA;
-		//end
+		end
 	FTDATA: 
 		if(XIL_NPI_AddrAck)
 			state <= WAITEMP;
@@ -297,13 +297,13 @@ always @(posedge FSL_Clk)
 		end
 	WRDATA:	 // the FSL_M_Clk would be the same as the FSL_S_Clk
 		begin
-			if (ADDR_MB < 0x90752FF8)  begin
+			if (ADDR_MB < 32'h90752FF8)  begin
 				state<= RDADDR;
-				ADDR_MB <= ADDR_MB + 0x00000008;
+				ADDR_MB <= ADDR_MB + 32'h00000008;
 			end
 			else begin
 			    state <= RDADDR;
-			    ADDR_MB <= 0x903a9800;
+			    ADDR_MB <= 32'h903a9800;
 			end
 		end
 	default:

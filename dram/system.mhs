@@ -241,9 +241,9 @@ END
 BEGIN readbgcop
  PARAMETER INSTANCE = readbgcop_0
  PARAMETER HW_VER = 1.00.a
- BUS_INTERFACE MFSL = readbgcop_0_to_microblaze_0
  BUS_INTERFACE SFSL = microblaze_0_to_readbgcop_0
  BUS_INTERFACE XIL_NPI = readbgcop_0_XIL_NPI
+ BUS_INTERFACE MFSL = readbgcop_0_to_microblaze_0
  PORT FSL_Clk = clk_62_5000MHzPLL0
  PORT system_dcm_locked = Dcm_all_locked
  PORT FSL_S_Clk = clk_125_0000MHzPLL0

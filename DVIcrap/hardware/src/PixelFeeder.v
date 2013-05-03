@@ -3,16 +3,15 @@
 module PixelFeeder( //System:
                     input          cpu_clk_g,
                     input          clk50_g, // DVI Clock
+						  input 			  chipscope_clk,
                     input          rst,
                     //DDR2 FIFOS:
-/*
                     input          rdf_valid,
                     input          af_full,
                     input  [127:0] rdf_dout,
                     output         rdf_rd_en,
                     output         af_wr_en,
                     output [30:0]  af_addr_din,
-//*/
                     // DVI module:
                     output reg [23:0] video,
                     output reg        video_valid,
@@ -27,7 +26,10 @@ module PixelFeeder( //System:
     /**************************************************************************
     * YOUR CODE HERE: Write logic to keep the FIFO as full as possible.
     **************************************************************************/
-
+    reg valid;
+    reg [127:0] dout;
+    wire feeder_full;
+    wire [31:0] feeder_dout;
 
 
     /* We drop the first frame to allow the buffer to fill with data from
@@ -54,15 +56,54 @@ module PixelFeeder( //System:
     	.full(feeder_full),
     	.empty(feeder_empty));
 */
+
+    pixel_fifo feeder_fifo(
+    	.rst(rst),
+    	.wr_clk(cpu_clk_g),
+    	.rd_clk(clk50_g),
+    	.din(dout), //input
+    	.wr_en(valid), //input
+    	.rd_en(video_ready),
+    	.dout(feeder_dout),
+    	.full(feeder_full),
+    	.empty(feeder_empty));
+
+
+
+    always @(posedge cpu_clk_g) begin
+	if(!feeder_full) begin
+		valid <= 1;
+		dout <= 128'hffffffffffffffffffffffffffffffff;//rdf_dout; //read in processed output pixels
+	end
+	else begin
+		valid <= 0;
+	end
+    end 
+    //assign dout = 128'hffffffffffffffffffffffffffffffff;
+    //assign valid = 1'b1;
+
+
     always @(*) begin
         if (video_ready) begin
-            video = 24'hffffff; //feeder_dout[23:0];
+            video = feeder_dout[23:0];
             video_valid = 1'b1;
         end 
-   end
-/*
+    end
+
     assign rdf_rd_en = 1;
     assign af_wr_en = 1;
     assign af_addr_din = 31'b0;
-//*/
+	 
+	
+//	 wire [35:0] chipscope_control;
+//    chipscope_icon icon(
+//    .CONTROL0(chipscope_control)
+//    ) /* synthesis syn_noprune = 1 */;
+//    chipscope_ila ila(
+//    .CONTROL(chipscope_control),
+//    .CLK(cpu_clk_g),
+//    .DATA({rst, cpu_clk_g, clk50_g, video, video_valid, feeder_dout}),
+//    .TRIG0(rst)
+//    ) /* synthesis syn_noprune = 1 */;
+
 endmodule

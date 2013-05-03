@@ -284,14 +284,12 @@ module ml505top
         .cpu_clk_g(cpu_clk_g),
         .clk50_g(clk50_g),
         .rst(rst || ~init_done),
-/*
         .rdf_valid(pixel_rdf_valid),
         .af_full(pixel_af_full),
         .rdf_dout(rdf_dout),
         .rdf_rd_en(pixel_rdf_rd_en),
         .af_wr_en(pixel_af_wr_en),
         .af_addr_din(pixel_af_addr_din),
-//*/
         .video(video),
         .video_valid(video_valid),
         .video_ready(video_ready));

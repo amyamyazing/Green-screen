@@ -183,7 +183,9 @@ module ml505top
   wire [31:0]  bypass_addr;
   wire [31:0]  bypass_din;
   wire [3:0]   bypass_we;
+  wire init_done;
 
+ assign init_done = 1;
 
 /*  
   Memory150 #(.SIM_ONLY(1'b0)) mem_arch(

@@ -25,7 +25,10 @@ module PixelFeeder( //System:
     /**************************************************************************
     * YOUR CODE HERE: Write logic to keep the FIFO as full as possible.
     **************************************************************************/
-
+    reg valid;
+    reg [127:0] dout;
+    wire feeder_full;
+    wire [31:0] feeder_dout;
 
 
     /* We drop the first frame to allow the buffer to fill with data from
@@ -52,12 +55,40 @@ module PixelFeeder( //System:
     	.full(feeder_full),
     	.empty(feeder_empty));
 */
+
+    pixel_fifo feeder_fifo(
+    	.rst(rst),
+    	.wr_clk(cpu_clk_g),
+    	.rd_clk(clk50_g),
+    	.din(dout), //input
+    	.wr_en(valid), //input
+    	.rd_en(video_ready),
+    	.dout(feeder_dout),
+    	.full(feeder_full),
+    	.empty(feeder_empty));
+
+
+
+    always @(posedge cpu_clk_g) begin
+	if(!feeder_full) begin
+		valid <= 1;
+		dout <= 128'hffffffffffffffffffffffffffffffff; //read in processed output pixels
+	end
+	else begin
+		valid <= 0;
+	end
+    end 
+    //assign dout = 128'hffffffffffffffffffffffffffffffff;
+    //assign valid = 1'b1;
+
+
     always @(*) begin
         if (video_ready) begin
-            video = 24'hffffff; //feeder_dout[23:0];
+            video = feeder_dout[23:0];
             video_valid = 1'b1;
         end 
    end
+
     assign rdf_rd_en = 1;
     assign af_wr_en = 1;
     assign af_addr_din = 31'b0;

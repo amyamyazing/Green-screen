@@ -5,7 +5,7 @@ Parameter TMPDIR set to xst/tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> 
 Parameter xsthdpdir set to xst
@@ -687,6 +687,7 @@ Analyzing hierarchy for module <Register> in library <work> with parameters.
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <ml505top>.
+WARNING:Xst:852 - "../../src/ml505top.v" line 283: Unconnected input port 'chipscope_clk' of instance 'pixelfeed' is tied to GND.
 Module <ml505top> is correct for synthesis.
  
     Set user-defined property "BANDWIDTH =  OPTIMIZED" for instance <user_clk_pll> in unit <ml505top>.
@@ -723,6 +724,7 @@ Module <ml505top> is correct for synthesis.
 Analyzing module <PixelFeeder> in library <work>.
 	FETCH = 1'b1
 	IDLE = 1'b0
+WARNING:Xst:2211 - "../../src/pixel_fifo/pixel_fifo.v" line 60: Instantiating black box module <pixel_fifo>.
 Module <PixelFeeder> is correct for synthesis.
  
 Analyzing module <DVI> in library <work>.
@@ -1306,17 +1308,8 @@ Module <Register.11> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <video> in unit <PixelFeeder> has a constant value of 111111111111111111111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <dout> in unit <PixelFeeder> has a constant value of 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <video_valid> in unit <PixelFeeder> has a constant value of 1 during circuit operation. The register is replaced by logic.
-
-Synthesizing Unit <PixelFeeder>.
-    Related source file is "../../src/PixelFeeder.v".
-WARNING:Xst:647 - Input <clk50_g> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 32-bit down counter for signal <ignore_count>.
-    Summary:
-	inferred   1 Counter(s).
-Unit <PixelFeeder> synthesized.
-
 
 Synthesizing Unit <Register_1>.
     Related source file is "../../src/DVI/Register.v".
@@ -1518,6 +1511,23 @@ Synthesizing Unit <Register_11>.
     Summary:
 	inferred   8 D-type flip-flop(s).
 Unit <Register_11> synthesized.
+
+
+Synthesizing Unit <PixelFeeder>.
+    Related source file is "../../src/PixelFeeder.v".
+WARNING:Xst:647 - Input <chipscope_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <af_full> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rdf_dout> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rdf_valid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <feeder_empty> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <feeder_dout<31:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 24-bit latch for signal <video>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit down counter for signal <ignore_count>.
+    Found 1-bit register for signal <valid>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <PixelFeeder> synthesized.
 
 
 Synthesizing Unit <SDR2DDR_1>.
@@ -1726,11 +1736,12 @@ Synthesizing Unit <ml505top>.
     Related source file is "../../src/ml505top.v".
 WARNING:Xst:647 - Input <GPIO_SW_S> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1780 - Signal <stall> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <pixel_rdf_valid> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <pixel_rdf_rd_en> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <pixel_af_wr_en> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <pixel_af_full> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <pixel_af_addr_din> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <rdf_dout> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <pixel_rdf_valid> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <pixel_rdf_rd_en> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <pixel_af_wr_en> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <pixel_af_full> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <pixel_af_addr_din> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <line_y1_valid> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <line_y0_valid> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <line_x1_valid> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -1785,8 +1796,8 @@ Macro Statistics
  7-bit adder                                           : 1
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 41
- 1-bit register                                        : 21
+# Registers                                            : 42
+ 1-bit register                                        : 22
  10-bit register                                       : 1
  11-bit register                                       : 1
  17-bit register                                       : 1
@@ -1797,6 +1808,8 @@ Macro Statistics
  40-bit register                                       : 2
  7-bit register                                        : 1
  8-bit register                                        : 3
+# Latches                                              : 1
+ 24-bit latch                                          : 1
 # Tristates                                            : 2
  1-bit tristate buffer                                 : 2
 
@@ -1869,8 +1882,10 @@ Macro Statistics
  26-bit adder                                          : 1
  3-bit adder                                           : 1
  7-bit adder                                           : 1
-# Registers                                            : 224
- Flip-Flops                                            : 224
+# Registers                                            : 225
+ Flip-Flops                                            : 225
+# Latches                                              : 1
+ 24-bit latch                                          : 1
 
 =========================================================================
 
@@ -1941,8 +1956,8 @@ Unit <ml505top> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 160
- Flip-Flops                                            : 160
+# Registers                                            : 161
+ Flip-Flops                                            : 161
 # Shift Registers                                      : 10
  4-bit shift register                                  : 1
  5-bit shift register                                  : 9
@@ -1987,26 +2002,28 @@ Cell Usage :
 #      MUXCY                       : 25
 #      VCC                         : 1
 #      XORCY                       : 26
-# FlipFlops/Latches                : 183
+# FlipFlops/Latches                : 208
 #      FD                          : 79
 #      FDE                         : 25
-#      FDR                         : 35
+#      FDR                         : 36
 #      FDRE                        : 20
 #      FDRSE                       : 6
 #      FDS                         : 2
 #      FDSE                        : 2
+#      LD                          : 24
 #      ODDR                        : 14
 # Shift Registers                  : 9
 #      SRLC16E                     : 9
-# Clock Buffers                    : 6
-#      BUFG                        : 6
+# Clock Buffers                    : 7
+#      BUFG                        : 7
 # IO Buffers                       : 30
 #      IBUF                        : 1
 #      IBUFG                       : 1
 #      IOBUF                       : 1
 #      OBUF                        : 26
 #      OBUFT                       : 1
-# Others                           : 1
+# Others                           : 2
+#      pixel_fifo                  : 1
 #      PLL_ADV                     : 1
 =========================================================================
 
@@ -2017,25 +2034,25 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             183  out of  69120     0%  
+ Number of Slice Registers:             208  out of  69120     0%  
  Number of Slice LUTs:                  233  out of  69120     0%  
     Number used as Logic:               224  out of  69120     0%  
     Number used as Memory:                9  out of  17920     0%  
        Number used as SRL:                9
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    265
-   Number with an unused Flip Flop:      82  out of    265    30%  
-   Number with an unused LUT:            32  out of    265    12%  
-   Number of fully used LUT-FF pairs:   151  out of    265    56%  
-   Number of unique control sets:        20
+ Number of LUT Flip Flop pairs used:    290
+   Number with an unused Flip Flop:      82  out of    290    28%  
+   Number with an unused LUT:            57  out of    290    19%  
+   Number of fully used LUT-FF pairs:   151  out of    290    52%  
+   Number of unique control sets:        22
 
 IO Utilization: 
  Number of IOs:                          31
  Number of bonded IOBs:                  30  out of    640     4%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                6  out of     32    18%  
+ Number of BUFG/BUFGCTRLs:                7  out of     32    21%  
  Number of PLL_ADVs:                      1  out of      6    16%  
 
 ---------------------------
@@ -2056,11 +2073,15 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-cpu_clk                            | BUFG                   | 192   |
------------------------------------+------------------------+-------+
+-----------------------------------------------+---------------------------+-------+
+Clock Signal                                   | Clock buffer(FF name)     | Load  |
+-----------------------------------------------+---------------------------+-------+
+cpu_clk                                        | BUFG                      | 193   |
+video_ready1(dvi/DVIData/PixCnt/PixelActive1:O)| BUFG(*)(pixelfeed/video_0)| 24    |
+-----------------------------------------------+---------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -2105,7 +2126,7 @@ Delay:               3.943ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'cpu_clk'
-  Total number of paths / destination ports: 131 / 131
+  Total number of paths / destination ports: 132 / 132
 -------------------------------------------------------------------------
 Offset:              2.684ns (Levels of Logic = 2)
   Source:            user_clk_pll:LOCKED (PAD)
@@ -2125,8 +2146,27 @@ Offset:              2.684ns (Levels of Logic = 2)
                                        (18.7% logic, 81.3% route)
 
 =========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'video_ready1'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              0.336ns (Levels of Logic = 0)
+  Source:            pixelfeed/feeder_fifo:dout<0> (PAD)
+  Destination:       pixelfeed/video_0 (LATCH)
+  Destination Clock: video_ready1 falling
+
+  Data Path: pixelfeed/feeder_fifo:dout<0> to pixelfeed/video_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    pixel_fifo:dout<0>     1   0.000   0.336  pixelfeed/feeder_fifo (pixelfeed/feeder_dout<0>)
+     LD:D                     -0.071          pixelfeed/video_0
+    ----------------------------------------
+    Total                      0.336ns (0.000ns logic, 0.336ns route)
+                                       (0.0% logic, 100.0% route)
+
+=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'cpu_clk'
-  Total number of paths / destination ports: 48 / 20
+  Total number of paths / destination ports: 75 / 22
 -------------------------------------------------------------------------
 Offset:              5.612ns (Levels of Logic = 3)
   Source:            count_r_12 (FF)
@@ -2147,7 +2187,7 @@ Offset:              5.612ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 3 / 3
+  Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Delay:               3.977ns (Levels of Logic = 2)
   Source:            user_clk_pll:LOCKED (PAD)
@@ -2167,15 +2207,15 @@ Delay:               3.977ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 43.00 secs
-Total CPU time to Xst completion: 28.58 secs
+Total REAL time to Xst completion: 31.00 secs
+Total CPU time to Xst completion: 31.02 secs
  
 --> 
 
 
-Total memory usage is 672084 kilobytes
+Total memory usage is 673436 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  102 (   0 filtered)
+Number of warnings :  112 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 

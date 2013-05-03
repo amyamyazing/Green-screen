@@ -1,40 +1,292 @@
 //! **************************************************************************
-// Written by: Map P.15xf on Sun Apr 21 20:22:30 2013
+// Written by: Map P.15xf on Thu May 02 18:05:40 2013
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "GPIO_LED<0>" LOCATE = SITE "H18" LEVEL 1;
+COMP "USER_CLK" LOCATE = SITE "AH15" LEVEL 1;
 COMP "DVI_H" LOCATE = SITE "AM12" LEVEL 1;
+COMP "DVI_V" LOCATE = SITE "AM11" LEVEL 1;
+COMP "GPIO_LED<0>" LOCATE = SITE "H18" LEVEL 1;
 COMP "GPIO_LED<1>" LOCATE = SITE "L18" LEVEL 1;
 COMP "GPIO_LED<2>" LOCATE = SITE "G15" LEVEL 1;
-COMP "DVI_RESET_B" LOCATE = SITE "AK6" LEVEL 1;
 COMP "GPIO_LED<3>" LOCATE = SITE "AD26" LEVEL 1;
 COMP "GPIO_LED<4>" LOCATE = SITE "G16" LEVEL 1;
 COMP "GPIO_LED<5>" LOCATE = SITE "AD25" LEVEL 1;
-COMP "DVI_D<0>" LOCATE = SITE "AB8" LEVEL 1;
 COMP "GPIO_LED<6>" LOCATE = SITE "AD24" LEVEL 1;
-COMP "DVI_D<1>" LOCATE = SITE "AC8" LEVEL 1;
 COMP "GPIO_LED<7>" LOCATE = SITE "AE24" LEVEL 1;
-COMP "DVI_V" LOCATE = SITE "AM11" LEVEL 1;
+COMP "DVI_RESET_B" LOCATE = SITE "AK6" LEVEL 1;
+COMP "DVI_DE" LOCATE = SITE "AE8" LEVEL 1;
+COMP "IIC_SDA_VIDEO" LOCATE = SITE "T29" LEVEL 1;
+COMP "IIC_SCL_VIDEO" LOCATE = SITE "U27" LEVEL 1;
+COMP "DVI_XCLK_N" LOCATE = SITE "AL10" LEVEL 1;
+COMP "DVI_XCLK_P" LOCATE = SITE "AL11" LEVEL 1;
+COMP "DVI_D<10>" LOCATE = SITE "AP14" LEVEL 1;
+COMP "DVI_D<11>" LOCATE = SITE "AN14" LEVEL 1;
+COMP "GPIO_SW_C" LOCATE = SITE "AJ6" LEVEL 1;
+COMP "DVI_D<0>" LOCATE = SITE "AB8" LEVEL 1;
+COMP "DVI_D<1>" LOCATE = SITE "AC8" LEVEL 1;
 COMP "DVI_D<2>" LOCATE = SITE "AN12" LEVEL 1;
 COMP "DVI_D<3>" LOCATE = SITE "AP12" LEVEL 1;
-COMP "GPIO_SW_C" LOCATE = SITE "AJ6" LEVEL 1;
 COMP "DVI_D<4>" LOCATE = SITE "AA9" LEVEL 1;
 COMP "DVI_D<5>" LOCATE = SITE "AA8" LEVEL 1;
 COMP "DVI_D<6>" LOCATE = SITE "AM13" LEVEL 1;
 COMP "DVI_D<7>" LOCATE = SITE "AN13" LEVEL 1;
 COMP "DVI_D<8>" LOCATE = SITE "AA10" LEVEL 1;
 COMP "DVI_D<9>" LOCATE = SITE "AB10" LEVEL 1;
-COMP "IIC_SCL_VIDEO" LOCATE = SITE "U27" LEVEL 1;
-COMP "DVI_XCLK_N" LOCATE = SITE "AL10" LEVEL 1;
-COMP "DVI_XCLK_P" LOCATE = SITE "AL11" LEVEL 1;
-COMP "USER_CLK" LOCATE = SITE "AH15" LEVEL 1;
-COMP "IIC_SDA_VIDEO" LOCATE = SITE "T29" LEVEL 1;
-COMP "DVI_D<10>" LOCATE = SITE "AP14" LEVEL 1;
-COMP "DVI_DE" LOCATE = SITE "AE8" LEVEL 1;
-COMP "DVI_D<11>" LOCATE = SITE "AN14" LEVEL 1;
-TIMEGRP cpu_clk = BEL "count_r_0" BEL "cpu_clk_buf" BEL
-        "dvi/DVIInit/I2CControl/Master/LastState_1" BEL
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<26>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP"
+        PINNAME CLKAL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<45>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP"
+        PINNAME REGCLKAL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKAU;
+TIMEGRP cpu_clk = BEL "count_r_0" BEL "pixelfeed/valid" BEL "cpu_clk_buf" BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/gwas.wsts/ram_full_i"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/rst_d3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d2"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/rst_d2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d1"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/rst_d1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_bin_12"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_bin_11"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_bin_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_bin_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_bin_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_bin_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_bin_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_bin_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_bin_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_bin_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_bin_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_12"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_11"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_12"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_11"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_asreg_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_0"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d1_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d1_0"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d1_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d1_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d1_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d1_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d1_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d1_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d1_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d1_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d1_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_0"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d2_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d2_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d2_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d2_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d2_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d2_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d2_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d2_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d2_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d2_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_d2_0"
+        BEL "dvi/DVIInit/I2CControl/Master/LastState_1" BEL
         "dvi/DVIInit/I2CControl/Master/LastState_6" BEL
         "dvi/DVIInit/I2CControl/Master/LastState_7" BEL
         "dvi/DVIInit/I2CControl/Master/SDEReg/Out_0" BEL
@@ -202,10 +454,394 @@ TIMEGRP cpu_clk = BEL "count_r_0" BEL "cpu_clk_buf" BEL
         "dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Mshreg_Out_39"
         BEL "dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out_39" BEL
         "dvi/DVIInit/I2CCmdInit/SHIFT.VldShft/SHIFT.Register/Mshreg_Out_4" BEL
-        "dvi/DVIInit/I2CCmdInit/SHIFT.VldShft/SHIFT.Register/Out_4";
+        "dvi/DVIInit/I2CCmdInit/SHIFT.VldShft/SHIFT.Register/Out_4" PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<26>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<45>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<62>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<63>";
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<27>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP"
+        PINNAME CLKBL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<46>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP"
+        PINNAME REGCLKBL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBU;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBL;
+PIN
+        pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>
+        = BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP"
+        PINNAME CLKBU;
+TIMEGRP clk50 = BEL "clkdiv50_buf" BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_bin_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_bin_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_bin_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_bin_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_bin_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_bin_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_bin_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_bin_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_bin_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_bin_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_bin_0"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_0"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/wr_pntr_gc_asreg_0"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_12"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_11"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gcx.clkx/rd_pntr_gc_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_11"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_12"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_0"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_12"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_11"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_10"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_9"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_8"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_7"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_6"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_5"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_4"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_3"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_2"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/rpntr/count_d1_0"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_1"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_0"
+        BEL
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/has_mux_b.B/sel_pipe_0"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_23"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_22"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_21"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_20"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_19"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_18"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_17"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_16"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_15"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_14"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_13"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_12"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_11"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_10"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_9"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_8"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_7"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_6"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_5"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_4"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_3"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_2"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_1"
+        BEL "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/dout_i_0"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<27>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<46>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<64>"
+        PIN
+        "pixelfeed/feeder_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_pins<65>";
 PIN user_clk_pll_pins<2> = BEL "user_clk_pll" PINNAME CLKIN1;
 TIMEGRP USER_CLK = PIN "user_clk_pll_pins<2>";
 TS_USER_CLK = PERIOD TIMEGRP "USER_CLK" 10 ns HIGH 50%;
 TS_cpu_clk = PERIOD TIMEGRP "cpu_clk" TS_USER_CLK / 0.5 HIGH 50%;
+TS_clk50 = PERIOD TIMEGRP "clk50" TS_USER_CLK / 0.5 HIGH 50%;
 SCHEMATIC END;
 

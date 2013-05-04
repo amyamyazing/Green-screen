@@ -1,0 +1,3 @@
+verilog work "/home/cc/cs150/sp13/class/cs150-at/finalproject/hdl/system.v"
+verilog work "../DVI/hardware/src/pixel_fifo/pixel_fifo.v"
+verilog work "../DVI/hardware/src/PixelFeeder.v"

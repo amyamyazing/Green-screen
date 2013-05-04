@@ -1,0 +1,12 @@
+-batch 
+-create writecop 
+-ver 1.00.a 
+-dir /home/cc/cs150/sp13/class/cs150-at/finalproject/ 
+-lang verilog 
+-bus fsl s 
+-xps 
+-ise 
+-driver 
+-totalin 2
+-argin 1
+-desc "new FSL core"

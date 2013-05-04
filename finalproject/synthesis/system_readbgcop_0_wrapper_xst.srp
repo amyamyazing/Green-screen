@@ -1,0 +1,419 @@
+Release 14.1 - xst P.15xf (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-at/finalproject/synthesis/xst_temp_dir/
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_readbgcop_0_wrapper_xst.prj"
+Verilog Include Directory          : {"/home/cc/cs150/sp13/class/cs150-at/finalproject/pcores/" "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/Xilinx/14.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc5vlx110tff1136-1
+Output File Name                   : "../implementation/system_readbgcop_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_readbgcop_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-at/finalproject/pcores/readbgcop_v1_00_a/hdl/verilog/readbgcop.v" in library readbgcop_v1_00_a
+Module <readbgcop> compiled
+Compiling verilog file "../hdl/system_readbgcop_0_wrapper.v" in library work
+Module <system_readbgcop_0_wrapper> compiled
+No errors in compilation
+Analysis of file <"system_readbgcop_0_wrapper_xst.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <system_readbgcop_0_wrapper> in library <work>.
+
+Analyzing hierarchy for module <readbgcop> in library <readbgcop_v1_00_a> with parameters.
+	C_PI_ADDR_WIDTH = "00000000000000000000000000100000"
+	C_PI_BE_WIDTH = "00000000000000000000000000001000"
+	C_PI_DATA_WIDTH = "00000000000000000000000001000000"
+	C_PI_RDWDADDR_WIDTH = "00000000000000000000000000000100"
+	FTDATA = "000100"
+	INIT = "000001"
+	RDADDR = "000010"
+	WAITEMP = "001000"
+	WAITLAT = "010000"
+	WRDATA = "100000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <system_readbgcop_0_wrapper>.
+Module <system_readbgcop_0_wrapper> is correct for synthesis.
+ 
+Analyzing module <readbgcop> in library <readbgcop_v1_00_a>.
+	C_PI_ADDR_WIDTH = 32'b00000000000000000000000000100000
+	C_PI_BE_WIDTH = 32'b00000000000000000000000000001000
+	C_PI_DATA_WIDTH = 32'b00000000000000000000000001000000
+	C_PI_RDWDADDR_WIDTH = 32'b00000000000000000000000000000100
+	FTDATA = 6'b000100
+	INIT = 6'b000001
+	RDADDR = 6'b000010
+	WAITEMP = 6'b001000
+	WAITLAT = 6'b010000
+	WRDATA = 6'b100000
+Module <readbgcop> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <startlat> in unit <readbgcop> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <readbgcop>.
+    Related source file is "/home/cc/cs150/sp13/class/cs150-at/finalproject/pcores/readbgcop_v1_00_a/hdl/verilog/readbgcop.v".
+WARNING:Xst:647 - Input <XIL_NPI_WrFIFO_Empty> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <XIL_NPI_WrFIFO_Push> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <FSL_M_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <XIL_NPI_RdFIFO_RdWdAddr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <XIL_NPI_RdFIFO_Flush> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <FSL_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FSL_S_Control> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <XIL_NPI_WrFIFO_Data> is never assigned. Tied to value 0000000000000000000000000000000000000000000000000000000000000000.
+WARNING:Xst:647 - Input <XIL_NPI_RdFIFO_Data<63:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <FSL_M_Control> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <XIL_NPI_WrFIFO_AlmostFull> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <startlat> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 6                                              |
+    | Clock              | FSL_S_Clk                 (rising_edge)        |
+    | Reset              | state$or0000              (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000001                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 32-bit register for signal <ADDR_MB>.
+    Found 32-bit register for signal <DATA_MB>.
+    Found 2-bit register for signal <latency_counter>.
+    Found 2-bit subtractor for signal <latency_counter$share0000> created at line 253.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  66 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <readbgcop> synthesized.
+
+
+Synthesizing Unit <system_readbgcop_0_wrapper>.
+    Related source file is "../hdl/system_readbgcop_0_wrapper.v".
+Unit <system_readbgcop_0_wrapper> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 2-bit subtractor                                      : 1
+# Registers                                            : 3
+ 2-bit register                                        : 1
+ 32-bit register                                       : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <readbgcop_0/state/FSM> on signal <state[1:6]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ 000001 | 000001
+ 000010 | 000010
+ 000100 | 000100
+ 001000 | 001000
+ 100000 | 100000
+ 010000 | 010000
+--------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 1
+ 2-bit subtractor                                      : 1
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system_readbgcop_0_wrapper> ...
+
+Optimizing unit <readbgcop> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 72
+ Flip-Flops                                            : 72
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system_readbgcop_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 297
+
+Cell Usage :
+# BELS                             : 50
+#      GND                         : 1
+#      LUT2                        : 3
+#      LUT3                        : 3
+#      LUT4                        : 33
+#      LUT5                        : 5
+#      LUT6                        : 5
+# FlipFlops/Latches                : 72
+#      FDR                         : 38
+#      FDRE                        : 32
+#      FDRS                        : 1
+#      FDSE                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              72  out of  69120     0%  
+ Number of Slice LUTs:                   49  out of  69120     0%  
+    Number used as Logic:                49  out of  69120     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     81
+   Number with an unused Flip Flop:       9  out of     81    11%  
+   Number with an unused LUT:            32  out of     81    39%  
+   Number of fully used LUT-FF pairs:    40  out of     81    49%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                         297
+ Number of bonded IOBs:                   0  out of    640     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)           | Load  |
+-----------------------------------+---------------------------------+-------+
+FSL_S_Clk                          | NONE(readbgcop_0/state_FSM_FFd5)| 72    |
+-----------------------------------+---------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.173ns (Maximum Frequency: 460.091MHz)
+   Minimum input arrival time before clock: 1.624ns
+   Maximum output required time after clock: 1.083ns
+   Maximum combinational path delay: 0.468ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FSL_S_Clk'
+  Clock period: 2.173ns (frequency: 460.091MHz)
+  Total number of paths / destination ports: 352 / 72
+-------------------------------------------------------------------------
+Delay:               2.173ns (Levels of Logic = 2)
+  Source:            readbgcop_0/latency_counter_1 (FF)
+  Destination:       readbgcop_0/DATA_MB_31 (FF)
+  Source Clock:      FSL_S_Clk rising
+  Destination Clock: FSL_S_Clk rising
+
+  Data Path: readbgcop_0/latency_counter_1 to readbgcop_0/DATA_MB_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.471   0.811  readbgcop_0/latency_counter_1 (readbgcop_0/latency_counter_1)
+     LUT6:I2->O           33   0.094   0.703  readbgcop_0/DATA_MB_mux0000<0>21 (readbgcop_0/N5)
+     LUT4:I2->O            1   0.094   0.000  readbgcop_0/DATA_MB_mux0000<9>1 (readbgcop_0/DATA_MB_mux0000<9>)
+     FDR:D                    -0.018          readbgcop_0/DATA_MB_9
+    ----------------------------------------
+    Total                      2.173ns (0.659ns logic, 1.514ns route)
+                                       (30.3% logic, 69.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_S_Clk'
+  Total number of paths / destination ports: 394 / 177
+-------------------------------------------------------------------------
+Offset:              1.624ns (Levels of Logic = 2)
+  Source:            XIL_NPI_RdFIFO_Empty (PAD)
+  Destination:       readbgcop_0/DATA_MB_31 (FF)
+  Destination Clock: FSL_S_Clk rising
+
+  Data Path: XIL_NPI_RdFIFO_Empty to readbgcop_0/DATA_MB_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I0->O           33   0.094   0.703  readbgcop_0/DATA_MB_mux0000<0>21 (readbgcop_0/N5)
+     LUT4:I2->O            1   0.094   0.000  readbgcop_0/DATA_MB_mux0000<9>1 (readbgcop_0/DATA_MB_mux0000<9>)
+     FDR:D                    -0.018          readbgcop_0/DATA_MB_9
+    ----------------------------------------
+    Total                      1.624ns (0.921ns logic, 0.703ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_S_Clk'
+  Total number of paths / destination ports: 101 / 101
+-------------------------------------------------------------------------
+Offset:              1.083ns (Levels of Logic = 1)
+  Source:            readbgcop_0/state_FSM_FFd3 (FF)
+  Destination:       XIL_NPI_RdFIFO_Pop (PAD)
+  Source Clock:      FSL_S_Clk rising
+
+  Data Path: readbgcop_0/state_FSM_FFd3 to XIL_NPI_RdFIFO_Pop
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.471   0.518  readbgcop_0/state_FSM_FFd3 (readbgcop_0/state_FSM_FFd3)
+     LUT3:I2->O            1   0.094   0.000  readbgcop_0/latency_counter_mux0000<0>111 (XIL_NPI_RdFIFO_Pop)
+    ----------------------------------------
+    Total                      1.083ns (0.565ns logic, 0.518ns route)
+                                       (52.2% logic, 47.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 3
+-------------------------------------------------------------------------
+Delay:               0.468ns (Levels of Logic = 1)
+  Source:            XIL_NPI_RdFIFO_Empty (PAD)
+  Destination:       XIL_NPI_RdFIFO_Pop (PAD)
+
+  Data Path: XIL_NPI_RdFIFO_Empty to XIL_NPI_RdFIFO_Pop
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT3:I0->O            1   0.094   0.000  readbgcop_0/latency_counter_mux0000<0>111 (XIL_NPI_RdFIFO_Pop)
+    ----------------------------------------
+    Total                      0.468ns (0.468ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 20.09 secs
+ 
+--> 
+
+
+Total memory usage is 635988 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

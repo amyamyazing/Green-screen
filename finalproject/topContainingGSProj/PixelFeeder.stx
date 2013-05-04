@@ -1,0 +1,65 @@
+Release 14.1 - xst P.15xf (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-at/finalproject/topContainingGSProj/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/cc/cs150/sp13/class/cs150-at/finalproject/topContainingGSProj/xst
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "/home/cc/cs150/sp13/class/cs150-at/finalproject/hdl/system.v" in library work
+Module <system> compiled
+Module <system_microblaze_0_wrapper> compiled
+Module <system_mb_plb_wrapper> compiled
+Module <system_ilmb_wrapper> compiled
+Module <system_dlmb_wrapper> compiled
+Module <system_dlmb_cntlr_wrapper> compiled
+Module <system_ilmb_cntlr_wrapper> compiled
+Module <system_lmb_bram_wrapper> compiled
+Module <system_rs232_uart_1_wrapper> compiled
+Module <system_ddr2_sdram_wrapper> compiled
+Module <system_clock_generator_0_wrapper> compiled
+Module <system_mdm_0_wrapper> compiled
+Module <system_proc_sys_reset_0_wrapper> compiled
+Module <system_readbgcop_0_to_microblaze_0_wrapper> compiled
+Module <system_readbgcop_0_wrapper> compiled
+Module <system_microblaze_0_to_readbgcop_0_wrapper> compiled
+Module <system_readfgcop_0_to_microblaze_0_wrapper> compiled
+Module <system_readfgcop_0_wrapper> compiled
+Module <system_microblaze_0_to_readfgcop_0_wrapper> compiled
+Module <system_microblaze_0_to_writecop_0_wrapper> compiled
+Compiling verilog file "../DVI/hardware/src/pixel_fifo/pixel_fifo.v" in library work
+Module <system_writecop_0_wrapper> compiled
+Compiling verilog file "../DVI/hardware/src/PixelFeeder.v" in library work
+Module <pixel_fifo> compiled
+Module <PixelFeeder> compiled
+No errors in compilation
+Analysis of file <"PixelFeeder.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 0.79 secs
+ 
+--> 
+
+
+Total memory usage is 571140 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

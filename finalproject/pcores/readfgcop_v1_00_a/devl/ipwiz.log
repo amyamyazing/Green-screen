@@ -1,0 +1,64 @@
+
+----------------------------------------------------------------------------
+--                            File Generation                             --
+----------------------------------------------------------------------------
+Start Creating ISE project 
+Start Creating drver source 
+
+----------------------------------------------------------------------------
+--                              Final Report                              --
+----------------------------------------------------------------------------
+Thank you for using Create and Import Peripheral Wizard!
+
+Peripheral summary
+
+  top name       : readfgcop
+  version        : 1.00.a
+  type           : FSL master slave
+  features       : 
+
+File Summary
+
+  - HDL source -
+/home/cc/cs150/sp13/class/cs150-at/finalproject/pcores/readfgcop_v1_00_a/hdl/vhd
+l
+  top level      : readfgcop.vhd
+
+  - XPS interface -
+  /home/cc/cs150/sp13/class/cs150-at/finalproject/pcores/readfgcop_v1_00_a/data
+  mpd            : readfgcop_v2_1_0.mpd
+  pao            : readfgcop_v2_1_0.pao
+
+  - ISE project -
+/home/cc/cs150/sp13/class/cs150-at/finalproject/pcores/readfgcop_v1_00_a/devl/pr
+ojnav
+  ise project    : readfgcop.xise
+  tcl script     : readfgcop.tcl
+
+
+  - XST synthesis -
+/home/cc/cs150/sp13/class/cs150-at/finalproject/pcores/readfgcop_v1_00_a/devl/sy
+nthesis
+  xst script     : readfgcop_xst.scr
+  xst project    : readfgcop_xst.prj
+
+  - Misc file -
+  /home/cc/cs150/sp13/class/cs150-at/finalproject/pcores/readfgcop_v1_00_a/devl
+  help           : README.txt
+  option         : ipwiz.opt
+  log            : ipwiz.log
+
+  - Driver source -
+  /home/cc/cs150/sp13/class/cs150-at/finalproject/drivers/readfgcop_v1_00_a/src
+  makefile       : Makefile
+  header         : readfgcop.h
+  source         : readfgcop.c
+
+  - Driver interface -
+  - user needs to add these to repositories path in SDK (Xilinx
+Tools-->Repositories)
+  /home/cc/cs150/sp13/class/cs150-at/finalproject/drivers/readfgcop_v1_00_a/data
+  mdd            : readfgcop_v2_1_0.mdd
+  tcl            : readfgcop_v2_1_0.tcl
+
+

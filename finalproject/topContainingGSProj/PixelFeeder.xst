@@ -1,0 +1,5 @@
+set -tmpdir "/home/cc/cs150/sp13/class/cs150-at/finalproject/topContainingGSProj/xst/projnav.tmp"
+set -xsthdpdir "/home/cc/cs150/sp13/class/cs150-at/finalproject/topContainingGSProj/xst"
+elaborate
+-ifn PixelFeeder.prj
+-ifmt mixed

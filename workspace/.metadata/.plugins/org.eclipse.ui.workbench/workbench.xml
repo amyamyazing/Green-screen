@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="15" version="2.0">
+<workbenchAdvisor/>
+<window height="768" maximized="true" width="1024" x="0" y="25">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="166" y="30"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.xilinx.sdk.xbash.toolbar1" itemType="typeToolBarContribution" x="40" y="30"/>
+<coolItem id="com.xilinx.sdk.targetmanager.ui.toolbar1" itemType="typeToolBarContribution" x="68" y="30"/>
+<coolItem id="com.xilinx.sdk.sw.toolbar1" itemType="typeToolBarContribution" x="40" y="30"/>
+<coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
+<coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="82" y="30"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="96" y="30"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1361931907148" focus="true" label="Workspace - C/C++">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="gcd.c" partName="gcd.c" path="/home/cc/cs150/sp13/class/cs150-ar/workspace/GCD/src/gcd.c" title="gcd.c" tooltip="GCD/src/gcd.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GCD/src/gcd.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="953" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="gcd_coprocessor.h" partName="gcd_coprocessor.h" path="/home/cc/cs150/sp13/class/cs150-ar/workspace/GCD/src/gcd_coprocessor.h" title="gcd_coprocessor.h" tooltip="GCD/src/gcd_coprocessor.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GCD/src/gcd_coprocessor.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="37" selectionOffset="2077" selectionTopPixel="130"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="gcd_coprocessor.c" partName="gcd_coprocessor.c" path="/home/cc/cs150/sp13/class/cs150-ar/workspace/GCD/src/gcd_coprocessor.c" title="gcd_coprocessor.c" tooltip="GCD/src/gcd_coprocessor.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GCD/src/gcd_coprocessor.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="557" selectionTopPixel="0"/>
+</editor>
+<editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="/home/cc/cs150/sp13/class/cs150-ar/workspace/read_write_DRAM_bsp_0/system.mss" title="system.mss" tooltip="read_write_DRAM_bsp_0/system.mss" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/read_write_DRAM_bsp_0/system.mss"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="read_write_DRAM.c" partName="read_write_DRAM.c" path="/home/cc/cs150/sp13/class/cs150-ar/workspace/read_write_DRAM/src/read_write_DRAM.c" title="read_write_DRAM.c" tooltip="read_write_DRAM/src/read_write_DRAM.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/read_write_DRAM/src/read_write_DRAM.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2695" selectionTopPixel="1544"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="writecopimage.h" partName="writecopimage.h" path="/home/cc/cs150/sp13/class/cs150-ar/workspace/read_write_DRAM/src/writecopimage.h" title="writecopimage.h" tooltip="read_write_DRAM/src/writecopimage.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/read_write_DRAM/src/writecopimage.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="879" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="readbgcop.v" partName="readbgcop.v" title="readbgcop.v" tooltip="/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readbgcop_v1_00_a/hdl/verilog/readbgcop.v" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readbgcop_v1_00_a/hdl/verilog/readbgcop.v"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9354" selectionTopPixel="3341"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="writecopimage.v" partName="writecopimage.v" title="writecopimage.v" tooltip="/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/writecopimage_v1_00_a/hdl/verilog/writecopimage.v" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/writecopimage_v1_00_a/hdl/verilog/writecopimage.v"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="449" selectionTopPixel="2926"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="readfgcop.v" partName="readfgcop.v" title="readfgcop.v" tooltip="/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readfgcop_v1_00_a/hdl/verilog/readfgcop.v" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readfgcop_v1_00_a/hdl/verilog/readfgcop.v"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9478" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="system.xml" partName="system.xml" path="/home/cc/cs150/sp13/class/cs150-ar/workspace/lab5B_hw_platform/system.xml" title="system.xml" tooltip="lab5B_hw_platform/system.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5B_hw_platform/system.xml"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="2048"/>
+</editor>
+<editor id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" partName="system.xml" path="/home/cc/cs150/sp13/class/cs150-ar/workspace/lab5B_hw_platform/system.xml" title="system.xml" tooltip="lab5B_hw_platform/system.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5B_hw_platform/system.xml"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" CommonNavigator.LINKING_ENABLED.delayed="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
+<view id="org.eclipse.tm.terminal.view.TerminalView" partName="Terminal 1">
+<viewState Title="Terminal 1" _keys_="Title,connectionManageractive,connectionManagerconnection0HasCommandInputField,connectionManagerconnection0PartName,connectionManagersize" connectionManageractive="connection0" connectionManagerconnection0HasCommandInputField="false" connectionManagerconnection0PartName="Terminal 1" connectionManagersize="1"/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="303" org.eclipse.ui.ide.locationField="63" org.eclipse.ui.ide.markerType="370" org.eclipse.ui.ide.pathField="123" org.eclipse.ui.ide.priorityField="19" org.eclipse.ui.ide.resourceField="93"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.SearchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.CElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.make.ui.makeTargetActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.buildConfigActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.NavigationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.OpenActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.CodingActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.presentation"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.cdt.ui.CView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.tm.terminal.view.TerminalView"/>
+<show_view_action id="org.eclipse.cdt.make.ui.views.MakeView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.cdt.ui.includeBrowser"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewSourceFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewHeaderFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="com.xilinx.sdk.appwiz.CAppWizard"/>
+<new_wizard_action id="com.xilinx.sdk.appwiz.CCAppWizard"/>
+<new_wizard_action id="com.xilinx.sdk.hw.newHwWizard"/>
+<new_wizard_action id="com.xilinx.sdk.sw.ui.NewBspWizard"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.tm.terminal.view.TerminalView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.cdt.make.ui.views.MakeView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.cdt.ui.CView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.24950495" ratioLeft="252" ratioRight="758" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.7488226" ratioLeft="477" ratioRight="160" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.tm.terminal.view.TerminalView" label="Terminal 1"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="topRight" ratio="0.74934036" ratioLeft="568" ratioRight="190" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.cdt.make.ui.views.MakeView" label="Make Target"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readfgcop_v1_00_a/data/readfgcop_v2_1_0.mpd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/read_write_DRAM/src/read_write_DRAM.c"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readfgcop_v1_00_a/hdl/verilog/readfgcop.v"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readbgcop_v1_00_a/hdl/verilog/readbgcop.v"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readbgcop_v1_00_a/data/readbgcop_v2_1_0.mpd"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/writecopimage_v1_00_a/hdl/verilog/writecopimage.v"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/writecopimage_v1_00_a/hdl/verilog/writecopimage.v"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readbgcop_v1_00_a/hdl/verilog/readbgcop.v"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/read_write_DRAM/src/read_write_DRAM.c"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readbgcop_v1_00_a/hdl/verilog/readbgcop.v"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/read_write_DRAM/src/read_write_DRAM.c"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readbgcop_v1_00_a/hdl/verilog/readbgcop.v"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readfgcop_v1_00_a/hdl/verilog/readfgcop.v"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/read_write_DRAM/src/read_write_DRAM.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.lscript.editor" path="/read_write_DRAM/src/lscript.ld"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/lab5B_hw_platform/system.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/lab5B_hw_platform/system.xml"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readfgcop_v1_00_a/hdl/verilog/readfgcop.v"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/read_write_DRAM/src/read_write_DRAM.c"/>
+</editors>
+<item historyLabel="readbgcop.v" index="3">
+<position info="not_deleted" x="9554" y="0"/>
+</item>
+<item historyLabel="readfgcop.v" index="2">
+<position info="not_deleted" x="10645" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="1">
+<position info="not_deleted" x="2914" y="0"/>
+</item>
+<item historyLabel="readfgcop.v" index="2">
+<position info="not_deleted" x="9499" y="0"/>
+</item>
+<item historyLabel="readfgcop_v2_1_0.mpd" index="0">
+<position info="not_deleted" x="1948" y="0"/>
+</item>
+<item historyLabel="readfgcop.v" index="2">
+<position info="not_deleted" x="9499" y="0"/>
+</item>
+<item historyLabel="readbgcop_v2_1_0.mpd" index="4">
+<position info="not_deleted" x="1995" y="0"/>
+</item>
+<item historyLabel="readfgcop.v" index="2">
+<position info="not_deleted" x="9499" y="0"/>
+</item>
+<item historyLabel="writecopimage.v" index="5">
+<position info="not_deleted" x="449" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="3">
+<position info="not_deleted" x="9777" y="0"/>
+</item>
+<item historyLabel="readfgcop.v" index="2">
+<position info="not_deleted" x="9499" y="0"/>
+</item>
+<item historyLabel="writecopimage.v" index="6">
+<position info="not_deleted" x="449" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="7">
+<position info="not_deleted" x="9777" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="8">
+<position info="not_deleted" x="2914" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="9">
+<position info="not_deleted" x="9769" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="10">
+<position info="not_deleted" x="2757" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="9">
+<position info="not_deleted" x="10247" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="10">
+<position info="not_deleted" x="2757" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="11">
+<position info="not_deleted" x="10245" y="0"/>
+</item>
+<item historyLabel="readfgcop.v" index="12">
+<position info="not_deleted" x="10783" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="11">
+<position info="not_deleted" x="9987" y="0"/>
+</item>
+<item historyLabel="readfgcop.v" index="12">
+<position info="not_deleted" x="10751" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="11">
+<position info="not_deleted" x="9987" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="13">
+<position info="not_deleted" x="3939" y="0"/>
+</item>
+<item historyLabel="lscript.ld" index="14"/>
+<item historyLabel="read_write_DRAM.c" index="13">
+<position info="not_deleted" x="2457" y="0"/>
+</item>
+<item historyLabel="system.xml" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="system.xml" index="16"/>
+<item historyLabel="readfgcop.v" index="17">
+<position info="not_deleted" x="9020" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="13">
+<position info="not_deleted" x="3950" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="11">
+<position/>
+</item>
+<item historyLabel="readfgcop.v" index="17">
+<position info="not_deleted" x="9020" y="0"/>
+</item>
+<item historyLabel="system.xml" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="system.xml" index="16"/>
+<item historyLabel="read_write_DRAM.c" index="13">
+<position info="not_deleted" x="3950" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="11">
+<position info="not_deleted" x="10518" y="0"/>
+</item>
+<item historyLabel="readfgcop.v" index="17">
+<position info="not_deleted" x="9478" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="11">
+<position info="not_deleted" x="10382" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="13">
+<position info="not_deleted" x="3913" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="11">
+<position info="not_deleted" x="10363" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="13">
+<position info="not_deleted" x="3913" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="13">
+<position info="not_deleted" x="4067" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="13">
+<position info="not_deleted" x="4039" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="13">
+<position info="not_deleted" x="4091" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="11">
+<position info="not_deleted" x="10363" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="13">
+<position info="not_deleted" x="3958" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="11">
+<position info="not_deleted" x="10382" y="0"/>
+</item>
+<item historyLabel="read_write_DRAM.c" index="13">
+<position info="not_deleted" x="3958" y="0"/>
+</item>
+<item historyLabel="readbgcop.v" index="11">
+<position info="not_deleted" x="10382" y="0"/>
+</item>
+<item active="true" historyLabel="read_write_DRAM.c" index="18">
+<position info="not_deleted" x="4014" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" tooltip="lab5B_hw_platform/system.xml">
+<persistable path="/lab5B_hw_platform/system.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.lscript.editor" name="lscript.ld" tooltip="read_write_DRAM/src/lscript.ld">
+<persistable path="/read_write_DRAM/src/lscript.ld"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="readbgcop_v2_1_0.mpd" tooltip="/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readbgcop_v1_00_a/data/readbgcop_v2_1_0.mpd">
+<persistable uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readbgcop_v1_00_a/data/readbgcop_v2_1_0.mpd"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="readfgcop.v" tooltip="/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readfgcop_v1_00_a/hdl/verilog/readfgcop.v">
+<persistable uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readfgcop_v1_00_a/hdl/verilog/readfgcop.v"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="readfgcop_v2_1_0.mpd" tooltip="/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readfgcop_v1_00_a/data/readfgcop_v2_1_0.mpd">
+<persistable uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readfgcop_v1_00_a/data/readfgcop_v2_1_0.mpd"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="writecopimage.v" tooltip="/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/writecopimage_v1_00_a/hdl/verilog/writecopimage.v">
+<persistable uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/writecopimage_v1_00_a/hdl/verilog/writecopimage.v"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="readbgcop.v" tooltip="/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readbgcop_v1_00_a/hdl/verilog/readbgcop.v">
+<persistable uri="file:/home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/readbgcop_v1_00_a/hdl/verilog/readbgcop.v"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="writecopimage.c" tooltip="read_write_DRAM/src/writecopimage.c">
+<persistable path="/read_write_DRAM/src/writecopimage.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="writecopimage.h" tooltip="read_write_DRAM/src/writecopimage.h">
+<persistable path="/read_write_DRAM/src/writecopimage.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="read_write_DRAM.c" tooltip="read_write_DRAM/src/read_write_DRAM.c">
+<persistable path="/read_write_DRAM/src/read_write_DRAM.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="read_write_DRAM_bsp_0/system.mss">
+<persistable path="/read_write_DRAM_bsp_0/system.mss"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="gcd_coprocessor.c" tooltip="GCD/src/gcd_coprocessor.c">
+<persistable path="/GCD/src/gcd_coprocessor.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="gcd_coprocessor.h" tooltip="GCD/src/gcd_coprocessor.h">
+<persistable path="/GCD/src/gcd_coprocessor.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="gcd.c" tooltip="GCD/src/gcd.c">
+<persistable path="/GCD/src/gcd.c"/>
+</file>
+</mruList>
+</workbench>

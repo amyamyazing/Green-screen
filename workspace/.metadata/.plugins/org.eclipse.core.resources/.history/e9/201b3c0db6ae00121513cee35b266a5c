@@ -1,0 +1,184 @@
+/*
+ * Copyright (c) 2009 Xilinx, Inc.  All rights reserved.
+ *
+ * Xilinx, Inc.
+ * XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A
+ * COURTESY TO YOU.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+ * ONE POSSIBLE   IMPLEMENTATION OF THIS FEATURE, APPLICATION OR
+ * STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION
+ * IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE
+ * FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION.
+ * XILINX EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO
+ * THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO
+ * ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+ * FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ */
+
+/*
+ * helloworld.c: simple test application
+ */
+#include <stdio.h>
+#include "readbgcop.h"
+#include "writecopimage.h"
+
+int getOperation()
+{
+	xil_printf("Select the operation you want to perform:\n\r");
+	xil_printf("0.Read using CPU, 1.Read using coprocessor, "
+	    			"2. Write using CPU, 3. Write using coprocessor\n\r");
+	while(1)
+	{
+
+		char curC = getchar();
+		xil_printf("%c\r\n", curC);
+		int opNum = curC -'0';
+		if(opNum>=0 && opNum <4)
+			return opNum;
+		else{
+			xil_printf("the invalid operation is %x\r\n", curC);
+			xil_printf("Invalid operation, try again.\n\r");
+		}
+	}
+}
+
+
+int getHexNum()
+{
+    //unsigned int input_0[2];
+    //unsigned int output_0[1];
+    //input_0[0] = 0x90000000;
+    //input_0[1] = 0xffff0000;
+	int curHex = 0;
+    int i = 0;
+	while(1)
+	{
+		//xil_printf("i is %x\r\n", i);
+		char curC = getchar();
+		unsigned int c = curC;
+		//xil_printf(" %c ", curC);
+		if (curC != '\r' && curC != '\n' && c != 0){
+			if(curC >= '0' && curC <='9')
+			{
+				curHex = (curHex<<4)+(curC - '0');
+				i = (i+1)%6;
+			}
+			else if(curC>= 'a' && curC <= 'f')
+			{
+				curHex = (curHex<<4)+(curC-'a'+10);
+				i = (i+1)%6;
+			}
+			else if(curC>= 'A' && curC <= 'F')
+			{
+				curHex = (curHex<<4)+(curC-'A'+10);
+				i = (i+1)%6;
+			}
+
+			if(i == 0)
+			{
+				//xil_printf("\n\r");
+//				input_0[0] = addr;
+//				writecopimage(
+//							 2,
+//							 input_0
+//							 );
+//				input_0[0] = input_0[0] + 0x00000008;
+				return curHex;
+			}
+		}
+	}
+}
+//int test()
+//{
+//	unsigned int value = 0x00000000;
+//    unsigned int* addr = 0x9f000000;
+//	while(value <= 0x00ffffff){
+//		value = *addr;
+//		addr = addr + 0x00000008;
+//	}
+//	return addr;
+//
+//}
+
+
+int main()
+{
+    unsigned int input_0[2];
+//    unsigned int output_0[1];
+    input_0[0] = 0x903a9800;
+	//input_0[1] = 0xffff0000;
+//    unsigned int* addr = 0x90000000;
+//    unsigned int val;
+
+
+    while(1)
+    {
+
+
+//    	val = getHexNum();
+//    	input_0[1] = getHexNum();
+//
+//    	writecopimage(
+//    				 2,
+//    				 input_0
+//    				 );
+//    	input_0[0] = input_0[0] + 0x00000008;
+//    	*addr = val;
+//    	addr = addr + 0x00000008;
+//    	xil_printf("write done\n");
+
+    	input_0[1] = input_0[1] + 0x00000001;
+    	int op = 1;//getOperation();
+    	//xil_printf("Specify address in hex (must be 8 byte aligned and between 90000000 and 9fffffff)\n\r");
+    	//unsigned int addrNum = getHexNum();
+//    	if(addrNum<0x90000000 || addrNum>0x9fffffff || (addrNum%8))
+//    	{
+//    		xil_printf("Invalid Address %x, try again\r\n",addrNum);
+//    		continue;
+//    	}
+//    	unsigned int* addr = addrNum;
+//    	input_0[0] = addr;
+
+    	if(op>1)
+    	{
+    		//unsigned int newNum
+    		xil_printf("Specify value to write in hex\n\r");
+    		unsigned int val = getHexNum();
+
+    		if(op==2)
+    			*addr = val;
+    		else
+    		{
+    			input_0[1] = val;
+    			writecopimage(
+    					 2,
+    					 input_0
+    					 );
+
+    		}
+    		xil_printf("Written %x to %x\r\n",  val, addr);
+    	}
+    	else
+    	{
+    		// reading
+    		if(op==0)
+    			output_0[0] = *addr;
+    		else
+    		{
+    			readbgcop(
+							 0,
+							 0,
+							 input_0,
+							 output_0
+							 );
+    		}
+    		xil_printf("%x is read from DRAM\r\n", output_0[0]);
+    	}
+    }
+
+
+
+
+    return 0;
+}

@@ -5,7 +5,7 @@ CS150 project
 
 How to run this project:
 
-To test writing to DRAM you will need the "workspace" folder and our XPS system.xmp which can be found in "finalproject" folder"
+To test writing to DRAM you will need the "workspace" folder and our XPS system.xmp which can be found in "finalproject" folder
 
 To test DVI for constant color through the pixelfeeder, you will test it through the "DVIcrap" folder that has already been made so you should only have to run "make impact"
 

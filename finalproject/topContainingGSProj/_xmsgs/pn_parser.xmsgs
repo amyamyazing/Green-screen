@@ -8,5 +8,113 @@
 <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/CountCompare.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/CountCompare.v</arg>&quot; Line <arg fmt="%d" index="2">44</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/Const.v&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/CountCompare.v&quot; line 44
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/CountRegion.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/CountRegion.v</arg>&quot; Line <arg fmt="%d" index="2">43</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/Const.v&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/CountRegion.v&quot; line 43
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/Counter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/DVI.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/DVIData.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/DVIInitial.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/DVIInitial.v</arg>&quot; Line <arg fmt="%d" index="2">133</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CDRAMMaster.constants&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/DVIInitial.v&quot; line 133
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/DVIInitial.v</arg>&quot; Line <arg fmt="%d" index="2">134</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CMaster.constants&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/DVIInitial.v&quot; line 134
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/FIFOInitial.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/FIFOInitial.v</arg>&quot; Line <arg fmt="%d" index="2">44</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/Const.v&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/FIFOInitial.v&quot; line 44
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/FIFORegControl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/FIFORegister.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CDRAMMaster.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CDRAMMaster.v</arg>&quot; Line <arg fmt="%d" index="2">45</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/Const.v&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CDRAMMaster.v&quot; line 45
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CDRAMMaster.v</arg>&quot; Line <arg fmt="%d" index="2">136</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CDRAMMaster.constants&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CDRAMMaster.v&quot; line 136
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CDRAMMaster.v</arg>&quot; Line <arg fmt="%d" index="2">137</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CMaster.constants&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CDRAMMaster.v&quot; line 137
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CMaster.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CMaster.v</arg>&quot; Line <arg fmt="%d" index="2">45</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/Const.v&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CMaster.v&quot; line 45
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CMaster.v</arg>&quot; Line <arg fmt="%d" index="2">111</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CMaster.constants&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/I2CMaster.v&quot; line 111
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/PixelCounter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/PixelCounter.v</arg>&quot; Line <arg fmt="%d" index="2">45</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/Const.v&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/PixelCounter.v&quot; line 45
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/Register.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/SDR2DDR.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/SDR2DDR.v</arg>&quot; Line <arg fmt="%d" index="2">44</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/Const.v&apos; in file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/SDR2DDR.v&quot; line 44
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/DVI/ShiftRegister.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/IORegister.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/DVI/hardware/src/PixelFeeder.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/buff.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/greenscreen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cc/cs150/sp13/class/cs150-at/finalproject/system_top.v&quot; into library work</arg>
+</msg>
+
 </messages>
 

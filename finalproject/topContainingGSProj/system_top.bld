@@ -424,62 +424,6 @@ WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
    "U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V5.U_CS_B
    RAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb16/U_RAMB16" of
    type "RAMB16".  This attribute will be ignored.
-WARNING:NgdBuild:452 - logical net 'N116' has no driver
-WARNING:NgdBuild:452 - logical net 'N117' has no driver
-WARNING:NgdBuild:452 - logical net 'N118' has no driver
-WARNING:NgdBuild:452 - logical net 'N119' has no driver
-WARNING:NgdBuild:452 - logical net 'N120' has no driver
-WARNING:NgdBuild:452 - logical net 'N121' has no driver
-WARNING:NgdBuild:452 - logical net 'N122' has no driver
-WARNING:NgdBuild:452 - logical net 'N123' has no driver
-WARNING:NgdBuild:452 - logical net 'N124' has no driver
-WARNING:NgdBuild:452 - logical net 'N125' has no driver
-WARNING:NgdBuild:452 - logical net 'N126' has no driver
-WARNING:NgdBuild:452 - logical net 'N127' has no driver
-WARNING:NgdBuild:452 - logical net 'N128' has no driver
-WARNING:NgdBuild:452 - logical net 'N129' has no driver
-WARNING:NgdBuild:452 - logical net 'N130' has no driver
-WARNING:NgdBuild:452 - logical net 'N131' has no driver
-WARNING:NgdBuild:452 - logical net 'N132' has no driver
-WARNING:NgdBuild:452 - logical net 'N133' has no driver
-WARNING:NgdBuild:452 - logical net 'N134' has no driver
-WARNING:NgdBuild:452 - logical net 'N135' has no driver
-WARNING:NgdBuild:452 - logical net 'N136' has no driver
-WARNING:NgdBuild:452 - logical net 'N137' has no driver
-WARNING:NgdBuild:452 - logical net 'N138' has no driver
-WARNING:NgdBuild:452 - logical net 'N139' has no driver
-WARNING:NgdBuild:452 - logical net 'N140' has no driver
-WARNING:NgdBuild:452 - logical net 'N141' has no driver
-WARNING:NgdBuild:452 - logical net 'N142' has no driver
-WARNING:NgdBuild:452 - logical net 'N143' has no driver
-WARNING:NgdBuild:452 - logical net 'N144' has no driver
-WARNING:NgdBuild:452 - logical net 'N145' has no driver
-WARNING:NgdBuild:452 - logical net 'N146' has no driver
-WARNING:NgdBuild:452 - logical net 'N147' has no driver
-WARNING:NgdBuild:452 - logical net 'N148' has no driver
-WARNING:NgdBuild:452 - logical net 'N149' has no driver
-WARNING:NgdBuild:452 - logical net 'N150' has no driver
-WARNING:NgdBuild:452 - logical net 'N151' has no driver
-WARNING:NgdBuild:452 - logical net 'N152' has no driver
-WARNING:NgdBuild:452 - logical net 'N153' has no driver
-WARNING:NgdBuild:452 - logical net 'N154' has no driver
-WARNING:NgdBuild:452 - logical net 'N155' has no driver
-WARNING:NgdBuild:452 - logical net 'N156' has no driver
-WARNING:NgdBuild:452 - logical net 'N157' has no driver
-WARNING:NgdBuild:452 - logical net 'N158' has no driver
-WARNING:NgdBuild:452 - logical net 'N159' has no driver
-WARNING:NgdBuild:452 - logical net 'N160' has no driver
-WARNING:NgdBuild:452 - logical net 'N161' has no driver
-WARNING:NgdBuild:452 - logical net 'N162' has no driver
-WARNING:NgdBuild:452 - logical net 'N163' has no driver
-WARNING:NgdBuild:452 - logical net 'N164' has no driver
-WARNING:NgdBuild:452 - logical net 'N165' has no driver
-WARNING:NgdBuild:452 - logical net 'N166' has no driver
-WARNING:NgdBuild:452 - logical net 'N167' has no driver
-WARNING:NgdBuild:452 - logical net 'N168' has no driver
-WARNING:NgdBuild:452 - logical net 'N169' has no driver
-WARNING:NgdBuild:452 - logical net 'N170' has no driver
-WARNING:NgdBuild:452 - logical net 'N171' has no driver
 WARNING:NgdBuild:452 - logical net 'N172' has no driver
 WARNING:NgdBuild:452 - logical net 'N173' has no driver
 WARNING:NgdBuild:452 - logical net 'N174' has no driver
@@ -504,6 +448,62 @@ WARNING:NgdBuild:452 - logical net 'N192' has no driver
 WARNING:NgdBuild:452 - logical net 'N193' has no driver
 WARNING:NgdBuild:452 - logical net 'N194' has no driver
 WARNING:NgdBuild:452 - logical net 'N195' has no driver
+WARNING:NgdBuild:452 - logical net 'N196' has no driver
+WARNING:NgdBuild:452 - logical net 'N197' has no driver
+WARNING:NgdBuild:452 - logical net 'N198' has no driver
+WARNING:NgdBuild:452 - logical net 'N199' has no driver
+WARNING:NgdBuild:452 - logical net 'N200' has no driver
+WARNING:NgdBuild:452 - logical net 'N201' has no driver
+WARNING:NgdBuild:452 - logical net 'N202' has no driver
+WARNING:NgdBuild:452 - logical net 'N203' has no driver
+WARNING:NgdBuild:452 - logical net 'N204' has no driver
+WARNING:NgdBuild:452 - logical net 'N205' has no driver
+WARNING:NgdBuild:452 - logical net 'N206' has no driver
+WARNING:NgdBuild:452 - logical net 'N207' has no driver
+WARNING:NgdBuild:452 - logical net 'N208' has no driver
+WARNING:NgdBuild:452 - logical net 'N209' has no driver
+WARNING:NgdBuild:452 - logical net 'N210' has no driver
+WARNING:NgdBuild:452 - logical net 'N211' has no driver
+WARNING:NgdBuild:452 - logical net 'N212' has no driver
+WARNING:NgdBuild:452 - logical net 'N213' has no driver
+WARNING:NgdBuild:452 - logical net 'N214' has no driver
+WARNING:NgdBuild:452 - logical net 'N215' has no driver
+WARNING:NgdBuild:452 - logical net 'N216' has no driver
+WARNING:NgdBuild:452 - logical net 'N217' has no driver
+WARNING:NgdBuild:452 - logical net 'N218' has no driver
+WARNING:NgdBuild:452 - logical net 'N219' has no driver
+WARNING:NgdBuild:452 - logical net 'N220' has no driver
+WARNING:NgdBuild:452 - logical net 'N221' has no driver
+WARNING:NgdBuild:452 - logical net 'N222' has no driver
+WARNING:NgdBuild:452 - logical net 'N223' has no driver
+WARNING:NgdBuild:452 - logical net 'N224' has no driver
+WARNING:NgdBuild:452 - logical net 'N225' has no driver
+WARNING:NgdBuild:452 - logical net 'N226' has no driver
+WARNING:NgdBuild:452 - logical net 'N227' has no driver
+WARNING:NgdBuild:452 - logical net 'N228' has no driver
+WARNING:NgdBuild:452 - logical net 'N229' has no driver
+WARNING:NgdBuild:452 - logical net 'N230' has no driver
+WARNING:NgdBuild:452 - logical net 'N231' has no driver
+WARNING:NgdBuild:452 - logical net 'N232' has no driver
+WARNING:NgdBuild:452 - logical net 'N233' has no driver
+WARNING:NgdBuild:452 - logical net 'N234' has no driver
+WARNING:NgdBuild:452 - logical net 'N235' has no driver
+WARNING:NgdBuild:452 - logical net 'N236' has no driver
+WARNING:NgdBuild:452 - logical net 'N237' has no driver
+WARNING:NgdBuild:452 - logical net 'N238' has no driver
+WARNING:NgdBuild:452 - logical net 'N239' has no driver
+WARNING:NgdBuild:452 - logical net 'N240' has no driver
+WARNING:NgdBuild:452 - logical net 'N241' has no driver
+WARNING:NgdBuild:452 - logical net 'N242' has no driver
+WARNING:NgdBuild:452 - logical net 'N243' has no driver
+WARNING:NgdBuild:452 - logical net 'N244' has no driver
+WARNING:NgdBuild:452 - logical net 'N245' has no driver
+WARNING:NgdBuild:452 - logical net 'N246' has no driver
+WARNING:NgdBuild:452 - logical net 'N247' has no driver
+WARNING:NgdBuild:452 - logical net 'N248' has no driver
+WARNING:NgdBuild:452 - logical net 'N249' has no driver
+WARNING:NgdBuild:452 - logical net 'N250' has no driver
+WARNING:NgdBuild:452 - logical net 'N251' has no driver
 
 Partition Implementation Status
 -------------------------------
@@ -516,10 +516,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 134
 
-Total memory usage is 667080 kilobytes
+Total memory usage is 667328 kilobytes
 
 Writing NGD file "system_top.ngd" ...
-Total REAL time to NGDBUILD completion: 2 min  37 sec
+Total REAL time to NGDBUILD completion: 2 min  38 sec
 Total CPU time to NGDBUILD completion:  2 min  36 sec
 
 Writing NGDBUILD log file "system_top.bld"...

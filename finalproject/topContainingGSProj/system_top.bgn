@@ -6,7 +6,7 @@ Loading device for application Rf_Device from file '5vlx110t.nph' in environment
 -1
 Opened constraints file system_top.pcf.
 
-Fri May  3 13:26:15 2013
+Mon May  6 14:41:30 2013
 
 /opt/Xilinx/14.1/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:2 -g CclkPin:PullUp -g M0Pin:PullUp -g M1Pin:PullUp -g M2Pin:PullUp -g ProgPin:PullUp -g DonePin:PullUp -g InitPin:Pullup -g CsPin:Pullup -g DinPin:Pullup -g BusyPin:Pullup -g RdWrPin:Pullup -g HswapenPin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ConfigFallback:Enable -g SelectMAPAbort:Enable -g BPI_page_size:1 -g OverTempPowerDown:Disable -g USR_ACCESS:None -g JTAG_SysMon:Enable -g DCIUpdateMode:AsRequired -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Match_cycle:Auto -g Security:None -g DonePipe:Yes -g DriveDone:No -g Encrypt:No system_top.ncd 
 
@@ -128,16 +128,16 @@ There were 0 CONFIG constraint(s) processed from system_top.pcf.
 
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_0' at 'RAMB36_X2Y25' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_0' at 'RAMB36_X2Y30' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_1' at 'RAMB36_X2Y24' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_1' at 'RAMB36_X2Y23' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_2' at 'RAMB36_X2Y16' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_2' at 'RAMB36_X0Y17' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_3' at 'RAMB36_X2Y17' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_3' at 'RAMB36_X1Y17' location successfully updated with design data.
 
 
 INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_4' at 'RAMB36_X1Y18' location successfully updated with design data.
@@ -146,49 +146,48 @@ INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_4' at 'RAMB36_X1Y18' locatio
 INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_5' at 'RAMB36_X1Y19' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_6' at 'RAMB36_X1Y17' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_6' at 'RAMB36_X1Y27' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_7' at 'RAMB36_X1Y20' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_7' at 'RAMB36_X1Y22' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_8' at 'RAMB36_X2Y20' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_8' at 'RAMB36_X2Y24' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_9' at 'RAMB36_X2Y21' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_9' at 'RAMB36_X2Y29' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_10' at 'RAMB36_X2Y27' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_10' at 'RAMB36_X2Y28' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_11' at 'RAMB36_X2Y26' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_11' at 'RAMB36_X1Y23' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_12' at 'RAMB36_X2Y23' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_12' at 'RAMB36_X1Y29' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_13' at 'RAMB36_X2Y22' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_13' at 'RAMB36_X0Y29' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_14' at 'RAMB36_X2Y19' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_14' at 'RAMB36_X1Y30' location successfully updated with design data.
 
 
-INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_15' at 'RAMB36_X2Y18' location successfully updated with design data.
+INFO::100 - BRAM 'system_i/lmb_bram/lmb_bram/ramb36_15' at 'RAMB36_X1Y28' location successfully updated with design data.
 
 Running DRC.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net count_not0000 is sourced by
-   a combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net count3_not0000 is sourced
-   by a combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net count2_not0000 is sourced
-   by a combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   readfgcop_0_FSL_M_Write_pin_OBUF is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   readbgcop_0_FSL_M_Write_pin_OBUF is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net chipscope_control<13> is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-DRC detected 0 errors and 4 warnings.  Please see the previously displayed
+DRC detected 0 errors and 3 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
 '2100@license-srv.eecs.berkeley.edu'.

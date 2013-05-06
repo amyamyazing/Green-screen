@@ -196,8 +196,10 @@ Compiling verilog file "../DVI/hardware/src/PixelFeeder.v" in library work
 Module <GreenScreen> compiled
 Compiling verilog file "../DVI/hardware/src/DVI/DVI.v" in library work
 Module <PixelFeeder> compiled
-Compiling verilog file "../system_top.v" in library work
+Compiling verilog file "../buff.v" in library work
 Module <DVI> compiled
+Compiling verilog file "../system_top.v" in library work
+Module <buff> compiled
 Module <system_top> compiled
 No errors in compilation
 Analysis of file <"system_top.prj"> succeeded.
@@ -207,6 +209,8 @@ Analysis of file <"system_top.prj"> succeeded.
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for module <system_top> in library <work>.
+
+Analyzing hierarchy for module <buff> in library <work>.
 
 Analyzing hierarchy for module <GreenScreen> in library <work>.
 
@@ -590,14 +594,6 @@ Analyzing hierarchy for module <Register> in library <work> with parameters.
 	SetValue = "1"
 	Width = "00000000000000000000000000000001"
 
-Analyzing hierarchy for module <Register> in library <work> with parameters.
-	AsyncReset = "00000000000000000000000000000000"
-	AsyncSet = "00000000000000000000000000000000"
-	Initial = "X"
-	ResetValue = "0"
-	SetValue = "1"
-	Width = "00000000000000000000000000000001"
-
 Analyzing hierarchy for module <ShiftRegister> in library <work> with parameters.
 	AsyncReset = "00000000000000000000000000000000"
 	AsyncSet = "00000000000000000000000000000000"
@@ -719,10 +715,10 @@ Analyzing hierarchy for module <Register> in library <work> with parameters.
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <system_top>.
-WARNING:Xst:2211 - "../DVI/hardware/src/pixel_fifo/pixel_fifo.v" line 229: Instantiating black box module <pixel_fifo>.
-WARNING:Xst:2211 - "../DVI/hardware/src/pixel_fifo/pixel_fifo.v" line 240: Instantiating black box module <pixel_fifo>.
-WARNING:Xst:2211 - "../../labs/lab4/src/chipscope/chipscope_icon.v" line 348: Instantiating black box module <chipscope_icon>.
-WARNING:Xst:2211 - "../../labs/lab4/src/chipscope/chipscope_ila.v" line 351: Instantiating black box module <chipscope_ila>.
+WARNING:Xst:2211 - "../DVI/hardware/src/pixel_fifo/pixel_fifo.v" line 200: Instantiating black box module <pixel_fifo>.
+WARNING:Xst:2211 - "../DVI/hardware/src/pixel_fifo/pixel_fifo.v" line 211: Instantiating black box module <pixel_fifo>.
+WARNING:Xst:2211 - "../../labs/lab4/src/chipscope/chipscope_icon.v" line 294: Instantiating black box module <chipscope_icon>.
+WARNING:Xst:2211 - "../../labs/lab4/src/chipscope/chipscope_ila.v" line 297: Instantiating black box module <chipscope_ila>.
 Module <system_top> is correct for synthesis.
  
     Set user-defined property "SYN_NOPRUNE =  1" for instance <icon> in unit <system_top>.
@@ -730,13 +726,16 @@ Module <system_top> is correct for synthesis.
     Set property "SYN_NOPRUNE = 1" for instance <icon> in unit <system_top>.
     Set property "SYN_NOPRUNE = 1" for instance <ila> in unit <system_top>.
     Set property "BOX_TYPE = user_black_box" for instance <system_i> in unit <system_top>.
+Analyzing module <buff> in library <work>.
+Module <buff> is correct for synthesis.
+ 
 Analyzing module <GreenScreen> in library <work>.
 Module <GreenScreen> is correct for synthesis.
  
 Analyzing module <PixelFeeder> in library <work>.
 	FETCH = 1'b1
 	IDLE = 1'b0
-WARNING:Xst:2211 - "../DVI/hardware/src/pixel_fifo/pixel_fifo.v" line 59: Instantiating black box module <pixel_fifo>.
+WARNING:Xst:2211 - "../DVI/hardware/src/pixel_fifo/pixel_fifo.v" line 49: Instantiating black box module <pixel_fifo>.
 Module <PixelFeeder> is correct for synthesis.
  
 Analyzing module <DVI> in library <work>.
@@ -1321,6 +1320,20 @@ Module <Register.11> is correct for synthesis.
 
 Performing bidirectional port resolution...
 
+Synthesizing Unit <buff>.
+    Related source file is "../buff.v".
+    Found 2-bit adder for signal <$add0000> created at line 19.
+    Found 2-bit register for signal <counter>.
+    Found 32-bit register for signal <p0>.
+    Found 32-bit register for signal <p1>.
+    Found 32-bit register for signal <p2>.
+    Found 32-bit register for signal <p3>.
+    Summary:
+	inferred 130 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <buff> synthesized.
+
+
 Synthesizing Unit <GreenScreen>.
     Related source file is "../greenscreen.v".
 WARNING:Xst:1780 - Signal <r_bg> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -1773,15 +1786,12 @@ WARNING:Xst:646 - Signal <pixel_af_addr_din> is assigned but never used. This un
 WARNING:Xst:646 - Signal <fslrdfg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <fg_dout<31:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <dvi_video_ready> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <count3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <count2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <count> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <chipclk> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <bg_dout<31:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <addrfg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:737 - Found 4-bit latch for signal <count>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 4-bit latch for signal <count2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 4-bit latch for signal <count3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Using one-hot encoding for signal <count>.
-    Using one-hot encoding for signal <count2>.
-    Using one-hot encoding for signal <count3>.
 Unit <system_top> synthesized.
 
 
@@ -1792,29 +1802,28 @@ Macro Statistics
 # Multipliers                                          : 4
  18x18-bit multiplier                                  : 1
  9x9-bit multiplier                                    : 3
-# Adders/Subtractors                                   : 10
+# Adders/Subtractors                                   : 13
  10-bit adder                                          : 1
  11-bit adder                                          : 1
  16-bit adder carry out                                : 1
  17-bit adder carry out                                : 1
- 2-bit adder                                           : 1
+ 2-bit adder                                           : 4
  3-bit adder                                           : 1
  7-bit adder                                           : 1
  9-bit adder                                           : 3
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 39
+# Registers                                            : 54
  1-bit register                                        : 22
  10-bit register                                       : 1
  11-bit register                                       : 1
  17-bit register                                       : 1
- 2-bit register                                        : 1
+ 2-bit register                                        : 4
  3-bit register                                        : 7
+ 32-bit register                                       : 12
  40-bit register                                       : 2
  7-bit register                                        : 1
  8-bit register                                        : 3
-# Latches                                              : 3
- 4-bit latch                                           : 3
 # Comparators                                          : 1
  36-bit comparator less                                : 1
 # Tristates                                            : 2
@@ -1908,6 +1917,14 @@ WARNING:Xst:1290 - Hierarchical block <Value> is unconnected in block <DOBuff>.
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <DOBuff> is unconnected in block <I2CControl>.
    It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <p1_24> in Unit <gs_buff> is equivalent to the following 7 FFs/Latches, which will be removed : <p1_25> <p1_26> <p1_27> <p1_28> <p1_29> <p1_30> <p1_31> 
+INFO:Xst:2261 - The FF/Latch <p3_24> in Unit <gs_buff> is equivalent to the following 7 FFs/Latches, which will be removed : <p3_25> <p3_26> <p3_27> <p3_28> <p3_29> <p3_30> <p3_31> 
+INFO:Xst:2261 - The FF/Latch <p0_24> in Unit <gs_buff> is equivalent to the following 7 FFs/Latches, which will be removed : <p0_25> <p0_26> <p0_27> <p0_28> <p0_29> <p0_30> <p0_31> 
+INFO:Xst:2261 - The FF/Latch <p2_24> in Unit <gs_buff> is equivalent to the following 7 FFs/Latches, which will be removed : <p2_25> <p2_26> <p2_27> <p2_28> <p2_29> <p2_30> <p2_31> 
+WARNING:Xst:1710 - FF/Latch <p1_24> (without init value) has a constant value of 0 in block <gs_buff>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <p0_24> (without init value) has a constant value of 0 in block <gs_buff>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <p2_24> (without init value) has a constant value of 0 in block <gs_buff>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <p3_24> (without init value) has a constant value of 0 in block <gs_buff>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Out_0> (without init value) has a constant value of 0 in block <FSM.State>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Out_0> (without init value) has a constant value of 0 in block <FSM.State>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Out_0> (without init value) has a constant value of 0 in block <SAReg>. This FF/Latch will be trimmed during the optimization process.
@@ -1933,19 +1950,17 @@ Macro Statistics
 # Multipliers                                          : 4
  18x18-bit multiplier                                  : 1
  9x9-bit multiplier                                    : 3
-# Adders/Subtractors                                   : 10
+# Adders/Subtractors                                   : 13
  10-bit adder                                          : 1
  11-bit adder                                          : 1
  16-bit adder carry out                                : 1
  17-bit adder carry out                                : 1
- 2-bit adder                                           : 1
+ 2-bit adder                                           : 4
  3-bit adder                                           : 1
  7-bit adder                                           : 1
  9-bit adder                                           : 3
-# Registers                                            : 195
- Flip-Flops                                            : 195
-# Latches                                              : 3
- 4-bit latch                                           : 3
+# Registers                                            : 585
+ Flip-Flops                                            : 585
 # Comparators                                          : 1
  36-bit comparator less                                : 1
 
@@ -1958,11 +1973,6 @@ WARNING:Xst:1710 - FF/Latch <Out_16> (without init value) has a constant value o
 WARNING:Xst:1710 - FF/Latch <RgnAX/FSM.State/Out_0> (without init value) has a constant value of 0 in block <PixelCounter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RgnAY/FSM.State/Out_0> (without init value) has a constant value of 0 in block <PixelCounter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <SAReg/Out_0> (without init value) has a constant value of 0 in block <I2CMaster>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <count3_1> of sequential type is unconnected in block <system_top>.
-WARNING:Xst:2677 - Node <count3_2> of sequential type is unconnected in block <system_top>.
-WARNING:Xst:2677 - Node <count3_3> of sequential type is unconnected in block <system_top>.
-WARNING:Xst:2677 - Node <count2_3> of sequential type is unconnected in block <system_top>.
-WARNING:Xst:2677 - Node <count_3> of sequential type is unconnected in block <system_top>.
 WARNING:Xst:524 - All outputs of the instance <dvi/DVIInit/I2CControl/DOBuff/Value> of the block <Register_11> are unconnected in block <system_top>.
    This instance will be removed from the design along with all underlying logic
 WARNING:Xst:2677 - Node <dvi/DVIInit/I2CControl/DOBuff/Cntrl/FullReg/Out_0> of sequential type is unconnected in block <system_top>.
@@ -1973,6 +1983,8 @@ WARNING:Xst:2170 - Unit microblaze_0_to_readfgcop_0 : the following signal(s) fo
 WARNING:Xst:2170 - Unit microblaze_0_to_writecop_0 : the following signal(s) form a combinatorial loop: microblaze_0_to_writecop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Direction_0_or0000.
 
 Optimizing unit <system_top> ...
+
+Optimizing unit <buff> ...
 
 Optimizing unit <GreenScreen> ...
 
@@ -2005,7 +2017,39 @@ Optimizing unit <FIFOInitial_1> ...
 Optimizing unit <FIFOInitial_2> ...
 
 Optimizing unit <DVIData> ...
+WARNING:Xst:1710 - FF/Latch <gs_buff/p1_24> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p1_25> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p1_26> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p1_27> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p1_28> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p1_29> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p1_30> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p1_31> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p0_24> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p0_25> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p0_26> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p0_27> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p0_28> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p0_29> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p0_30> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p0_31> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <dvi/DVIInit/I2CControl/CurrentState_FSM_FFd1> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p3_31> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p3_30> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p3_29> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p3_28> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p3_27> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p3_26> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p3_25> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p3_24> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p2_31> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p2_30> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p2_29> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p2_28> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p2_27> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p2_26> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p2_25> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gs_buff/p2_24> (without init value) has a constant value of 0 in block <system_top>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -2071,19 +2115,29 @@ Processing Unit <system_top> :
 	Found 5-bit shift register for signal <dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out_38>.
 	Found 5-bit shift register for signal <dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Out_39>.
 	Found 5-bit shift register for signal <dvi/DVIInit/I2CCmdInit/SHIFT.VldShft/SHIFT.Register/Out_4>.
+	Found 5-bit shift register for signal <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_32>.
+	Found 5-bit shift register for signal <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_33>.
+	Found 5-bit shift register for signal <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_34>.
+	Found 5-bit shift register for signal <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_35>.
+	Found 5-bit shift register for signal <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_36>.
+	Found 5-bit shift register for signal <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_37>.
+	Found 5-bit shift register for signal <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_38>.
+	Found 5-bit shift register for signal <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_39>.
+	Found 5-bit shift register for signal <dvi/DVIInit/I2CDatInit/SHIFT.VldShft/SHIFT.Register/Out_4>.
 Unit <system_top> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 136
- Flip-Flops                                            : 136
-# Shift Registers                                      : 9
- 5-bit shift register                                  : 9
+# Registers                                            : 449
+ Flip-Flops                                            : 449
+# Shift Registers                                      : 18
+ 5-bit shift register                                  : 18
 
 =========================================================================
 INFO:Xst:2146 - In block <system_top>, Shifter <dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Mshreg_Out_27> <dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Mshreg_Out_30> are equivalent, XST will keep only <dvi/DVIInit/I2CCmdInit/SHIFT.DataShft/SHIFT.Register/Mshreg_Out_27>.
+INFO:Xst:2146 - In block <system_top>, Shifter <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Mshreg_Out_26> <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Mshreg_Out_25> <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Mshreg_Out_28> are equivalent, XST will keep only <dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Mshreg_Out_26>.
 
 =========================================================================
 *                           Partition Report                            *
@@ -2110,39 +2164,39 @@ Design Statistics
 # IOs                              : 286
 
 Cell Usage :
-# BELS                             : 7945
+# BELS                             : 7627
 #      BUF                         : 11
 #      GND                         : 32
 #      INV                         : 181
 #      LUT1                        : 245
-#      LUT2                        : 722
-#      LUT3                        : 1411
-#      LUT4                        : 996
-#      LUT5                        : 1213
-#      LUT6                        : 1711
+#      LUT2                        : 715
+#      LUT3                        : 1248
+#      LUT4                        : 993
+#      LUT5                        : 1145
+#      LUT6                        : 1630
 #      LUT6_2                      : 79
 #      MULT_AND                    : 2
 #      MUXCY                       : 410
 #      MUXCY_L                     : 239
 #      MUXF5                       : 2
 #      MUXF6                       : 1
-#      MUXF7                       : 211
+#      MUXF7                       : 215
 #      OR4                         : 2
 #      VCC                         : 29
 #      XORCY                       : 448
-# FlipFlops/Latches                : 8808
-#      FD                          : 1727
+# FlipFlops/Latches                : 9121
+#      FD                          : 1685
 #      FD_1                        : 11
 #      FDC                         : 289
 #      FDC_1                       : 5
 #      FDCE                        : 268
 #      FDCPE                       : 24
 #      FDCPE_1                     : 8
-#      FDE                         : 889
+#      FDE                         : 1248
 #      FDE_1                       : 8
 #      FDP                         : 141
 #      FDPE                        : 19
-#      FDR                         : 2345
+#      FDR                         : 2348
 #      FDR_1                       : 3
 #      FDRE                        : 1714
 #      FDRE_1                      : 1
@@ -2153,7 +2207,6 @@ Cell Usage :
 #      FDS_1                       : 2
 #      FDSE                        : 74
 #      IDDR_2CLK                   : 64
-#      LD                          : 7
 #      LDC                         : 1
 #      ODDR                        : 160
 # RAMS                             : 132
@@ -2162,13 +2215,13 @@ Cell Usage :
 #      RAMB16                      : 34
 #      RAMB18                      : 3
 #      RAMB36_EXP                  : 39
-# Shift Registers                  : 243
+# Shift Registers                  : 250
 #      SRL16                       : 112
 #      SRL16E                      : 33
-#      SRLC16E                     : 62
+#      SRLC16E                     : 69
 #      SRLC32E                     : 36
-# Clock Buffers                    : 11
-#      BUFG                        : 11
+# Clock Buffers                    : 14
+#      BUFG                        : 14
 # IO Buffers                       : 274
 #      IBUF                        : 3
 #      IOBUF                       : 65
@@ -2193,19 +2246,19 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            8808  out of  69120    12%  
- Number of Slice LUTs:                 6995  out of  69120    10%  
-    Number used as Logic:              6558  out of  69120     9%  
-    Number used as Memory:              437  out of  17920     2%  
+ Number of Slice Registers:            9121  out of  69120    13%  
+ Number of Slice LUTs:                 6680  out of  69120     9%  
+    Number used as Logic:              6236  out of  69120     9%  
+    Number used as Memory:              444  out of  17920     2%  
        Number used as RAM:              194
-       Number used as SRL:              243
+       Number used as SRL:              250
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  12439
-   Number with an unused Flip Flop:    3631  out of  12439    29%  
-   Number with an unused LUT:          5444  out of  12439    43%  
-   Number of fully used LUT-FF pairs:  3364  out of  12439    27%  
-   Number of unique control sets:       884
+ Number of LUT Flip Flop pairs used:  12320
+   Number with an unused Flip Flop:    3199  out of  12320    25%  
+   Number with an unused LUT:          5640  out of  12320    45%  
+   Number of fully used LUT-FF pairs:  3481  out of  12320    28%  
+   Number of unique control sets:       901
 
 IO Utilization: 
  Number of IOs:                         286
@@ -2214,7 +2267,7 @@ IO Utilization:
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               58  out of    148    39%  
     Number using Block RAM only:         58
- Number of BUFG/BUFGCTRLs:               11  out of     32    34%  
+ Number of BUFG/BUFGCTRLs:               14  out of     32    43%  
  Number of DSP48Es:                       7  out of     64    10%  
  Number of PLL_ADVs:                      1  out of      6    16%  
 
@@ -2256,10 +2309,10 @@ system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT4                   
 icon/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                                                                                                                                                                                               | BUFG                                                                                                                                   | 125   |
 icon/U0/iUPDATE_OUT                                                                                                                                                                                                                                       | NONE(icon/U0/U_ICON/U_iDATA_CMD)                                                                                                       | 1     |
 icon/CONTROL0<13>(icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)                                                                                                                                                                                    | NONE(*)(ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC)                                                                                       | 1     |
-count3_not0000(count3_not00001:O)                                                                                                                                                                                                                         | NONE(*)(count3_0)                                                                                                                      | 1     |
-count2_not0000(count2_not00001:O)                                                                                                                                                                                                                         | NONE(*)(count2_0)                                                                                                                      | 3     |
-count_not0000(count_not00001:O)                                                                                                                                                                                                                           | NONE(*)(count_0)                                                                                                                       | 3     |
-system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5                                                                                                                                                                                             | BUFG                                                                                                                                   | 380   |
+system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5                                                                                                                                                                                             | BUFG                                                                                                                                   | 349   |
+gs_valid1(gs_valid189:O)                                                                                                                                                                                                                                  | BUFG(*)(gs_buff/counter_1)                                                                                                             | 98    |
+system_i/readfgcop_0/FSL_M_Write1(system_i/readfgcop_0/readfgcop_0/FSL_M_Write1:O)                                                                                                                                                                        | BUFG(*)(fg_buff/counter_1)                                                                                                             | 130   |
+system_i/readbgcop_0/FSL_M_Write1(system_i/readbgcop_0/readbgcop_0/FSL_M_Write1:O)                                                                                                                                                                        | BUFG(*)(bg_buff/counter_1)                                                                                                             | 130   |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+-------+
 (*) These 12 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -2353,7 +2406,7 @@ Speed Grade: -1
    Minimum period: 6.602ns (Maximum Frequency: 151.469MHz)
    Minimum input arrival time before clock: 3.874ns
    Maximum output required time after clock: 8.043ns
-   Maximum combinational path delay: 3.714ns
+   Maximum combinational path delay: 3.750ns
 
 Timing Detail:
 --------------
@@ -2474,7 +2527,7 @@ Delay:               3.301ns (Levels of Logic = 5)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1'
   Clock period: 6.052ns (frequency: 165.223MHz)
-  Total number of paths / destination ports: 21561 / 6815
+  Total number of paths / destination ports: 21483 / 6797
 -------------------------------------------------------------------------
 Delay:               6.052ns (Levels of Logic = 9)
   Source:            system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifos.mpmc_read_fifo_0/pushaddr_r_10 (FF)
@@ -2526,30 +2579,30 @@ Delay:               1.381ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT4'
-  Clock period: 3.228ns (frequency: 309.835MHz)
+  Clock period: 3.155ns (frequency: 316.983MHz)
   Total number of paths / destination ports: 3713 / 1996
 -------------------------------------------------------------------------
-Delay:               3.228ns (Levels of Logic = 4)
-  Source:            bg_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/gwas.wsts/ram_full_i (FF)
-  Destination:       bg_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP (RAM)
+Delay:               3.155ns (Levels of Logic = 4)
+  Source:            fg_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_i (FF)
+  Destination:       fg_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (RAM)
   Source Clock:      system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT4 rising
   Destination Clock: system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT4 rising
 
-  Data Path: bg_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.wr/gwas.wsts/ram_full_i to bg_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP
+  Data Path: fg_fifo/BU2/U0/gconvfifo.rf/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_i to fg_fifo/BU2/U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q              1   0.471   0.973  U0/gconvfifo.rf/grf.rf/gl0.wr/gwas.wsts/ram_full_i (full)
+     FDP:C->Q             83   0.471   0.473  U0/gconvfifo.rf/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_i (empty)
      end scope: 'BU2'
-     end scope: 'bg_fifo'
-     LUT5:I0->O            4   0.094   0.496  buffered_bg1 (buffered_bg)
-     begin scope: 'bg_fifo'
+     end scope: 'fg_fifo'
+     INV:I->O              9   0.238   1.113  fg_ready1_INV_0 (fg_ready)
+     begin scope: 'fg_fifo'
      begin scope: 'BU2'
-     LUT2:I1->O           98   0.094   0.476  U0/gconvfifo.rf/grf.rf/gl0.wr/ram_wr_en_i1 (U0/gconvfifo.rf/grf.rf/gl0.wr/wpntr/count_not0001)
-     RAMB18:WEA1               0.624          U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP
+     LUT6:I0->O            4   0.094   0.352  U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/bindec_b.bindec_inst_b/ENOUT_1_mux00001 (U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/enb_array[1])
+     RAMB36_EXP:ENBU           0.414          U0/gconvfifo.rf/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
     ----------------------------------------
-    Total                      3.228ns (1.283ns logic, 1.945ns route)
-                                       (39.8% logic, 60.2% route)
+    Total                      3.155ns (1.217ns logic, 1.938ns route)
+                                       (38.6% logic, 61.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'icon/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
@@ -2603,96 +2656,94 @@ Delay:               1.392ns (Levels of Logic = 1)
                                        (50.9% logic, 49.1% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'count3_not0000'
-  Clock period: 1.675ns (frequency: 597.053MHz)
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Delay:               1.675ns (Levels of Logic = 1)
-  Source:            count3_0 (LATCH)
-  Destination:       count3_0 (LATCH)
-  Source Clock:      count3_not0000 falling
-  Destination Clock: count3_not0000 falling
-
-  Data Path: count3_0 to count3_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q              73   0.736   0.845  count3_0 (count3_0)
-     LUT3:I0->O           26   0.094   0.000  pixel_rdf_valid11 (N6)
-     LD:D                     -0.071          count3_0
-    ----------------------------------------
-    Total                      1.675ns (0.830ns logic, 0.845ns route)
-                                       (49.6% logic, 50.4% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'count2_not0000'
-  Clock period: 1.678ns (frequency: 595.867MHz)
-  Total number of paths / destination ports: 5 / 3
--------------------------------------------------------------------------
-Delay:               1.678ns (Levels of Logic = 1)
-  Source:            count2_2 (LATCH)
-  Destination:       count2_0 (LATCH)
-  Source Clock:      count2_not0000 falling
-  Destination Clock: count2_not0000 falling
-
-  Data Path: count2_2 to count2_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q              91   0.736   0.848  count2_2 (count2_2)
-     LUT3:I0->O            1   0.094   0.000  count2_mux0000<3>1 (count2_mux0000<3>)
-     LD:D                     -0.071          count2_0
-    ----------------------------------------
-    Total                      1.678ns (0.830ns logic, 0.848ns route)
-                                       (49.5% logic, 50.5% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'count_not0000'
-  Clock period: 1.674ns (frequency: 597.516MHz)
-  Total number of paths / destination ports: 5 / 3
--------------------------------------------------------------------------
-Delay:               1.674ns (Levels of Logic = 1)
-  Source:            count_2 (LATCH)
-  Destination:       count_0 (LATCH)
-  Source Clock:      count_not0000 falling
-  Destination Clock: count_not0000 falling
-
-  Data Path: count_2 to count_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q              66   0.736   0.844  count_2 (count_2)
-     LUT3:I0->O            1   0.094   0.000  count_mux0000<3>1 (count_mux0000<3>)
-     LD:D                     -0.071          count_0
-    ----------------------------------------
-    Total                      1.674ns (0.830ns logic, 0.844ns route)
-                                       (49.6% logic, 50.4% route)
-
-=========================================================================
 Timing constraint: Default period analysis for Clock 'system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5'
-  Clock period: 4.657ns (frequency: 214.741MHz)
-  Total number of paths / destination ports: 4620 / 1046
+  Clock period: 4.394ns (frequency: 227.587MHz)
+  Total number of paths / destination ports: 3982 / 1029
 -------------------------------------------------------------------------
-Delay:               4.657ns (Levels of Logic = 5)
-  Source:            dvi/DVIInit/I2CControl/Master/BitCnt/Register/Out_2 (FF)
-  Destination:       dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_0 (FF)
+Delay:               4.394ns (Levels of Logic = 3)
+  Source:            dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1 (FF)
+  Destination:       dvi/DVIData/PixCnt/XCnt/Register/Out_10 (FF)
   Source Clock:      system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5 rising
   Destination Clock: system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5 rising
 
-  Data Path: dvi/DVIInit/I2CControl/Master/BitCnt/Register/Out_2 to dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_0
+  Data Path: dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1 to dvi/DVIData/PixCnt/XCnt/Register/Out_10
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRSE:C->Q            5   0.471   0.995  dvi/DVIInit/I2CControl/Master/BitCnt/Register/Out_2 (dvi/DVIInit/I2CControl/Master/BitCnt/Register/Out_2)
-     LUT5:I0->O            3   0.094   0.800  dvi/DVIInit/I2CControl/Master/DoneOp1 (dvi/DVIInit/I2CControl/Master/DoneOp)
-     LUT5:I1->O            2   0.094   0.485  dvi/DVIInit/I2CControl/CurrentState_FSM_FFd1-In21 (N26)
-     LUT4:I3->O           23   0.094   0.597  dvi/DVIInit/I2CControl/InLatch/Cntrl/InAccept1 (dvi/DVIInit/I2CCommandReady)
-     LUT6:I5->O           40   0.094   0.839  dvi/DVIInit/I2CDatInit/_or00001 (dvi/DVIInit/I2CDatInit/_or0000)
-     LUT3:I0->O            1   0.094   0.000  dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_0_rstpot (dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_0_rstpot)
-     FD:D                     -0.018          dvi/DVIInit/I2CDatInit/SHIFT.DataShft/SHIFT.Register/Out_0
+     FDS:C->Q             30   0.471   0.837  dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1 (dvi/DVIData/PixCnt/RgnAX/FSM.State/Out_1)
+     LUT4:I1->O           18   0.094   1.162  dvi/DVIData/_or00001 (dvi/DVIData/FVPReg/Out_0_rstpot1)
+     LUT6:I0->O           21   0.094   0.684  dvi/DVIData/PixCnt/XReset1 (dvi/DVIData/PixCnt/XReset)
+     LUT2:I0->O           10   0.094   0.385  dvi/DVIData/PixCnt/_or00001 (dvi/DVIData/PixCnt/_or0000)
+     FDRE:R                    0.573          dvi/DVIData/PixCnt/XCnt/Register/Out_1
     ----------------------------------------
-    Total                      4.657ns (0.941ns logic, 3.716ns route)
-                                       (20.2% logic, 79.8% route)
+    Total                      4.394ns (1.326ns logic, 3.068ns route)
+                                       (30.2% logic, 69.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'gs_valid1'
+  Clock period: 1.979ns (frequency: 505.306MHz)
+  Total number of paths / destination ports: 195 / 98
+-------------------------------------------------------------------------
+Delay:               1.979ns (Levels of Logic = 1)
+  Source:            gs_buff/counter_0 (FF)
+  Destination:       gs_buff/p2_23 (FF)
+  Source Clock:      gs_valid1 rising
+  Destination Clock: gs_valid1 rising
+
+  Data Path: gs_buff/counter_0 to gs_buff/p2_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              7   0.471   0.743  gs_buff/counter_0 (gs_buff/counter_0)
+     LUT3:I0->O           24   0.094   0.458  gs_buff/p2_or00001 (gs_buff/p2_or0000)
+     FDE:CE                    0.213          gs_buff/p2_0
+    ----------------------------------------
+    Total                      1.979ns (0.778ns logic, 1.201ns route)
+                                       (39.3% logic, 60.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'system_i/readfgcop_0/FSL_M_Write1'
+  Clock period: 1.984ns (frequency: 503.957MHz)
+  Total number of paths / destination ports: 259 / 130
+-------------------------------------------------------------------------
+Delay:               1.984ns (Levels of Logic = 1)
+  Source:            fg_buff/counter_0 (FF)
+  Destination:       fg_buff/p2_31 (FF)
+  Source Clock:      system_i/readfgcop_0/FSL_M_Write1 rising
+  Destination Clock: system_i/readfgcop_0/FSL_M_Write1 rising
+
+  Data Path: fg_buff/counter_0 to fg_buff/p2_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              7   0.471   0.743  fg_buff/counter_0 (fg_buff/counter_0)
+     LUT3:I0->O           32   0.094   0.463  fg_buff/p2_or00001 (fg_buff/p2_or0000)
+     FDE:CE                    0.213          fg_buff/p2_0
+    ----------------------------------------
+    Total                      1.984ns (0.778ns logic, 1.206ns route)
+                                       (39.2% logic, 60.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'system_i/readbgcop_0/FSL_M_Write1'
+  Clock period: 1.984ns (frequency: 503.957MHz)
+  Total number of paths / destination ports: 259 / 130
+-------------------------------------------------------------------------
+Delay:               1.984ns (Levels of Logic = 1)
+  Source:            bg_buff/counter_0 (FF)
+  Destination:       bg_buff/p2_31 (FF)
+  Source Clock:      system_i/readbgcop_0/FSL_M_Write1 rising
+  Destination Clock: system_i/readbgcop_0/FSL_M_Write1 rising
+
+  Data Path: bg_buff/counter_0 to bg_buff/p2_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              7   0.471   0.743  bg_buff/counter_0 (bg_buff/counter_0)
+     LUT3:I0->O           32   0.094   0.463  bg_buff/p2_or00001 (bg_buff/p2_or0000)
+     FDE:CE                    0.213          bg_buff/p2_0
+    ----------------------------------------
+    Total                      1.984ns (0.778ns logic, 1.206ns route)
+                                       (39.2% logic, 60.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'system_i/mdm_0/mdm_0/drck_i'
@@ -2723,7 +2774,7 @@ Offset:              2.750ns (Levels of Logic = 4)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              1.836ns (Levels of Logic = 3)
+Offset:              1.872ns (Levels of Logic = 3)
   Source:            fpga_0_rst_1_sys_rst_pin (PAD)
   Destination:       system_i/proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_d1 (FF)
   Destination Clock: system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3 rising
@@ -2732,14 +2783,14 @@ Offset:              1.836ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            21   0.818   0.444  fpga_0_rst_1_sys_rst_pin_IBUF (DVI_RESET_B_OBUF)
+     IBUF:I->O           120   0.818   0.480  fpga_0_rst_1_sys_rst_pin_IBUF (DVI_RESET_B_OBUF)
      begin scope: 'system_i'
      begin scope: 'proc_sys_reset_0'
      INV:I->O              1   0.238   0.336  proc_sys_reset_0/EXT_LPF/exr_d1_or000011_INV_0 (proc_sys_reset_0/EXT_LPF/exr_d1_or00001)
      FDS:D                    -0.018          proc_sys_reset_0/EXT_LPF/exr_d1
     ----------------------------------------
-    Total                      1.836ns (1.056ns logic, 0.780ns route)
-                                       (57.5% logic, 42.5% route)
+    Total                      1.872ns (1.056ns logic, 0.816ns route)
+                                       (56.4% logic, 43.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1'
@@ -2965,7 +3016,7 @@ Offset:              3.874ns (Levels of Logic = 5)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT4'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              1.967ns (Levels of Logic = 3)
+Offset:              2.002ns (Levels of Logic = 3)
   Source:            fpga_0_rst_1_sys_rst_pin (PAD)
   Destination:       ila/U0/I_DQ.G_DW[66].U_DQ (FF)
   Destination Clock: system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT4 rising
@@ -2974,39 +3025,99 @@ Offset:              1.967ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            21   0.818   0.444  fpga_0_rst_1_sys_rst_pin_IBUF (DVI_RESET_B_OBUF)
+     IBUF:I->O           120   0.818   0.480  fpga_0_rst_1_sys_rst_pin_IBUF (DVI_RESET_B_OBUF)
      INV:I->O             51   0.238   0.467  rst1_INV_0 (rst)
      begin scope: 'ila'
      FDP:D                    -0.018          U0/I_DQ.G_DW[66].U_DQ
     ----------------------------------------
-    Total                      1.967ns (1.056ns logic, 0.911ns route)
-                                       (53.7% logic, 46.3% route)
+    Total                      2.002ns (1.056ns logic, 0.946ns route)
+                                       (52.7% logic, 47.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5'
-  Total number of paths / destination ports: 131 / 131
+  Total number of paths / destination ports: 100 / 100
 -------------------------------------------------------------------------
-Offset:              3.009ns (Levels of Logic = 2)
+Offset:              3.067ns (Levels of Logic = 2)
   Source:            fpga_0_rst_1_sys_rst_pin (PAD)
-  Destination:       dvi/DVIInit/I2CControl/Master/BitCnt/Register/Out_2 (FF)
+  Destination:       dvi/DVIInit/I2CControl/Master/CycCnt/Register/Out_6 (FF)
   Destination Clock: system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5 rising
 
-  Data Path: fpga_0_rst_1_sys_rst_pin to dvi/DVIInit/I2CControl/Master/BitCnt/Register/Out_2
+  Data Path: fpga_0_rst_1_sys_rst_pin to dvi/DVIInit/I2CControl/Master/CycCnt/Register/Out_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            21   0.818   1.177  fpga_0_rst_1_sys_rst_pin_IBUF (DVI_RESET_B_OBUF)
-     LUT6:I0->O            3   0.094   0.347  dvi/DVIInit/I2CControl/Master/_or00031 (dvi/DVIInit/I2CControl/Master/_or0003)
-     FDRSE:S                   0.573          dvi/DVIInit/I2CControl/Master/BitCnt/Register/Out_0
+     IBUF:I->O           120   0.818   1.213  fpga_0_rst_1_sys_rst_pin_IBUF (DVI_RESET_B_OBUF)
+     LUT6:I0->O            7   0.094   0.369  dvi/DVIInit/I2CControl/Master/_or00011 (dvi/DVIInit/I2CControl/Master/_or0001)
+     FDR:R                     0.573          dvi/DVIInit/I2CControl/Master/CycCnt/Register/Out_0
     ----------------------------------------
-    Total                      3.009ns (1.485ns logic, 1.524ns route)
-                                       (49.4% logic, 50.6% route)
+    Total                      3.067ns (1.485ns logic, 1.582ns route)
+                                       (48.4% logic, 51.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'gs_valid1'
+  Total number of paths / destination ports: 192 / 192
+-------------------------------------------------------------------------
+Offset:              2.437ns (Levels of Logic = 2)
+  Source:            fpga_0_rst_1_sys_rst_pin (PAD)
+  Destination:       gs_buff/p3_23 (FF)
+  Destination Clock: gs_valid1 rising
+
+  Data Path: fpga_0_rst_1_sys_rst_pin to gs_buff/p3_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           120   0.818   0.854  fpga_0_rst_1_sys_rst_pin_IBUF (DVI_RESET_B_OBUF)
+     LUT3:I0->O           24   0.094   0.458  gs_buff/p3_or00001 (gs_buff/p3_or0000)
+     FDE:CE                    0.213          gs_buff/p3_0
+    ----------------------------------------
+    Total                      2.437ns (1.125ns logic, 1.312ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'system_i/readfgcop_0/FSL_M_Write1'
+  Total number of paths / destination ports: 256 / 256
+-------------------------------------------------------------------------
+Offset:              2.442ns (Levels of Logic = 2)
+  Source:            fpga_0_rst_1_sys_rst_pin (PAD)
+  Destination:       fg_buff/p3_31 (FF)
+  Destination Clock: system_i/readfgcop_0/FSL_M_Write1 rising
+
+  Data Path: fpga_0_rst_1_sys_rst_pin to fg_buff/p3_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           120   0.818   0.854  fpga_0_rst_1_sys_rst_pin_IBUF (DVI_RESET_B_OBUF)
+     LUT3:I0->O           32   0.094   0.463  fg_buff/p3_or00001 (fg_buff/p3_or0000)
+     FDE:CE                    0.213          fg_buff/p3_0
+    ----------------------------------------
+    Total                      2.442ns (1.125ns logic, 1.317ns route)
+                                       (46.1% logic, 53.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'system_i/readbgcop_0/FSL_M_Write1'
+  Total number of paths / destination ports: 256 / 256
+-------------------------------------------------------------------------
+Offset:              2.442ns (Levels of Logic = 2)
+  Source:            fpga_0_rst_1_sys_rst_pin (PAD)
+  Destination:       bg_buff/p3_31 (FF)
+  Destination Clock: system_i/readbgcop_0/FSL_M_Write1 rising
+
+  Data Path: fpga_0_rst_1_sys_rst_pin to bg_buff/p3_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           120   0.818   0.854  fpga_0_rst_1_sys_rst_pin_IBUF (DVI_RESET_B_OBUF)
+     LUT3:I0->O           32   0.094   0.463  bg_buff/p3_or00001 (bg_buff/p3_or0000)
+     FDE:CE                    0.213          bg_buff/p3_0
+    ----------------------------------------
+    Total                      2.442ns (1.125ns logic, 1.317ns route)
+                                       (46.1% logic, 53.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5'
   Total number of paths / destination ports: 22 / 19
 -------------------------------------------------------------------------
-Offset:              4.096ns (Levels of Logic = 2)
+Offset:              4.107ns (Levels of Logic = 2)
   Source:            dvi/DVIInit/I2CControl/Master/PhaseCnt/Register/Out_1 (FF)
   Destination:       IIC_SCL_VIDEO (PAD)
   Source Clock:      system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5 rising
@@ -3015,37 +3126,37 @@ Offset:              4.096ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             7   0.471   0.743  dvi/DVIInit/I2CControl/Master/PhaseCnt/Register/Out_1 (dvi/DVIInit/I2CControl/Master/PhaseCnt/Register/Out_1)
+     FDRE:C->Q             9   0.471   0.754  dvi/DVIInit/I2CControl/Master/PhaseCnt/Register/Out_1 (dvi/DVIInit/I2CControl/Master/PhaseCnt/Register/Out_1)
      LUT3:I0->O            1   0.094   0.336  dvi/DVIInit/I2CControl/Master/SCL_or00001 (dvi/DVIInit/I2CControl/Master/SCL_not0001_inv)
      OBUFT:T->O                2.452          IIC_SCL_VIDEO_OBUFT (IIC_SCL_VIDEO)
     ----------------------------------------
-    Total                      4.096ns (3.017ns logic, 1.079ns route)
-                                       (73.7% logic, 26.3% route)
+    Total                      4.107ns (3.017ns logic, 1.090ns route)
+                                       (73.5% logic, 26.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1'
-  Total number of paths / destination ports: 222 / 192
+  Total number of paths / destination ports: 216 / 190
 -------------------------------------------------------------------------
-Offset:              4.769ns (Levels of Logic = 5)
-  Source:            system_i/readbgcop_0_to_microblaze_0/readbgcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0 (FF)
-  Destination:       readbgcop_0_FSL_M_Write_pin (PAD)
+Offset:              4.669ns (Levels of Logic = 5)
+  Source:            system_i/microblaze_0_to_readbgcop_0/microblaze_0_to_readbgcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0 (FF)
+  Destination:       readbgcop_0_FSL_S_Read_pin (PAD)
   Source Clock:      system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1 rising
 
-  Data Path: system_i/readbgcop_0_to_microblaze_0/readbgcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0 to readbgcop_0_FSL_M_Write_pin
+  Data Path: system_i/microblaze_0_to_readbgcop_0/microblaze_0_to_readbgcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0 to readbgcop_0_FSL_S_Read_pin
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q              2   0.471   0.581  readbgcop_0_to_microblaze_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Full_Out_0 (FSL_Full)
-     LUT2:I0->O            3   0.094   0.587  readbgcop_0_to_microblaze_0/FSL_M_Full1 (FSL_M_Full)
-     end scope: 'readbgcop_0_to_microblaze_0'
+     FDP:C->Q              3   0.471   0.347  microblaze_0_to_readbgcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out_0 (microblaze_0_to_readbgcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Empty_Out<0>)
+     INV:I->O              6   0.238   0.603  microblaze_0_to_readbgcop_0/Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Exists1_INV_0 (FSL_Has_Data)
+     end scope: 'microblaze_0_to_readbgcop_0'
      begin scope: 'readbgcop_0'
-     LUT2:I0->O          174   0.094   0.490  readbgcop_0/FSL_M_Write1 (FSL_M_Write)
+     LUT2:I0->O           36   0.094   0.464  readbgcop_0/latency_counter_mux0000<0>41 (FSL_S_Read)
      end scope: 'readbgcop_0'
      end scope: 'system_i'
-     OBUF:I->O                 2.452          readbgcop_0_FSL_M_Write_pin_OBUF (readbgcop_0_FSL_M_Write_pin)
+     OBUF:I->O                 2.452          readbgcop_0_FSL_S_Read_pin_OBUF (readbgcop_0_FSL_S_Read_pin)
     ----------------------------------------
-    Total                      4.769ns (3.111ns logic, 1.658ns route)
-                                       (65.2% logic, 34.8% route)
+    Total                      4.669ns (3.255ns logic, 1.414ns route)
+                                       (69.7% logic, 30.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'system_i/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3'
@@ -3329,7 +3440,7 @@ Offset:              0.471ns (Levels of Logic = 0)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 205 / 205
 -------------------------------------------------------------------------
-Delay:               3.714ns (Levels of Logic = 2)
+Delay:               3.750ns (Levels of Logic = 2)
   Source:            fpga_0_rst_1_sys_rst_pin (PAD)
   Destination:       DVI_RESET_B (PAD)
 
@@ -3337,26 +3448,26 @@ Delay:               3.714ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            21   0.818   0.444  fpga_0_rst_1_sys_rst_pin_IBUF (DVI_RESET_B_OBUF)
+     IBUF:I->O           120   0.818   0.480  fpga_0_rst_1_sys_rst_pin_IBUF (DVI_RESET_B_OBUF)
      OBUF:I->O                 2.452          DVI_RESET_B_OBUF (DVI_RESET_B)
     ----------------------------------------
-    Total                      3.714ns (3.270ns logic, 0.444ns route)
-                                       (88.0% logic, 12.0% route)
+    Total                      3.750ns (3.270ns logic, 0.480ns route)
+                                       (87.2% logic, 12.8% route)
 
 =========================================================================
 WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to icon.
 WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to ila.
 
 
-Total REAL time to Xst completion: 417.00 secs
-Total CPU time to Xst completion: 415.55 secs
+Total REAL time to Xst completion: 467.00 secs
+Total CPU time to Xst completion: 463.97 secs
  
 --> 
 
 
-Total memory usage is 966876 kilobytes
+Total memory usage is 1026892 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  100 (   0 filtered)
-Number of infos    :   48 (   0 filtered)
+Number of warnings :  132 (   0 filtered)
+Number of infos    :   53 (   0 filtered)
 

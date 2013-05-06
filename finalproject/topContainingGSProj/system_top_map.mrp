@@ -9,44 +9,44 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Fri May  3 13:01:32 2013
+Mapped Date    : Mon May  6 14:16:53 2013
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  162
+Number of warnings:  160
 Slice Logic Utilization:
-  Number of Slice Registers:                 7,022 out of  69,120   10%
-    Number used as Flip Flops:               7,000
-    Number used as Latches:                      8
+  Number of Slice Registers:                 7,335 out of  69,120   10%
+    Number used as Flip Flops:               7,320
+    Number used as Latches:                      1
     Number used as Latch-thrus:                 14
-  Number of Slice LUTs:                      6,105 out of  69,120    8%
-    Number used as logic:                    5,673 out of  69,120    8%
-      Number using O6 output only:           5,106
-      Number using O5 output only:             208
-      Number using O5 and O6:                  359
-    Number used as Memory:                     400 out of  17,920    2%
+  Number of Slice LUTs:                      5,858 out of  69,120    8%
+    Number used as logic:                    5,418 out of  69,120    7%
+      Number using O6 output only:           4,917
+      Number using O5 output only:             209
+      Number using O5 and O6:                  292
+    Number used as Memory:                     407 out of  17,920    2%
       Number used as Dual Port RAM:            184
         Number using O5 output only:            13
         Number using O5 and O6:                171
-      Number used as Shift Register:           216
-        Number using O6 output only:           214
+      Number used as Shift Register:           223
+        Number using O6 output only:           221
         Number using O5 output only:             2
-    Number used as exclusive route-thru:        32
-  Number of route-thrus:                       247
-    Number using O6 output only:               238
-    Number using O5 output only:                 7
+    Number used as exclusive route-thru:        33
+  Number of route-thrus:                       246
+    Number using O6 output only:               239
+    Number using O5 output only:                 5
     Number using O5 and O6:                      2
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,068 out of  17,280   23%
-  Number of LUT Flip Flop pairs used:        9,748
-    Number with an unused Flip Flop:         2,726 out of   9,748   27%
-    Number with an unused LUT:               3,643 out of   9,748   37%
-    Number of fully used LUT-FF pairs:       3,379 out of   9,748   34%
-    Number of unique control sets:             791
+  Number of occupied Slices:                 3,920 out of  17,280   22%
+  Number of LUT Flip Flop pairs used:        9,921
+    Number with an unused Flip Flop:         2,586 out of   9,921   26%
+    Number with an unused LUT:               4,063 out of   9,921   40%
+    Number of fully used LUT-FF pairs:       3,272 out of   9,921   32%
+    Number of unique control sets:             808
     Number of slice register sites lost
-      to control set restrictions:           1,789 out of  69,120    2%
+      to control set restrictions:           1,805 out of  69,120    2%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -68,8 +68,8 @@ Specific Feature Utilization:
       Number of 36k BlockRAM used:              64
       Number of 18k BlockRAM used:               4
     Total Memory used (KB):                  2,376 out of   5,328   44%
-  Number of BUFG/BUFGCTRLs:                      8 out of      32   25%
-    Number used as BUFGs:                        8
+  Number of BUFG/BUFGCTRLs:                      9 out of      32   28%
+    Number used as BUFGs:                        9
   Number of IDELAYCTRLs:                         3 out of      22   13%
   Number of BSCANs:                              2 out of       4   50%
   Number of BUFIOs:                              8 out of      80   10%
@@ -77,11 +77,11 @@ Specific Feature Utilization:
   Number of PLL_ADVs:                            1 out of       6   16%
 
   Number of RPM macros:            6
-Average Fanout of Non-Clock Nets:                3.49
+Average Fanout of Non-Clock Nets:                3.44
 
-Peak Memory Usage:  1246 MB
-Total REAL time to MAP completion:  10 mins 57 secs 
-Total CPU time to MAP completion:   10 mins 56 secs 
+Peak Memory Usage:  1236 MB
+Total REAL time to MAP completion:  8 mins 6 secs 
+Total CPU time to MAP completion:   7 mins 59 secs 
 
 Table of Contents
 -----------------
@@ -1046,21 +1046,6 @@ WARNING:Pack:2574 - The F7 multiplexer symbol
    suboptimally in the same slice component. The function generator could not be
    placed directly driving the F7 multiplexer. The design will exhibit
    suboptimal timing.
-WARNING:Pack:1653 - At least one timing constraint is impossible to meet because
-   component delays alone exceed the constraint. A timing constraint summary
-   below shows the failing constraints (preceded with an Asterisk (*)). Please
-   use the Timing Analyzer (GUI) or TRCE (command line) with the Mapped NCD and
-   PCF files to identify which constraints and paths are failing because of the
-   component delays alone. If the failing path(s) is mapped to Xilinx components
-   as expected, consider relaxing the constraint. If it is not mapped to
-   components as expected, re-evaluate your HDL and how synthesis is optimizing
-   the path. To allow the tools to bypass this error, set the environment
-   variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
-
-
-   For more information about the Timing Analyzer, consult the Xilinx Timing
-   Analyzer Reference manual; for more information on TRCE, consult the Xilinx
-   Command Line Tools User Guide "TRACE" chapter.
 WARNING:Place:838 - An IO Bus with more than one IO standard is found.
    Components associated with this bus are as follows: 
    	 Comp: GPIO_LED<0>   IOSTANDARD = LVCMOS25
@@ -1073,12 +1058,10 @@ WARNING:Place:838 - An IO Bus with more than one IO standard is found.
    	 Comp: GPIO_LED<7>   IOSTANDARD = SSTL18_II_DCI
 
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net count_not0000 is sourced by a combinatorial pin. This is not good
-   design practice. Use the CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net count3_not0000 is sourced by a combinatorial pin. This is not good
-   design practice. Use the CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net count2_not0000 is sourced by a combinatorial pin. This is not good
-   design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net readfgcop_0_FSL_M_Write_pin_OBUF is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net readbgcop_0_FSL_M_Write_pin_OBUF is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net chipscope_control<13> is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 
@@ -1088,14 +1071,14 @@ INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
 '2100@license-srv.eecs.berkeley.edu'.
 INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
 INFO:Security:56 - Part 'xc5vlx110t' is not a WebPack part.
-INFO:LIT:243 - Logical network N116 has no load.
+INFO:LIT:243 - Logical network N172 has no load.
 INFO:LIT:395 - The above info message is repeated 932 more times for the
    following (max. 5 shown):
-   N117,
-   N118,
-   N119,
-   N120,
-   N121
+   N173,
+   N174,
+   N175,
+   N176,
+   N177
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:MapLib:950 - SAVE has been detected on block
@@ -14762,200 +14745,6 @@ GND 		system_i/lmb_bram/lmb_bram/XST_GND
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
-
-Section 11 - Timing Report
---------------------------
-INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
-   information, see the TSI report.  Please consult the Xilinx Command Line 
-   Tools User Guide for information on generating a TSI report.
-INFO:Timing:3284 - This timing report was generated using estimated delay 
-   information.  For accurate numbers, please refer to the post Place and Route 
-   timing report.
-Number of Timing Constraints that were not applied: 2
-
-Asterisk (*) preceding a constraint indicates it was not met.
-   This may be due to a setup or hold violation.
-
-----------------------------------------------------------------------------------------------------------
-  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
-                                            |             |    Slack   | Achievable | Errors |    Score   
-----------------------------------------------------------------------------------------------------------
-* TS_system_i_clock_generator_0_clock_gener | SETUP       |    -8.642ns|    63.210ns|     140|     1179496
-  ator_0_SIG_PLL0_CLKOUT5 = PERIOD TIMEGRP  | HOLD        |     0.120ns|            |       0|           0
-  "system_i_clock_generator_0_clock_generat |             |            |            |        |            
-  or_0_SIG_PLL0_CLKOUT5" TS_sys_clk_pin * 0 |             |            |            |        |            
-  .5 HIGH 50%                               |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-* TS_system_i_clock_generator_0_clock_gener | SETUP       |     5.643ns|     4.714ns|       0|           0
-  ator_0_SIG_PLL0_CLKOUT4 = PERIOD TIMEGRP  | HOLD        |    -0.033ns|            |     316|        4612
-  "system_i_clock_generator_0_clock_generat |             |            |            |        |            
-  or_0_SIG_PLL0_CLKOUT4" TS_sys_clk_pin * 0 |             |            |            |        |            
-  .625 HIGH 50%                             |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-* TS_system_i_clock_generator_0_clock_gener | SETUP       |     6.566ns|     3.786ns|       0|           0
-  ator_0_SIG_PLL0_CLKOUT3 = PERIOD TIMEGRP  | HOLD        |    -0.033ns|            |      90|        2816
-  "system_i_clock_generator_0_clock_generat | MINPERIOD   |    12.001ns|     3.999ns|       0|           0
-  or_0_SIG_PLL0_CLKOUT3" TS_sys_clk_pin * 0 |             |            |            |        |            
-  .625 HIGH 50%                             |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-* TS_system_i_clock_generator_0_clock_gener | SETUP       |     3.461ns|     2.597ns|       0|           0
-  ator_0_SIG_PLL0_CLKOUT1 = PERIOD TIMEGRP  | HOLD        |    -0.033ns|            |     353|        7886
-  "system_i_clock_generator_0_clock_generat |             |            |            |        |            
-  or_0_SIG_PLL0_CLKOUT1" TS_sys_clk_pin * 1 |             |            |            |        |            
-  .25 HIGH 50%                              |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-* TS_MC_PHY_INIT_DATA_SEL_90 = MAXDELAY FRO | SETUP       |     3.676ns|     1.324ns|       0|           0
-  M TIMEGRP "TNM_PHY_INIT_DATA_SEL" TO TIME | HOLD        |    -0.028ns|            |      25|         244
-  GRP "FFS" TS_sys_clk_pin * 2              |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.600ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/en_dqs<7>" MAXDELAY = 0.6 ns       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.600ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/en_dqs<6>" MAXDELAY = 0.6 ns       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.600ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/en_dqs<5>" MAXDELAY = 0.6 ns       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.600ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/en_dqs<4>" MAXDELAY = 0.6 ns       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.600ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/en_dqs<3>" MAXDELAY = 0.6 ns       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.600ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/en_dqs<2>" MAXDELAY = 0.6 ns       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.600ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/en_dqs<1>" MAXDELAY = 0.6 ns       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.600ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/en_dqs<0>" MAXDELAY = 0.6 ns       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.850ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/gen_dqs[0].u_iob_dqs/en_dqs_sync"  |             |            |            |        |            
-  MAXDELAY = 0.85 ns                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.850ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/gen_dqs[1].u_iob_dqs/en_dqs_sync"  |             |            |            |        |            
-  MAXDELAY = 0.85 ns                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.850ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/gen_dqs[2].u_iob_dqs/en_dqs_sync"  |             |            |            |        |            
-  MAXDELAY = 0.85 ns                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.850ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/gen_dqs[3].u_iob_dqs/en_dqs_sync"  |             |            |            |        |            
-  MAXDELAY = 0.85 ns                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.850ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/gen_dqs[4].u_iob_dqs/en_dqs_sync"  |             |            |            |        |            
-  MAXDELAY = 0.85 ns                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.850ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/gen_dqs[5].u_iob_dqs/en_dqs_sync"  |             |            |            |        |            
-  MAXDELAY = 0.85 ns                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.850ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/gen_dqs[6].u_iob_dqs/en_dqs_sync"  |             |            |            |        |            
-  MAXDELAY = 0.85 ns                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET "system_i/DDR2_SDRAM/DDR2_SDRAM/mpmc_ | MAXDELAY    |     0.850ns|     0.000ns|       0|           0
-  core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_ph |             |            |            |        |            
-  y_io_0/gen_dqs[7].u_iob_dqs/en_dqs_sync"  |             |            |            |        |            
-  MAXDELAY = 0.85 ns                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_DQ_CE = MAXDELAY FROM TIMEGRP "TNM_DQ_ | SETUP       |     1.267ns|     1.133ns|       0|           0
-  CE_IDDR" TO TIMEGRP "TNM_DQS_FLOPS" 2.4 n | HOLD        |     0.737ns|            |       0|           0
-  s                                         |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_system_i_clock_generator_0_clock_gener | SETUP       |     2.926ns|     2.148ns|       0|           0
-  ator_0_SIG_PLL0_CLKOUT0 = PERIOD TIMEGRP  | HOLD        |     0.195ns|            |       0|           0
-  "system_i_clock_generator_0_clock_generat | MINHIGHPULSE|     5.500ns|     2.500ns|       0|           0
-  or_0_SIG_PLL0_CLKOUT0" TS_sys_clk_pin * 1 |             |            |            |        |            
-  .25 PHASE 2 ns HIGH 50%                   |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |     6.000ns|     4.000ns|       0|           0
-  pin" 100 MHz HIGH 50%                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_system_i_clock_generator_0_clock_gener | MINPERIOD   |     3.334ns|     1.666ns|       0|           0
-  ator_0_SIG_PLL0_CLKOUT2 = PERIOD TIMEGRP  |             |            |            |        |            
-  "system_i_clock_generator_0_clock_generat |             |            |            |        |            
-  or_0_SIG_PLL0_CLKOUT2" TS_sys_clk_pin * 2 |             |            |            |        |            
-   HIGH 50%                                 |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_ASYNC_FIFO_microblaze_0_to_writecop_0  | SETUP       |     6.304ns|     1.696ns|       0|           0
-  = MAXDELAY FROM TIMEGRP "microblaze_0_to_ | HOLD        |     1.199ns|            |       0|           0
-  writecop_0_fsl" 8 ns DATAPATHONLY         |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_ASYNC_FIFO_microblaze_0_to_readfgcop_0 | SETUP       |     6.330ns|     1.670ns|       0|           0
-   = MAXDELAY FROM TIMEGRP "microblaze_0_to | HOLD        |     1.175ns|            |       0|           0
-  _readfgcop_0_fsl" 8 ns DATAPATHONLY       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_ASYNC_FIFO_microblaze_0_to_readbgcop_0 | SETUP       |     6.330ns|     1.670ns|       0|           0
-   = MAXDELAY FROM TIMEGRP "microblaze_0_to | HOLD        |     1.175ns|            |       0|           0
-  _readbgcop_0_fsl" 8 ns DATAPATHONLY       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_ASYNC_FIFO_readbgcop_0_to_microblaze_0 | SETUP       |    13.657ns|     2.343ns|       0|           0
-   = MAXDELAY FROM TIMEGRP "readbgcop_0_to_ | HOLD        |     1.199ns|            |       0|           0
-  microblaze_0_fsl" 16 ns DATAPATHONLY      |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_ASYNC_FIFO_readfgcop_0_to_microblaze_0 | SETUP       |    13.751ns|     2.249ns|       0|           0
-   = MAXDELAY FROM TIMEGRP "readfgcop_0_to_ | HOLD        |     1.199ns|            |       0|           0
-  microblaze_0_fsl" 16 ns DATAPATHONLY      |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-
-
-Derived Constraint Report
-Review Timing Report for more details on the following derived constraints.
-To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
-or "Run Timing Analysis" from Timing Analyzer (timingan).
-Derived Constraints for TS_sys_clk_pin
-+-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
-|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
-|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
-+-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_pin                 |     10.000ns|      4.000ns|     31.605ns|            0|          924|            0| 460618259703|
-| TS_MC_PHY_INIT_DATA_SEL_90    |      5.000ns|      1.324ns|          N/A|           25|            0|           57|            0|
-| TS_system_i_clock_generator_0_|      8.000ns|      2.500ns|          N/A|            0|            0|          898|            0|
-| clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
-| OUT0                          |             |             |             |             |             |             |             |
-| TS_system_i_clock_generator_0_|      8.000ns|      2.597ns|          N/A|          353|            0|        20097|            0|
-| clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
-| OUT1                          |             |             |             |             |             |             |             |
-| TS_system_i_clock_generator_0_|      5.000ns|      1.666ns|          N/A|            0|            0|            0|            0|
-| clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
-| OUT2                          |             |             |             |             |             |             |             |
-| TS_system_i_clock_generator_0_|     16.000ns|      3.999ns|          N/A|           90|            0|       400054|            0|
-| clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
-| OUT3                          |             |             |             |             |             |             |             |
-| TS_system_i_clock_generator_0_|     16.000ns|      4.714ns|          N/A|          316|            0|        23465|            0|
-| clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
-| OUT4                          |             |             |             |             |             |             |             |
-| TS_system_i_clock_generator_0_|     20.000ns|     63.210ns|          N/A|          140|            0| 460617815132|            0|
-| clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
-| OUT5                          |             |             |             |             |             |             |             |
-+-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-
-5 constraints not met.
-
-
 
 Section 6 - IOB Properties
 --------------------------

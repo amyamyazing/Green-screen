@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/cc/cs150/sp13/class/cs150-at/finalproject/synthesi
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> 
 
@@ -448,7 +448,7 @@ Delay:               0.468ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 18.70 secs
+Total CPU time to Xst completion: 18.40 secs
  
 --> 
 

@@ -44,17 +44,7 @@ module PixelFeeder( //System:
 
     // FIFO to buffer the reads with a write width of 128 and read width of 32. We try to fetch blocks
     // until the FIFO is full.
-  /*  pixel_fifo feeder_fifo(
-    	.rst(rst),
-    	.wr_clk(cpu_clk_g),
-    	.rd_clk(clk50_g),
-    	.din(rdf_dout),
-    	.wr_en(rdf_valid),
-    	.rd_en(video_ready & ignore_count == 0),
-    	.dout(feeder_dout),
-    	.full(feeder_full),
-    	.empty(feeder_empty));
-*/
+
 
     pixel_fifo feeder_fifo(
     	.rst(rst),

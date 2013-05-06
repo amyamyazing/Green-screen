@@ -137,13 +137,22 @@ module system_top
   wire chipclk; //200MHz
   wire validbg, validfg; 
   wire fslrdbg, fslrdfg;
-  reg buffbg, bufffg; //1 when bg_dout and fg_dout have 4 pixels from DRAM
+  wire buffbg, bufffg; //1 when bg_dout and fg_dout have 4 pixels from DRAM
   wire buffered_bg, buffered_fg; //1 when buffbg/bufffg high and fifo not full
-  reg [127 : 0] bg_din, fg_din, rdf_dout; //data to be written to fifo
+  wire [127 : 0] bg_din, fg_din, rdf_dout; //data to be written to fifo
   wire [23 : 0] bg_in, fg_in; //input to greenscreen
   wire [31 : 0] bg_dout, fg_dout; //data coming out of fifos
   wire [23 : 0] res;
-  reg pixel_rdf_valid;
+  wire         pixel_rdf_rd_en;
+  wire         pixel_af_wr_en;
+  wire [30:0]  pixel_af_addr_din;
+  wire         pixel_af_full;
+  wire         pixel_rdf_valid;
+  wire         video_ready;
+  wire         dvi_video_ready;
+  wire         video_valid;
+  wire [23:0]  video;
+
   wire bg_full, fg_full, fg_ready, bg_ready, fg_empty, bg_empty;
   
   assign bg_ready = ~bg_empty;
@@ -164,67 +173,29 @@ module system_top
   assign addrbg =  readbgcop_0_XIL_NPI_Addr_pin;  
   assign addrfg =  readfgcop_0_XIL_NPI_Addr_pin;
   
-   //get bg pixels and buffer for bg_fifo 
-  always@(*) begin
-      bg_din = 128'b0;
-		buffbg = 0;
-      if(inbg != 32'b0) begin
-		    if(count == 2'b00) begin
-			     bg_din[31:0] = inbg;
-				  buffbg = 0;
-			     count = 2'b01;
-			 end
-			 else if (count == 2'b01) begin
-			     bg_din[63:32] = inbg;
-				  buffbg = 0;
-			     count = 2'b10;
-			 end
-			 else if (count == 2'b10) begin
-			     bg_din[95:64] = inbg;
-				  buffbg = 0;
-			     count = 2'b11;
-			 end
-			 else begin
-			     bg_din[127:96] = inbg;
-				  buffbg = 1;
-			     count = 2'b00;
-			 end
-		end
-  end
-  
-  assign buffered_bg = buffbg && ~bg_full;
-  
-   //get fg pixels and buffer for fg_fifo 
-  always@(*) begin
-      fg_din = 128'b0;
-		bufffg = 0;
-      if(infg != 32'b0) begin
-		    if(count2 == 2'b00) begin
-			     fg_din[31:0] = infg;
-				  bufffg = 0;
-			     count2 = 2'b01;
-			 end
-			 else if (count2 == 2'b01) begin
-			     fg_din[63:32] = infg;
-				  bufffg = 0;
-			     count2 = 2'b10;
-			 end
-			 else if (count2 == 2'b10) begin
-			     fg_din[95:64] = infg;
-				  bufffg = 0;
-			     count2 = 2'b11;
-			 end
-			 else begin
-			     fg_din[127:96] = infg;
-				  bufffg = 1;
-			     count2 = 2'b00;
-			 end
-		end
-  end
-  
+//buffers up 4 pixels for write to fifo width of 128
+  buff bg_buff(
+	.rst(rst), 
+	.validInput(validbg),
+	.pixel(inbg),
+	.out(bg_din),
+	.validOutput(buffbg)
+	);
+
+//buffers up 4 pixels for write to fifo width of 128	
+  buff fg_buff(
+	.rst(rst), 
+	.validInput(validfg),
+	.pixel(infg),
+	.out(fg_din),
+	.validOutput(bufffg)
+	);
+	
+//write to fifo is data is valid and fifo not full
+  assign buffered_bg = buffbg && ~bg_full; 
   assign buffered_fg = bufffg && ~fg_full;
 
-
+  
 
       pixel_fifo bg_fifo(
     	.rst(rst),
@@ -248,7 +219,7 @@ module system_top
     	.full(fg_full),
     	.empty(fg_empty));
 
-
+//if fifo is not empty read from it and assign for passing into GreenScreen module
   assign bg_in = (bg_ready) ? bg_dout[23:0] : 24'b0;
   assign fg_in = (fg_ready) ? fg_dout[23:0] : 24'b0;
 
@@ -256,45 +227,20 @@ module system_top
     .bg(bg_in),
 	 .fg(fg_in),
 	 .Result(res));
+
+  wire gs_valid;
+  assign gs_valid = (res != 24'b0);
 	 
-  always@(*) begin
-      rdf_dout = 128'b0;
-		pixel_rdf_valid = 0;
-      if(res != 32'b0) begin
-		    if(count3 == 2'b00) begin
-			     rdf_dout[23:0] = res;
-				  pixel_rdf_valid = 0;
-			     count3 = 2'b01;
-			 end
-			 else if (count2 == 2'b01) begin
-			     rdf_dout[63:32] = res;
-				  pixel_rdf_valid = 0;
-			     count3 = 2'b10;
-			 end
-			 else if (count2 == 2'b10) begin
-			     rdf_dout[95:64] = res;
-				  pixel_rdf_valid = 0;
-			     count3 = 2'b11;
-			 end
-			 else begin
-			     rdf_dout[127:96] = res;
-				  pixel_rdf_valid = 1;
-			     count3 = 2'b00;
-			 end
-		end
-  end
+//buffers up four processed pixels for pixelfeeder write width of 128	 
+  buff gs_buff(
+	.rst(rst), 
+	.validInput(gs_valid),
+	.pixel(res),
+	.out(rdf_dout),
+	.validOutput(pixel_rdf_valid)
+	);
   
   //DVI
-  
-  wire         pixel_rdf_rd_en;
-  wire         pixel_af_wr_en;
-  wire [30:0]  pixel_af_addr_din;
-  wire         pixel_af_full;
-  //wire         pixel_rdf_valid;
-  wire         video_ready;
-  wire         dvi_video_ready;
-  wire         video_valid;
-  wire [23:0]  video;
   
   
     PixelFeeder pixelfeed(
@@ -351,7 +297,8 @@ module system_top
  chipscope_ila ila(
  .CONTROL(chipscope_control),
  .CLK(clk),
- .DATA({10'b0 ,rst,fslrdbg,validbg,inbg,addrbg}),
+ .DATA({10'b0 ,rst,fslrdbg,validbg,inbg,addrbg}), //tests that values are coming in from DRAM
+ //.DATA({8'b0 ,rst,validbg,bg_ready,buffbg,buffered_bg,bg_din[63:0]}),
  //.DATA({16'b0, rst,count,inbg, video, video_ready, video_valid}),
  .TRIG0(rst)
  ) /* synthesis syn_noprune = 1 */; 

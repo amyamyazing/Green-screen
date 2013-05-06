@@ -1,7 +1,7 @@
 Release 14.1 par P.15xf (lin64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-p380-32.EECS.Berkeley.EDU::  Fri May 03 13:12:36 2013
+p380-32.EECS.Berkeley.EDU::  Mon May 06 14:25:06 2013
 
 par -w -intstyle ise -ol high -mt off system_top_map.ncd system_top.ncd
 system_top.pcf 
@@ -35,7 +35,7 @@ Device speed data version:  "PRODUCTION 1.73 2012-04-23".
 Device Utilization Summary:
 
    Number of BSCANs                          2 out of 4      50%
-   Number of BUFGs                           8 out of 32     25%
+   Number of BUFGs                           9 out of 32     28%
    Number of BUFIOs                          8 out of 80     10%
    Number of DSP48Es                         7 out of 64     10%
    Number of IDELAYCTRLs                     3 out of 22     13%
@@ -54,14 +54,14 @@ Device Utilization Summary:
    Number of PLL_ADVs                        1 out of 6      16%
    Number of RAMB18X2s                       4 out of 148     2%
    Number of RAMB36_EXPs                    64 out of 148    43%
-   Number of Slices                       4068 out of 17280  23%
-   Number of Slice Registers              7022 out of 69120  10%
-      Number used as Flip Flops           7000
-      Number used as Latches                 8
+   Number of Slices                       3920 out of 17280  22%
+   Number of Slice Registers              7335 out of 69120  10%
+      Number used as Flip Flops           7320
+      Number used as Latches                 1
       Number used as LatchThrus             14
 
-   Number of Slice LUTS                   6105 out of 69120   8%
-   Number of Slice LUT-Flip Flop pairs    9748 out of 69120  14%
+   Number of Slice LUTS                   5858 out of 69120   8%
+   Number of Slice LUT-Flip Flop pairs    9921 out of 69120  14%
 
 
 Overall effort level (-ol):   High 
@@ -69,8 +69,8 @@ Router effort level (-rl):    High
 
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please
    consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.
-Starting initial Timing Analysis.  REAL time: 53 secs 
-Finished initial Timing Analysis.  REAL time: 54 secs 
+Starting initial Timing Analysis.  REAL time: 52 secs 
+Finished initial Timing Analysis.  REAL time: 53 secs 
 
 WARNING:Par:288 - The signal system_i/dlmb_LMB_ABus<30> has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal system_i/dlmb_LMB_ABus<31> has no load.  PAR will not attempt to route this signal.
@@ -78,7 +78,7 @@ WARNING:Par:288 - The signal GPIO_SW_C_IBUF has no load.  PAR will not attempt t
 Starting Router
 
 
-Phase  1  : 49437 unrouted;      REAL time: 59 secs 
+Phase  1  : 48682 unrouted;      REAL time: 59 secs 
 INFO:Route:538 - One or more MIG cores have been detected in your design and have been successfully
    placed and routed. These MIG core(s) have critical skew and delay requirements 
    that are independent of the user (UCF) timing constraints. These MIG-related timing 
@@ -86,27 +86,27 @@ INFO:Route:538 - One or more MIG cores have been detected in your design and hav
    separately that all timing constraints specified in the UCF file have been met.
 
 
-Phase  2  : 38298 unrouted;      REAL time: 1 mins 7 secs 
+Phase  2  : 37635 unrouted;      REAL time: 1 mins 6 secs 
 
-Phase  3  : 12348 unrouted;      REAL time: 1 mins 49 secs 
+Phase  3  : 12226 unrouted;      REAL time: 1 mins 44 secs 
 
-Phase  4  : 12559 unrouted; (Setup:2795233, Hold:276, Component Switching Limit:0)     REAL time: 2 mins 51 secs 
+Phase  4  : 12226 unrouted; (Setup:0, Hold:10, Component Switching Limit:0)     REAL time: 2 mins 2 secs 
 
 Updating file: system_top.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:2802902, Hold:274, Component Switching Limit:0)     REAL time: 6 mins 53 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:10, Component Switching Limit:0)     REAL time: 2 mins 33 secs 
 
-Phase  6  : 0 unrouted; (Setup:2802902, Hold:274, Component Switching Limit:0)     REAL time: 11 mins 25 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:10, Component Switching Limit:0)     REAL time: 2 mins 33 secs 
 
-Phase  7  : 0 unrouted; (Setup:2802902, Hold:274, Component Switching Limit:0)     REAL time: 11 mins 26 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:10, Component Switching Limit:0)     REAL time: 2 mins 33 secs 
 
-Phase  8  : 0 unrouted; (Setup:2802902, Hold:274, Component Switching Limit:0)     REAL time: 11 mins 26 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:10, Component Switching Limit:0)     REAL time: 2 mins 33 secs 
 
-Phase  9  : 0 unrouted; (Setup:2802902, Hold:0, Component Switching Limit:0)     REAL time: 11 mins 28 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 35 secs 
 
-Phase 10  : 0 unrouted; (Setup:2802902, Hold:0, Component Switching Limit:0)     REAL time: 11 mins 37 secs 
-Total REAL time to Router completion: 11 mins 37 secs 
-Total CPU time to Router completion: 11 mins 52 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 44 secs 
+Total REAL time to Router completion: 2 mins 44 secs 
+Total CPU time to Router completion: 2 mins 55 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -125,25 +125,27 @@ Generating Clock Report
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
 |system_i/clk_62_5000 |              |      |      |            |             |
-|             MHzPLL0 | BUFGCTRL_X0Y4| No   | 1396 |  0.540     |  2.075      |
-+---------------------+--------------+------+------+------------+-------------+
-|system_i/clk_125_000 |              |      |      |            |             |
-|            0MHzPLL0 | BUFGCTRL_X0Y2| No   | 1342 |  0.622     |  2.190      |
+|             MHzPLL0 | BUFGCTRL_X0Y4| No   | 1368 |  0.650     |  2.174      |
 +---------------------+--------------+------+------+------------+-------------+
 |clock_generator_0_CL |              |      |      |            |             |
-|      KOUT5_pin_OBUF | BUFGCTRL_X0Y0| No   |  169 |  0.300     |  2.060      |
-+---------------------+--------------+------+------+------------+-------------+
-|clock_generator_0_CL |              |      |      |            |             |
-|      KOUT4_pin_OBUF | BUFGCTRL_X0Y5| No   |  340 |  0.616     |  2.200      |
+|      KOUT5_pin_OBUF | BUFGCTRL_X0Y0| No   |  161 |  0.396     |  2.055      |
 +---------------------+--------------+------+------+------------+-------------+
 |system_i/clk_125_000 |              |      |      |            |             |
-|          0MHz90PLL0 | BUFGCTRL_X0Y1| No   |  163 |  0.290     |  2.081      |
+|          0MHz90PLL0 | BUFGCTRL_X0Y1| No   |  163 |  0.277     |  2.046      |
++---------------------+--------------+------+------+------------+-------------+
+|system_i/clk_125_000 |              |      |      |            |             |
+|            0MHzPLL0 | BUFGCTRL_X0Y2| No   | 1329 |  0.666     |  2.190      |
++---------------------+--------------+------+------+------------+-------------+
+|clock_generator_0_CL |              |      |      |            |             |
+|      KOUT4_pin_OBUF | BUFGCTRL_X0Y5| No   |  312 |  0.540     |  2.128      |
 +---------------------+--------------+------+------+------------+-------------+
 |chipscope_control<0> |              |      |      |            |             |
-|                     |BUFGCTRL_X0Y30| No   |   52 |  0.289     |  1.861      |
+|                     |BUFGCTRL_X0Y29| No   |   53 |  0.527     |  2.112      |
 +---------------------+--------------+------+------+------------+-------------+
 |system_i/mdm_0/Dbg_C |              |      |      |            |             |
-|                lk_1 |BUFGCTRL_X0Y31| No   |   74 |  0.272     |  1.808      |
+|                lk_1 |BUFGCTRL_X0Y30| No   |   69 |  0.262     |  1.797      |
++---------------------+--------------+------+------+------------+-------------+
+|            gs_valid |BUFGCTRL_X0Y31| No   |   26 |  0.196     |  1.894      |
 +---------------------+--------------+------+------+------------+-------------+
 |clock_generator_0_CL |              |      |      |            |             |
 |      KOUT6_pin_OBUF | BUFGCTRL_X0Y3| No   |    4 |  0.077     |  1.896      |
@@ -196,19 +198,19 @@ Generating Clock Report
 |pmc_phy_if_0/u_phy_i |              |      |      |            |             |
 |  o_0/delayed_dqs<7> |        IO Clk| No   |   17 |  0.101     |  0.425      |
 +---------------------+--------------+------+------+------------+-------------+
+|readfgcop_0_FSL_M_Wr |              |      |      |            |             |
+|        ite_pin_OBUF |         Local|      |   75 |  1.932     |  3.337      |
++---------------------+--------------+------+------+------------+-------------+
+|readbgcop_0_FSL_M_Wr |              |      |      |            |             |
+|        ite_pin_OBUF |         Local|      |   75 |  1.516     |  2.302      |
++---------------------+--------------+------+------+------------+-------------+
 |system_i/mdm_0/Dbg_U |              |      |      |            |             |
-|             pdate_1 |         Local|      |   21 |  1.720     |  2.666      |
-+---------------------+--------------+------+------+------------+-------------+
-|       count_not0000 |         Local|      |    1 |  0.000     |  0.636      |
-+---------------------+--------------+------+------+------------+-------------+
-|      count3_not0000 |         Local|      |    1 |  0.000     |  0.465      |
-+---------------------+--------------+------+------+------------+-------------+
-|      count2_not0000 |         Local|      |    1 |  0.000     |  0.801      |
+|             pdate_1 |         Local|      |   21 |  1.360     |  2.637      |
 +---------------------+--------------+------+------+------------+-------------+
 |chipscope_control<13 |              |      |      |            |             |
-|                   > |         Local|      |    5 |  0.000     |  0.673      |
+|                   > |         Local|      |    5 |  0.000     |  0.634      |
 +---------------------+--------------+------+------+------------+-------------+
-| icon/U0/iUPDATE_OUT |         Local|      |    1 |  0.000     |  0.920      |
+| icon/U0/iUPDATE_OUT |         Local|      |    1 |  0.000     |  1.222      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -219,24 +221,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 2802902 (Setup: 2802902, Hold: 0, Component Switching Limit: 0)
-
-WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
-   your design.
-
-   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
-   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
-
-   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to
-   ensure the best options are set in the tools for timing closure.
-
-   Use the Xilinx "SmartXplorer" script to try special combinations of
-   options known to produce very good results.
-
-   Visit the Xilinx technical support web at http://support.xilinx.com and go to
-   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
-   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
-   in your design.
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
 
 Number of Timing Constraints that were not applied: 2
 
@@ -247,21 +232,9 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TS_system_i_clock_generator_0_clock_gener | SETUP       |   -24.647ns|   143.235ns|     140|     2795571
-  ator_0_SIG_PLL0_CLKOUT5 = PERIOD          | HOLD        |     0.331ns|            |       0|           0
-  TIMEGRP         "system_i_clock_generator |             |            |            |        |            
-  _0_clock_generator_0_SIG_PLL0_CLKOUT5"    |             |            |            |        |            
-        TS_sys_clk_pin * 0.5 HIGH 50%       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-* TS_system_i_clock_generator_0_clock_gener | SETUP       |    -0.309ns|    16.618ns|      35|        7331
-  ator_0_SIG_PLL0_CLKOUT4 = PERIOD          | HOLD        |     0.032ns|            |       0|           0
-  TIMEGRP         "system_i_clock_generator |             |            |            |        |            
-  _0_clock_generator_0_SIG_PLL0_CLKOUT4"    |             |            |            |        |            
-        TS_sys_clk_pin * 0.625 HIGH 50%     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
   NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.012ns|     0.838ns|       0|           0
   AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
-  f_0/u_phy_io_0/gen_dqs[3].u_iob_dqs/en_dq |             |            |            |        |            
+  f_0/u_phy_io_0/gen_dqs[2].u_iob_dqs/en_dq |             |            |            |        |            
   s_sync"         MAXDELAY = 0.85 ns        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.045ns|     0.805ns|       0|           0
@@ -281,7 +254,7 @@ Asterisk (*) preceding a constraint indicates it was not met.
 ----------------------------------------------------------------------------------------------------------
   NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
   AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
-  f_0/u_phy_io_0/gen_dqs[2].u_iob_dqs/en_dq |             |            |            |        |            
+  f_0/u_phy_io_0/gen_dqs[3].u_iob_dqs/en_dq |             |            |            |        |            
   s_sync"         MAXDELAY = 0.85 ns        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
@@ -299,9 +272,30 @@ Asterisk (*) preceding a constraint indicates it was not met.
   f_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/en_dq |             |            |            |        |            
   s_sync"         MAXDELAY = 0.85 ns        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_MC_PHY_INIT_DATA_SEL_90 = MAXDELAY FRO | SETUP       |     0.071ns|     4.929ns|       0|           0
-  M TIMEGRP "TNM_PHY_INIT_DATA_SEL" TO      | HOLD        |     0.123ns|            |       0|           0
-      TIMEGRP "FFS" TS_sys_clk_pin * 2      |             |            |            |        |            
+  NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.069ns|     0.531ns|       0|           0
+  AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
+  f_0/u_phy_io_0/en_dqs<2>"         MAXDELA |             |            |            |        |            
+  Y = 0.6 ns                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.069ns|     0.531ns|       0|           0
+  AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
+  f_0/u_phy_io_0/en_dqs<3>"         MAXDELA |             |            |            |        |            
+  Y = 0.6 ns                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.069ns|     0.531ns|       0|           0
+  AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
+  f_0/u_phy_io_0/en_dqs<4>"         MAXDELA |             |            |            |        |            
+  Y = 0.6 ns                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.069ns|     0.531ns|       0|           0
+  AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
+  f_0/u_phy_io_0/en_dqs<6>"         MAXDELA |             |            |            |        |            
+  Y = 0.6 ns                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.069ns|     0.531ns|       0|           0
+  AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
+  f_0/u_phy_io_0/en_dqs<7>"         MAXDELA |             |            |            |        |            
+  Y = 0.6 ns                                |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.072ns|     0.528ns|       0|           0
   AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
@@ -315,52 +309,37 @@ Asterisk (*) preceding a constraint indicates it was not met.
 ----------------------------------------------------------------------------------------------------------
   NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
   AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
-  f_0/u_phy_io_0/en_dqs<2>"         MAXDELA |             |            |            |        |            
-  Y = 0.6 ns                                |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
-  AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
-  f_0/u_phy_io_0/en_dqs<3>"         MAXDELA |             |            |            |        |            
-  Y = 0.6 ns                                |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
-  AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
-  f_0/u_phy_io_0/en_dqs<4>"         MAXDELA |             |            |            |        |            
-  Y = 0.6 ns                                |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
-  AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
   f_0/u_phy_io_0/en_dqs<5>"         MAXDELA |             |            |            |        |            
   Y = 0.6 ns                                |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
-  AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
-  f_0/u_phy_io_0/en_dqs<6>"         MAXDELA |             |            |            |        |            
-  Y = 0.6 ns                                |             |            |            |        |            
+  TS_MC_PHY_INIT_DATA_SEL_90 = MAXDELAY FRO | SETUP       |     0.260ns|     4.740ns|       0|           0
+  M TIMEGRP "TNM_PHY_INIT_DATA_SEL" TO      | HOLD        |     0.267ns|            |       0|           0
+      TIMEGRP "FFS" TS_sys_clk_pin * 2      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "system_i/DDR2_SDRAM/DDR2_SDR | MAXDELAY    |     0.079ns|     0.521ns|       0|           0
-  AM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_i |             |            |            |        |            
-  f_0/u_phy_io_0/en_dqs<7>"         MAXDELA |             |            |            |        |            
-  Y = 0.6 ns                                |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_DQ_CE = MAXDELAY FROM TIMEGRP "TNM_DQ_ | SETUP       |     0.206ns|     2.194ns|       0|           0
-  CE_IDDR" TO TIMEGRP "TNM_DQS_FLOPS"       | HOLD        |     1.001ns|            |       0|           0
+  TS_DQ_CE = MAXDELAY FROM TIMEGRP "TNM_DQ_ | SETUP       |     0.316ns|     2.084ns|       0|           0
+  CE_IDDR" TO TIMEGRP "TNM_DQS_FLOPS"       | HOLD        |     0.999ns|            |       0|           0
      2.4 ns                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_system_i_clock_generator_0_clock_gener | SETUP       |     0.417ns|     7.583ns|       0|           0
-  ator_0_SIG_PLL0_CLKOUT1 = PERIOD          | HOLD        |     0.005ns|            |       0|           0
+  TS_system_i_clock_generator_0_clock_gener | SETUP       |     0.522ns|     7.478ns|       0|           0
+  ator_0_SIG_PLL0_CLKOUT1 = PERIOD          | HOLD        |     0.000ns|            |       0|           0
   TIMEGRP         "system_i_clock_generator |             |            |            |        |            
   _0_clock_generator_0_SIG_PLL0_CLKOUT1"    |             |            |            |        |            
         TS_sys_clk_pin * 1.25 HIGH 50%      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_system_i_clock_generator_0_clock_gener | SETUP       |     0.681ns|    14.638ns|       0|           0
-  ator_0_SIG_PLL0_CLKOUT3 = PERIOD          | HOLD        |     0.002ns|            |       0|           0
+  TS_system_i_clock_generator_0_clock_gener | SETUP       |     0.850ns|    14.300ns|       0|           0
+  ator_0_SIG_PLL0_CLKOUT4 = PERIOD          | HOLD        |     0.314ns|            |       0|           0
+  TIMEGRP         "system_i_clock_generator |             |            |            |        |            
+  _0_clock_generator_0_SIG_PLL0_CLKOUT4"    |             |            |            |        |            
+        TS_sys_clk_pin * 0.625 HIGH 50%     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_system_i_clock_generator_0_clock_gener | SETUP       |     1.309ns|    13.382ns|       0|           0
+  ator_0_SIG_PLL0_CLKOUT3 = PERIOD          | HOLD        |     0.025ns|            |       0|           0
   TIMEGRP         "system_i_clock_generator |             |            |            |        |            
   _0_clock_generator_0_SIG_PLL0_CLKOUT3"    |             |            |            |        |            
         TS_sys_clk_pin * 0.625 HIGH 50%     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_system_i_clock_generator_0_clock_gener | SETUP       |     0.950ns|     6.733ns|       0|           0
-  ator_0_SIG_PLL0_CLKOUT0 = PERIOD          | HOLD        |     0.398ns|            |       0|           0
+  TS_system_i_clock_generator_0_clock_gener | SETUP       |     1.360ns|     6.186ns|       0|           0
+  ator_0_SIG_PLL0_CLKOUT0 = PERIOD          | HOLD        |     0.452ns|            |       0|           0
   TIMEGRP         "system_i_clock_generator |             |            |            |        |            
   _0_clock_generator_0_SIG_PLL0_CLKOUT0"    |             |            |            |        |            
         TS_sys_clk_pin * 1.25 PHASE 2 ns HI |             |            |            |        |            
@@ -375,29 +354,35 @@ Asterisk (*) preceding a constraint indicates it was not met.
   TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |     6.000ns|     4.000ns|       0|           0
   pin" 100 MHz HIGH 50%                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_ASYNC_FIFO_microblaze_0_to_writecop_0  | SETUP       |     5.119ns|     2.881ns|       0|           0
-  = MAXDELAY FROM TIMEGRP         "microbla | HOLD        |     1.461ns|            |       0|           0
-  ze_0_to_writecop_0_fsl" 8 ns DATAPATHONLY |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_ASYNC_FIFO_microblaze_0_to_readbgcop_0 | SETUP       |     5.434ns|     2.566ns|       0|           0
-   = MAXDELAY FROM TIMEGRP         "microbl | HOLD        |     1.451ns|            |       0|           0
-  aze_0_to_readbgcop_0_fsl" 8 ns DATAPATHON |             |            |            |        |            
-  LY                                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_ASYNC_FIFO_microblaze_0_to_readfgcop_0 | SETUP       |     5.466ns|     2.534ns|       0|           0
+  TS_ASYNC_FIFO_microblaze_0_to_readfgcop_0 | SETUP       |     4.836ns|     3.164ns|       0|           0
    = MAXDELAY FROM TIMEGRP         "microbl | HOLD        |     1.449ns|            |       0|           0
   aze_0_to_readfgcop_0_fsl" 8 ns DATAPATHON |             |            |            |        |            
   LY                                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_ASYNC_FIFO_readfgcop_0_to_microblaze_0 | SETUP       |     9.346ns|     6.654ns|       0|           0
-   = MAXDELAY FROM TIMEGRP         "readfgc | HOLD        |     1.462ns|            |       0|           0
+  TS_ASYNC_FIFO_microblaze_0_to_writecop_0  | SETUP       |     5.122ns|     2.878ns|       0|           0
+  = MAXDELAY FROM TIMEGRP         "microbla | HOLD        |     1.497ns|            |       0|           0
+  ze_0_to_writecop_0_fsl" 8 ns DATAPATHONLY |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_ASYNC_FIFO_microblaze_0_to_readbgcop_0 | SETUP       |     5.316ns|     2.684ns|       0|           0
+   = MAXDELAY FROM TIMEGRP         "microbl | HOLD        |     1.444ns|            |       0|           0
+  aze_0_to_readbgcop_0_fsl" 8 ns DATAPATHON |             |            |            |        |            
+  LY                                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_ASYNC_FIFO_readbgcop_0_to_microblaze_0 | SETUP       |     9.412ns|     6.588ns|       0|           0
+   = MAXDELAY FROM TIMEGRP         "readbgc | HOLD        |     1.461ns|            |       0|           0
   op_0_to_microblaze_0_fsl" 16 ns DATAPATHO |             |            |            |        |            
   NLY                                       |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_ASYNC_FIFO_readbgcop_0_to_microblaze_0 | SETUP       |     9.457ns|     6.543ns|       0|           0
-   = MAXDELAY FROM TIMEGRP         "readbgc | HOLD        |     1.413ns|            |       0|           0
+  TS_ASYNC_FIFO_readfgcop_0_to_microblaze_0 | SETUP       |     9.415ns|     6.585ns|       0|           0
+   = MAXDELAY FROM TIMEGRP         "readfgc | HOLD        |     2.038ns|            |       0|           0
   op_0_to_microblaze_0_fsl" 16 ns DATAPATHO |             |            |            |        |            
   NLY                                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_system_i_clock_generator_0_clock_gener | SETUP       |    13.192ns|     6.808ns|       0|           0
+  ator_0_SIG_PLL0_CLKOUT5 = PERIOD          | HOLD        |     0.324ns|            |       0|           0
+  TIMEGRP         "system_i_clock_generator |             |            |            |        |            
+  _0_clock_generator_0_SIG_PLL0_CLKOUT5"    |             |            |            |        |            
+        TS_sys_clk_pin * 0.5 HIGH 50%       |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -411,29 +396,29 @@ Derived Constraints for TS_sys_clk_pin
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_pin                 |     10.000ns|      4.000ns|     71.618ns|            0|          175|            0| 460618259703|
-| TS_MC_PHY_INIT_DATA_SEL_90    |      5.000ns|      4.929ns|          N/A|            0|            0|           57|            0|
-| TS_system_i_clock_generator_0_|      8.000ns|      6.733ns|          N/A|            0|            0|          898|            0|
+|TS_sys_clk_pin                 |     10.000ns|      4.000ns|      9.480ns|            0|            0|            0|       428968|
+| TS_MC_PHY_INIT_DATA_SEL_90    |      5.000ns|      4.740ns|          N/A|            0|            0|           57|            0|
+| TS_system_i_clock_generator_0_|      8.000ns|      6.186ns|          N/A|            0|            0|          898|            0|
 | clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
 | OUT0                          |             |             |             |             |             |             |             |
-| TS_system_i_clock_generator_0_|      8.000ns|      7.583ns|          N/A|            0|            0|        20097|            0|
+| TS_system_i_clock_generator_0_|      8.000ns|      7.478ns|          N/A|            0|            0|        20097|            0|
 | clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
 | OUT1                          |             |             |             |             |             |             |             |
 | TS_system_i_clock_generator_0_|      5.000ns|      1.666ns|          N/A|            0|            0|            0|            0|
 | clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
 | OUT2                          |             |             |             |             |             |             |             |
-| TS_system_i_clock_generator_0_|     16.000ns|     14.638ns|          N/A|            0|            0|       400054|            0|
+| TS_system_i_clock_generator_0_|     16.000ns|     13.382ns|          N/A|            0|            0|       400054|            0|
 | clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
 | OUT3                          |             |             |             |             |             |             |             |
-| TS_system_i_clock_generator_0_|     16.000ns|     16.618ns|          N/A|           35|            0|        23465|            0|
+| TS_system_i_clock_generator_0_|     16.000ns|     14.300ns|          N/A|            0|            0|         3935|            0|
 | clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
 | OUT4                          |             |             |             |             |             |             |             |
-| TS_system_i_clock_generator_0_|     20.000ns|    143.235ns|          N/A|          140|            0| 460617815132|            0|
+| TS_system_i_clock_generator_0_|     20.000ns|      6.808ns|          N/A|            0|            0|         3927|            0|
 | clock_generator_0_SIG_PLL0_CLK|             |             |             |             |             |             |             |
 | OUT5                          |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
-2 constraints not met.
+All constraints were met.
 
 
 Generating Pad Report.
@@ -442,17 +427,17 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 3 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 11 mins 54 secs 
-Total CPU time to PAR completion: 12 mins 8 secs 
+Total REAL time to PAR completion: 3 mins 4 secs 
+Total CPU time to PAR completion: 3 mins 14 secs 
 
-Peak Memory Usage:  1074 MB
+Peak Memory Usage:  1043 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
-Timing: Completed - 175 errors found.
+Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 6
+Number of warning messages: 5
 Number of info messages: 2
 
 Writing design to file system_top.ncd

@@ -1,5 +1,5 @@
 //----------------------------------------------------------------------------
-// readcop - module
+// readbgcop - module
 //----------------------------------------------------------------------------
 // IMPORTANT:
 // DO NOT MODIFY THIS FILE EXCEPT IN THE DESIGNATED SECTIONS.
@@ -32,7 +32,7 @@
 // ***************************************************************************
 //
 //----------------------------------------------------------------------------
-// Filename:          readcop
+// Filename:          readbgcop
 // Version:           1.00.a
 // Description:       Example FSL core (Verilog).
 // Date:              Mon Mar  4 12:51:06 2013 (by Create and Import Peripheral Wizard)
@@ -79,158 +79,190 @@
 //----------------------------------------
 // Module Section
 //----------------------------------------
-module readcop 
-	(
-		// ADD USER PORTS BELOW THIS LINE 
-		/*********************************/
-		/**  NPI Interface Ports below ***/
-		/**  CS150 Tutorial 1			 ***/
-		/*********************************/
-		system_dcm_locked,
-		XIL_NPI_Addr, 
-		XIL_NPI_AddrReq, 
-		XIL_NPI_AddrAck, 
-		XIL_NPI_RNW, 
-		XIL_NPI_Size, 
-		XIL_NPI_WrFIFO_Data, 
-		XIL_NPI_WrFIFO_BE, 
-		XIL_NPI_WrFIFO_Push, 
-		XIL_NPI_RdFIFO_Data, 
-		XIL_NPI_RdFIFO_Pop, 
-		XIL_NPI_RdFIFO_RdWdAddr, 
-		XIL_NPI_WrFIFO_Empty, 
-		XIL_NPI_WrFIFO_AlmostFull, 
-		XIL_NPI_WrFIFO_Flush, 
-		// NPI_RdFIFO_DataAvailable, // I Only used for MPMC2 connections 
-		XIL_NPI_RdFIFO_Empty, 
-		XIL_NPI_RdFIFO_Flush, 
-		XIL_NPI_RdFIFO_Latency, 
-		XIL_NPI_RdModWr, 
-		XIL_NPI_InitDone, 
-		/**End of NPI Port addition **/
-		// ADD USER PORTS ABOVE THIS LINE 
+module readbgcop 
+  (
+   // ADD USER PORTS BELOW THIS LINE 
+   /*********************************/
+   /**  NPI Interface Ports below ***/
+   /**  CS150 Tutorial 1			 ***/
+   /*********************************/
+   system_dcm_locked,
+   XIL_NPI_Addr, 
+   XIL_NPI_AddrReq, 
+   XIL_NPI_AddrAck, 
+   XIL_NPI_RNW, 
+   XIL_NPI_Size, 
+   XIL_NPI_WrFIFO_Data, 
+   XIL_NPI_WrFIFO_BE, 
+   XIL_NPI_WrFIFO_Push, 
+   XIL_NPI_RdFIFO_Data, 
+   XIL_NPI_RdFIFO_Pop, 
+   XIL_NPI_RdFIFO_RdWdAddr, 
+   XIL_NPI_WrFIFO_Empty, 
+   XIL_NPI_WrFIFO_AlmostFull, 
+   XIL_NPI_WrFIFO_Flush, 
+   // NPI_RdFIFO_DataAvailable, // I Only used for MPMC2 connections 
+   XIL_NPI_RdFIFO_Empty, 
+   XIL_NPI_RdFIFO_Flush, 
+   XIL_NPI_RdFIFO_Latency, 
+   XIL_NPI_RdModWr, 
+   XIL_NPI_InitDone, 
+   /**End of NPI Port addition **/
+   // ADD USER PORTS ABOVE THIS LINE 
+   OUTBG_Port,
+   // DO NOT EDIT BELOW THIS LINE ////////////////////
+   // Bus protocol ports, do not add or delete. 
+   FSL_Clk,
+   FSL_Rst,
+   FSL_S_Clk,
+   FSL_S_Read,
+   FSL_S_Data,
+   FSL_S_Control,
+   FSL_S_Exists,
+   FSL_M_Clk,
+   FSL_M_Write,
+   FSL_M_Data,
+   FSL_M_Control,
+   FSL_M_Full
+   // DO NOT EDIT ABOVE THIS LINE ////////////////////
+   );
 
-		// DO NOT EDIT BELOW THIS LINE ////////////////////
-		// Bus protocol ports, do not add or delete. 
-		FSL_Clk,
-		FSL_Rst,
-		FSL_S_Clk,
-		FSL_S_Read,
-		FSL_S_Data,
-		FSL_S_Control,
-		FSL_S_Exists,
-		FSL_M_Clk,
-		FSL_M_Write,
-		FSL_M_Data,
-		FSL_M_Control,
-		FSL_M_Full
-		// DO NOT EDIT ABOVE THIS LINE ////////////////////
-	);
+   // ADD USER PORTS BELOW THIS LINE 
+   /*********************************/
+   /**  NPI Interface Ports below ***/
+   /**  CS150 Tutorial 1			 ***/
+   /*********************************/ 
 
-// ADD USER PORTS BELOW THIS LINE 
-/*********************************/
-/**  NPI Interface Ports below ***/
-/**  CS150 Tutorial 1			 ***/
-/*********************************/ 
+   /** NPI interface parameters 			**/
+   parameter C_PI_ADDR_WIDTH = 32; 
+   parameter C_PI_DATA_WIDTH = 256; //changed
+   parameter C_PI_BE_WIDTH = 8; 
+   parameter C_PI_RDWDADDR_WIDTH = 4;
+   /** End of NPI parameter definition **/
+   input		system_dcm_locked;
+   output [C_PI_ADDR_WIDTH-1:0] XIL_NPI_Addr; 
+   output 			XIL_NPI_AddrReq; 
+   input 			XIL_NPI_AddrAck; 
+   output 			XIL_NPI_RNW; 
+   output [3:0] 		XIL_NPI_Size; 
+   output [63:0] XIL_NPI_WrFIFO_Data; 
+   output [C_PI_BE_WIDTH-1:0] 	XIL_NPI_WrFIFO_BE; 
+   output 			XIL_NPI_WrFIFO_Push; 
+   input [C_PI_DATA_WIDTH-1:0] 	XIL_NPI_RdFIFO_Data; 
+   output 			XIL_NPI_RdFIFO_Pop; 
+   input [C_PI_RDWDADDR_WIDTH-1:0] XIL_NPI_RdFIFO_RdWdAddr; 
+   input 			   XIL_NPI_WrFIFO_Empty;  
+   input 			   XIL_NPI_WrFIFO_AlmostFull; 
+   output 			   XIL_NPI_WrFIFO_Flush; 
+   // input NPI_RdFIFO_DataAvailable; //Only used for MPMC2 designs 
+   input 			   XIL_NPI_RdFIFO_Empty; 
+   output 			   XIL_NPI_RdFIFO_Flush; 
+   input [1:0] 			   XIL_NPI_RdFIFO_Latency; 
+   output 			   XIL_NPI_RdModWr; 
+   input 			   XIL_NPI_InitDone; 
+   /**End of NPI Port addition **/
+   output [0 : 127] 		   OUTBG_Port;
+   // ADD USER PORTS ABOVE THIS LINE 
 
-/** NPI interface parameters 			**/
-parameter C_PI_ADDR_WIDTH = 32; 
-parameter C_PI_DATA_WIDTH = 64; 
-parameter C_PI_BE_WIDTH = 8; 
-parameter C_PI_RDWDADDR_WIDTH = 4;
-/** End of NPI parameter definition **/
-input		system_dcm_locked;
-output 	[C_PI_ADDR_WIDTH-1:0] XIL_NPI_Addr; 
-output 	XIL_NPI_AddrReq; 
-input 	XIL_NPI_AddrAck; 
-output 	XIL_NPI_RNW; 
-output 	[3:0] XIL_NPI_Size; 
-output 	[C_PI_DATA_WIDTH-1:0] XIL_NPI_WrFIFO_Data; 
-output 	[C_PI_BE_WIDTH-1:0] XIL_NPI_WrFIFO_BE; 
-output 	XIL_NPI_WrFIFO_Push; 
-input 	[C_PI_DATA_WIDTH-1:0] XIL_NPI_RdFIFO_Data; 
-output 	XIL_NPI_RdFIFO_Pop; 
-input 	[C_PI_RDWDADDR_WIDTH-1:0] XIL_NPI_RdFIFO_RdWdAddr; 
-input 	XIL_NPI_WrFIFO_Empty;  
-input 	XIL_NPI_WrFIFO_AlmostFull; 
-output 	XIL_NPI_WrFIFO_Flush; 
-// input NPI_RdFIFO_DataAvailable; //Only used for MPMC2 designs 
-input 	XIL_NPI_RdFIFO_Empty; 
-output 	XIL_NPI_RdFIFO_Flush; 
-input 	[1:0] XIL_NPI_RdFIFO_Latency; 
-output 	XIL_NPI_RdModWr; 
-input 	XIL_NPI_InitDone; 
-/**End of NPI Port addition **/
-// ADD USER PORTS ABOVE THIS LINE 
+   input 			   FSL_Clk;
+   input 			   FSL_Rst;
+   input 			   FSL_S_Clk;
+   output 			   FSL_S_Read;
+   input [0 : 31] 		   FSL_S_Data;
+   input 			   FSL_S_Control;
+   input 			   FSL_S_Exists;
+   input 			   FSL_M_Clk;
+   output 			   FSL_M_Write;
+   output [0 : 127] 		   FSL_M_Data; //changed
+   output 			   FSL_M_Control;
+   input 			   FSL_M_Full;
 
-input                                     FSL_Clk;
-input                                     FSL_Rst;
-input                                     FSL_S_Clk;
-output                                    FSL_S_Read;
-input      [0 : 31]                       FSL_S_Data;
-input                                     FSL_S_Control;
-input                                     FSL_S_Exists;
-input                                     FSL_M_Clk;
-output                                    FSL_M_Write;
-output     [0 : 31]                       FSL_M_Data;
-output                                    FSL_M_Control;
-input                                     FSL_M_Full;
-
-// ADD USER PARAMETERS BELOW THIS LINE 
-// --USER parameters added here 
-// ADD USER PARAMETERS ABOVE THIS LINE
-
-
-//----------------------------------------
-// Implementation Section
-//----------------------------------------
-// we will build a simple state machine
-// it will read one word from the FSL,
-// use it as address, and then fetch
-// the data from DRAM, finally write to
-// FSL
-localparam INIT 	= 6'b000001; 
-localparam RDADDR	= 6'b000010;
-localparam FTDATA	= 6'b000100;
-localparam WAITEMP	= 6'b001000;
-localparam WAITLAT	= 6'b010000;
-localparam WRDATA	= 6'b100000;
-
-reg [5:0] state;
-
-reg[31:0] ADDR_MB;
-reg[31:0] DATA_MB;
-
-assign FSL_S_Read  = (state == RDADDR) ? FSL_S_Exists : 0;
-assign FSL_M_Write = (state == WRDATA) ? ~FSL_M_Full : 0;
-//assign FSL_M_Data = DATA_MB;
-// twist around
-assign FSL_M_Data [0:7] = DATA_MB[7:0]; 
-assign FSL_M_Data [8:15] = DATA_MB[15:8];
-assign FSL_M_Data [16:23] = DATA_MB[23:16];
-assign FSL_M_Data [24:31] = DATA_MB[31:24];
-assign XIL_NPI_Addr = ADDR_MB;
-assign XIL_NPI_RdModWr = 1'b0; // does not have to be asserted
-assign XIL_NPI_RNW = XIL_NPI_AddrReq;  // we will assert this to read when AddrReq is high
+   // ADD USER PARAMETERS BELOW THIS LINE 
+   // --USER parameters added here 
+   // ADD USER PARAMETERS ABOVE THIS LINE
 
 
-assign XIL_NPI_Size = 4'h0; //double word transfer, check MPMC datasheet for other mode 
-assign XIL_NPI_WrFIFO_Flush = 1'b0;
-assign XIL_NPI_WrFIFO_BE = 8'h00; // not writing
+   //----------------------------------------
+   // Implementation Section
+   //----------------------------------------
+   // we will build a simple state machine
+   // it will read one word from the FSL,
+   // use it as address, and then fetch
+   // the data from DRAM, finally write to
+   // FSL
+   localparam INIT 	= 6'b000001; 
+   localparam RDADDR	= 6'b000010;
+   localparam FTDATA	= 6'b000100;
+   localparam WAITEMP	= 6'b001000;
+   localparam WAITLAT	= 6'b010000;
+   localparam WRDATA	= 6'b100000;
 
-assign XIL_NPI_AddrReq = (state == FTDATA);
+   reg [5:0] 			   state;
 
-assign XIL_NPI_RdFIFO_Pop = (state == WAITEMP) & (~XIL_NPI_RdFIFO_Empty) & XIL_NPI_InitDone; // the FIFO_Empty flag should be 0 after pop is one
+   reg [31:0] 			   ADDR_MB;
+   reg [127:0] 			   DATA_MB;
 
-wire rst;
-assign rst = !system_dcm_locked;
+   assign FSL_S_Read  = (state == RDADDR) ? FSL_S_Exists : 0;
+   assign FSL_M_Write = (state == WRDATA) ? ~FSL_M_Full : 0;
+   //assign FSL_M_Data = DATA_MB;
+   // twist around
+   assign FSL_M_Data [0:7] = DATA_MB[7:0]; 
+   assign FSL_M_Data [8:15] = DATA_MB[15:8];
+   assign FSL_M_Data [16:23] = DATA_MB[23:16];
+   assign FSL_M_Data [24:31] = DATA_MB[31:24];
+   assign FSL_M_Data [39:32] = DATA_MB[32:39]; 
+   assign FSL_M_Data [47:40] = DATA_MB[40:47];
+   assign FSL_M_Data [55:48] = DATA_MB[48:55];
+   assign FSL_M_Data [63:56] = DATA_MB[56:63];
+   assign FSL_M_Data [71:64] = DATA_MB[64:71]; 
+   assign FSL_M_Data [79:72] = DATA_MB[72:79];
+   assign FSL_M_Data [87:80] = DATA_MB[80:87];
+   assign FSL_M_Data [95:88] = DATA_MB[88:95];
+   assign FSL_M_Data [103:96] = DATA_MB[96:103]; 
+   assign FSL_M_Data [111:104] = DATA_MB[104:111];
+   assign FSL_M_Data [119:112] = DATA_MB[112:119];
+   assign FSL_M_Data [127:120] = DATA_MB[120:127];
 
-reg [1:0] latency_counter; // this counter is used to keep track of
-			   // when to latch in the returned data
-			   // from DRAM
-reg startlat;
-// In this module we will make both FSL_S_Clk and
-// and FSL_M_Clk equivalent to the MPMC clock
+   assign OUTBG_Port [0:7] = DATA_MB[7:0];
+   assign OUTBG_Port [8:15] = DATA_MB[15:8];
+   assign OUTBG_Port [16:23] = DATA_MB[23:16];
+   assign OUTBG_Port [24:31] = DATA_MB[31:24];
+   assign OUTBG_Port [39:32] = DATA_MB[32:39]; 
+   assign OUTBG_Port [47:40] = DATA_MB[40:47];
+   assign OUTBG_Port [55:48] = DATA_MB[48:55];
+   assign OUTBG_Port [63:56] = DATA_MB[56:63];
+   assign OUTBG_Port [71:64] = DATA_MB[64:71]; 
+   assign OUTBG_Port [79:72] = DATA_MB[72:79];
+   assign OUTBG_Port [87:80] = DATA_MB[80:87];
+   assign OUTBG_Port [95:88] = DATA_MB[88:95];
+   assign OUTBG_Port [103:96] = DATA_MB[96:103]; 
+   assign OUTBG_Port [111:104] = DATA_MB[104:111];
+   assign OUTBG_Port [119:112] = DATA_MB[112:119];
+   assign OUTBG_Port [127:120] = DATA_MB[120:127];
+
+   assign XIL_NPI_Addr = ADDR_MB;
+   assign XIL_NPI_RdModWr = 1'b0; // does not have to be asserted
+   assign XIL_NPI_RNW = XIL_NPI_AddrReq;  // we will assert this to read when AddrReq is high
+
+
+   //assign XIL_NPI_Size = 4'h0; //double word transfer, check MPMC datasheet for other mode 
+   assign XIL_NPI_Size = 4'b0010;   //eight word transfer
+   assign XIL_NPI_WrFIFO_Flush = 1'b0;
+   assign XIL_NPI_WrFIFO_BE = 8'h00; // not writing
+
+   assign XIL_NPI_AddrReq = (state == FTDATA);
+
+   assign XIL_NPI_RdFIFO_Pop = (state == WAITEMP) & (~XIL_NPI_RdFIFO_Empty) & XIL_NPI_InitDone; // the FIFO_Empty flag should be 0 after pop is one
+
+   wire 			   rst;
+   assign rst = !system_dcm_locked;
+
+   reg [1:0] 			   latency_counter; // this counter is used to keep track of
+   // when to latch in the returned data
+   // from DRAM
+   reg 				   startlat;
+   // In this module we will make both FSL_S_Clk and
+   // and FSL_M_Clk equivalent to the MPMC clock
 
 always @(posedge FSL_S_Clk) 
    begin  
@@ -265,7 +297,10 @@ always @(posedge FSL_S_Clk)
 			  begin
 			    if(latency_counter == 0)
 					begin
-					  DATA_MB <=  XIL_NPI_RdFIFO_Data[31:0];
+					  DATA_MB[31:0] <=  XIL_NPI_RdFIFO_Data[31:0];
+					  DATA_MB[63:32] <=  XIL_NPI_RdFIFO_Data[95:64];
+					  DATA_MB[95:64] <=  XIL_NPI_RdFIFO_Data[159:128];
+					  DATA_MB[127:96] <=  XIL_NPI_RdFIFO_Data[221:192];
 					  state <= WRDATA;
 					end
 			    else
@@ -279,7 +314,10 @@ always @(posedge FSL_S_Clk)
 		begin
 			if(latency_counter == 0)
 			  begin
-				DATA_MB <=  XIL_NPI_RdFIFO_Data[31:0];
+				DATA_MB[31:0] <=  XIL_NPI_RdFIFO_Data[31:0];
+				DATA_MB[63:32] <=  XIL_NPI_RdFIFO_Data[95:64];
+				DATA_MB[95:64] <=  XIL_NPI_RdFIFO_Data[159:128];
+				DATA_MB[127:96] <=  XIL_NPI_RdFIFO_Data[221:192];
 				state <= WRDATA;
 			  end
 			else
@@ -295,7 +333,7 @@ always @(posedge FSL_S_Clk)
         endcase
    end
 
-	
 
 
 endmodule
+

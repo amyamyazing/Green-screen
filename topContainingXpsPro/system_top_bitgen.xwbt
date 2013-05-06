@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.ncd
-OUTFILE=/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro/system_top.bit
-FAMILY=Virtex5
-PART=xc5vlx110t-1ff1136
-WORKINGDIR=/home/cc/cs150/sp13/class/cs150-ar/Desktop/labs/FinalProj/topContainingXpsPro
-LICENSE=ISE
-USER_INFO=__174112198_174112199_174416789

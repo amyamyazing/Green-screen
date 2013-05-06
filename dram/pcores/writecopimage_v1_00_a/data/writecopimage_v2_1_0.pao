@@ -1,7 +1,0 @@
-##############################################################################
-## Filename:          /home/cc/cs150/sp13/class/cs150-ar/finalproj/dram/pcores/writecopimage_v1_00_a/data/writecopimage_v2_1_0.pao
-## Description:       Peripheral Analysis Order
-## Date:              Wed Mar 13 12:33:07 2013 (by Create and Import Peripheral Wizard)
-##############################################################################
-
-lib writecopimage_v1_00_a writecopimage verilog

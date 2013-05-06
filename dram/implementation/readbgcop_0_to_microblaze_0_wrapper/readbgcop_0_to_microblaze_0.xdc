@@ -1,1 +1,0 @@
-set_max_delay -from [get_pins -quiet {Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/Memory_reg*/DO* Using_FIFO.Async_FIFO_Gen.Use_Control.Use_DPRAM1.Async_FIFO_I1/*/Memory_reg*/DO*}] 16000

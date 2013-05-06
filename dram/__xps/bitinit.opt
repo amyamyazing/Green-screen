@@ -1,1 +1,0 @@
- -p xc5vlx110tff1136-1 -pe microblaze_0 ../../workspace/read_write_DRAM/Debug/read_write_DRAM.elf

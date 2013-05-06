@@ -1,0 +1,15 @@
+Green-screen
+============
+
+CS150 project
+
+How to run this project:
+
+To test writing to DRAM you will need the "workspace" folder and our XPS system.xmp which can be found in "finalproject" folder"
+
+To test DVI for constant color through the pixelfeeder, you will test it through the "DVIcrap" folder that has already been made so you should only have to run "make impact"
+
+The "workspace2" folder is for reading from DRAM. We use the C code to read from DRAM and import it into our ISE project.
+
+Our final project is all put together in the "finalproject" folder. This will need "workspace2" for the reason described above for reading from DRAM. The folder includes our implementation of our project (XPS, ISE). ISE includes all the necessary files to run it. We have included chipscope for debugging purposes.
+
